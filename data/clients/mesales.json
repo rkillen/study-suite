@@ -1,0 +1,128 @@
+{
+  "clientId": "mesales",
+  "profileName": "MeSales — Enterprise Software Sales, Pitching & Executive Presence (C1)",
+  "watchOuts": [
+    {
+      "tag": "Vocal Presence · Spotlight Management",
+      "title": "Breath Anchoring & Pausing So Your Voice Never Cuts Off",
+      "detail": "When you feel spotlighted in a formal presentation, shallow chest breathing and rushing to finish a point cause vocal tension and breath cut-off. Land your opening sentence cleanly, drop your pitch slightly at the period, and take a silent 1.5-second breath before launching the next point."
+    },
+    {
+      "tag": "Executive Pitching · Structure",
+      "title": "Problem → Business Impact → Value Outcome (Not Feature Lists)",
+      "detail": "With 8 years in account management, your natural strength is customer trust. Carry that into formal pitches by leading with the client's commercial bottleneck first ('Most enterprise teams lose 18% of margin to manual handoffs'), then connecting your software service directly to mutual growth."
+    },
+    {
+      "tag": "Storycraft · Interview Framing",
+      "title": "Sharpening the 'We' vs. 'I' Balance in Account Turnaround Stories",
+      "detail": "Collaborative account managers often default to 'we' ('We grew the account by 30%'). In senior interviews, own your strategic decisions explicitly ('I identified the churn risk early, restructured the roadmap, and expanded ARR by 30%') while crediting the delivery team."
+    },
+    {
+      "tag": "C1 Register · Gulf Business English Polish",
+      "title": "Trimming Ceremonial Filler for Crisp Executive Conciseness",
+      "detail": "In fast-paced enterprise pitches and international interviews, replace warm-up hedges ('Kindly note that we are trying to...', 'Actually, to be honest with you...') with direct commercial framing: 'Here is how we de-risk the rollout and accelerate time-to-value.'"
+    },
+    {
+      "tag": "Delivery & Prosody · Emphasis",
+      "title": "Using Strategic Contrast Stress to Hold the Room",
+      "detail": "Instead of pushing harder with volume when nervous, lean on word stress and pacing to command attention: 'We don't just implement software—we engineer measurable revenue growth on both sides of the table.'"
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "The 2-Minute Opening Pitch Without Losing Breath or Momentum",
+      "category": "Sales Pitch · Spotlight Control",
+      "prompt": "You are opening a high-stakes enterprise pitch to a skeptical VP of Operations in Dubai. Deliver your first two minutes using short, punchy sentences and deliberate 1.5-second pauses at every period—framing the business problem before mentioning your software platform."
+    },
+    {
+      "title": "Turnaround Story: Expanding an At-Risk Enterprise Account",
+      "category": "High-Stakes Interview · Behavioral Storycraft",
+      "prompt": "An interviewer asks: 'Tell me about a time you turned a difficult client relationship into long-term growth.' Walk through the situation, your personal strategic decision ('I...'), and the commercial outcome for both the client and your company in 90 seconds."
+    },
+    {
+      "title": "Reframing a Price Objection Around Mutual ROI",
+      "category": "Consultative Sales · Value Positioning",
+      "prompt": "A prospect says your software services proposal is 25% higher than a regional competitor's quote. Respond calmly without defending your price—pivot the conversation to risk reduction, speed of adoption, and net business growth."
+    },
+    {
+      "title": "Turning Networking-Event Ease into Boardroom Authority",
+      "category": "Presentation Mastery · Presence Shift",
+      "prompt": "You naturally shine in conversational event settings where the spotlight feels shared. Practice delivering a formal 90-second product-strategy update as if you were speaking one-on-one to a trusted client over coffee—keeping the tone warm, unhurried, and grounded."
+    },
+    {
+      "title": "The 'Why Hire Me?' Executive Closing Statement",
+      "category": "High-Stakes Interview · Executive Positioning",
+      "prompt": "Close a final-round interview for a Senior Enterprise Account Director role. Synthesize your 8 years of account management, your self-taught instinct for consultative selling, and your core philosophy: driving measurable growth for both the customer and the business."
+    }
+  ],
+  "beachcombing": {
+    "tier1": [
+      "Glass towers glowing over Sheikh Zayed Road",
+      "A silent boardroom five minutes before kickoff",
+      "Coffee cups at a bustling tech summit booth",
+      "A handwritten notebook covered in deal notes"
+    ],
+    "tier2": [
+      "A guarded procurement director warming up mid-meeting",
+      "A fellow rep trading war stories after an expo",
+      "An executive sponsor betting their reputation on a rollout",
+      "A quiet corner table after a loud networking floor"
+    ],
+    "tier3": [
+      "Why true persuasion feels like conversation, not performance",
+      "Mutual growth as the foundation of lasting client trust",
+      "Turning stage nerves into grounded vocal authority",
+      "What 8 years in the field teaches that playbooks never can"
+    ]
+  },
+  "customCards": [
+    {
+      "id": "mesales-01",
+      "category": "custom",
+      "term": "Interview Upgrade: \"In my team, we managed to grow the customer's account over two years.\"",
+      "definition": "\"I spotted an untapped expansion opportunity, aligned both leadership teams, and grew the account by 35% over two years.\"",
+      "example": "While delivery was a team effort, I owned the commercial strategy from day one.",
+      "note": "Interview Ownership: Senior sales interviewers listen for 'I' on strategy and 'we' on execution."
+    },
+    {
+      "id": "mesales-02",
+      "category": "custom",
+      "term": "Pitch Reframe: \"Our software services have many advanced features that can help your company.\"",
+      "definition": "\"We eliminate the operational bottlenecks slowing your revenue growth—and our platform is how we execute it.\"",
+      "example": "Before we look at architecture, let's quantify what current delays are costing your team each quarter.",
+      "note": "Consultative Selling: Lead with business impact before introducing technical capabilities."
+    },
+    {
+      "id": "mesales-03",
+      "category": "custom",
+      "term": "Vocal Reset Cue: What should you do the instant you feel your throat tightening or breath shortening mid-pitch?",
+      "definition": "Finish the current phrase on a downward inflection, pause for 2 full seconds, inhale low into the ribs, and deliver one short 8-word sentence.",
+      "example": "\"Let me pause on that number for a second. [Breathe] That's where the real margin sits.\"",
+      "note": "Spotlight Control: To the room, a deliberate pause reads as confidence—never hesitation."
+    },
+    {
+      "id": "mesales-04",
+      "category": "custom",
+      "term": "C1 Conciseness: \"Actually, to be honest with you, what I am trying to say is that both sides need to win.\"",
+      "definition": "\"A partnership only scales when it delivers measurable growth for both the customer and our business.\"",
+      "example": "Every renewal I've closed came down to proving mutual ROI well before contract season.",
+      "note": "Executive Register: Cutting throat-clearing openers makes your core philosophy land twice as hard."
+    },
+    {
+      "id": "mesales-05",
+      "category": "custom",
+      "term": "Price Objection Pivot: \"We are more expensive because our enterprise service quality is much better.\"",
+      "definition": "\"Our upfront investment is higher because we build in dedicated onboarding that cuts your time-to-value in half.\"",
+      "example": "When you factor in faster deployment and zero rework, total cost of ownership is actually lower.",
+      "note": "Value Framing: Anchor price differences to speed, risk reduction, and net financial return."
+    },
+    {
+      "id": "mesales-06",
+      "category": "custom",
+      "term": "Storycraft Hook: How do you open a 90-second interview story so the panel leans in immediately?",
+      "definition": "\"Eighteen months ago, our largest regional account was 60 days from churning—here is how I turned it around.\"",
+      "example": "Starting with the stakes hooks the interviewer before you unpack the action steps.",
+      "note": "Narrative Arc: High-stakes headline first, concise action second, quantified result third."
+    }
+  ]
+}
