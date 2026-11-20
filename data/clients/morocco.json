@@ -88,67 +88,67 @@
   "customCards": [
     {
       "id": "mor-01",
-      "category": "oxford",
-      "tag": "Grammar · Articles",
-      "front": "Fix the article usage:\n\"The curiosity and the humility are essential in the philosophy.\"",
-      "back": "\"Curiosity and humility are essential in philosophy.\"\n\nRule: Omit 'the' before uncountable abstract nouns used in a general sense.",
-      "example": "Curiosity drives discovery, whereas certainty often stops it."
+      "category": "custom",
+      "term": "Fix the articles: \"The curiosity and the humility are essential in the philosophy.\"",
+      "definition": "\"Curiosity and humility are essential in philosophy.\"",
+      "example": "Curiosity drives discovery, whereas certainty often stops it.",
+      "note": "Grammar · Articles (77%): Omit 'the' before uncountable abstract nouns used in a general sense."
     },
     {
       "id": "mor-02",
-      "category": "oxford",
-      "tag": "Grammar · Verb Patterns",
-      "front": "Complete with the natural verb pattern:\n\"When traveling, I avoid ______ (follow) rigid itineraries so I can explore.\"",
-      "back": "\"...I avoid following rigid itineraries...\"\n\nRule: 'Avoid', 'enjoy', 'consider', and 'recommend' always take a gerund (-ing), never 'to + verb'.",
-      "example": "I always recommend wandering through a neighborhood early in the morning."
+      "category": "custom",
+      "term": "Complete: \"When traveling, I avoid ______ (follow) rigid itineraries.\"",
+      "definition": "\"When traveling, I avoid following rigid itineraries.\"",
+      "example": "I always recommend wandering through a neighborhood early in the morning.",
+      "note": "Grammar · Verb Patterns (83%): 'Avoid', 'enjoy', 'consider', and 'recommend' take a gerund (-ing), never 'to + verb'."
     },
     {
       "id": "mor-03",
-      "category": "oxford",
-      "tag": "Grammar · Past Simple",
-      "front": "Choose the accurate tense:\n\"I ______ (read) Al-Ghazali's reflections on habit when I was in university.\"",
-      "back": "\"I read (/rɛd/) Al-Ghazali's reflections on habit when I was in university.\"\n\nRule: A finished past time marker ('when I was in university') requires Past Simple.",
-      "example": "That book stayed with me long after I finished it."
+      "category": "custom",
+      "term": "Choose the tense: \"I ______ (read) Al-Ghazali's reflections when I was in university.\"",
+      "definition": "\"I read (/rɛd/) Al-Ghazali's reflections when I was in university.\"",
+      "example": "That book stayed with me long after I finished it.",
+      "note": "Grammar · Past Simple (83%): A finished past time marker ('when I was in university') requires Past Simple, not Present Perfect."
     },
     {
       "id": "mor-04",
-      "category": "oxford",
-      "tag": "Storycraft · C1 Upgrade",
-      "front": "Upgrade the B2 phrase:\n\"It made me think a lot about how people behave.\"",
-      "back": "\"It prompted me to reflect on human nature.\"\n\nC1 Upgrade: 'Prompted me to reflect on' replaces 'made me think about' with effortless precision.",
-      "example": "Watching how strangers treated one another prompted me to reflect on civic trust."
+      "category": "custom",
+      "term": "C1 Upgrade: \"It made me think a lot about how people behave.\"",
+      "definition": "\"It prompted me to reflect on human nature.\"",
+      "example": "Watching how strangers treated one another prompted me to reflect on civic trust.",
+      "note": "Storycraft · Lexical Precision: 'Prompted me to reflect on' replaces 'made me think about' with effortless authority."
     },
     {
       "id": "mor-05",
-      "category": "oxford",
-      "tag": "Storycraft · C1 Upgrade",
-      "front": "Upgrade the B2 phrase:\n\"The atmosphere of the old city was very special and peaceful.\"",
-      "back": "\"The old quarter had a deeply contemplative atmosphere.\"\n\nC1 Upgrade: 'Contemplative' or 'serene' captures mood far better than 'special and peaceful'.",
-      "example": "At dusk, the courtyard takes on a quiet, contemplative stillness."
+      "category": "custom",
+      "term": "C1 Upgrade: \"The atmosphere of the old city was very special and peaceful.\"",
+      "definition": "\"The old quarter had a deeply contemplative atmosphere.\"",
+      "example": "At dusk, the courtyard takes on a quiet, contemplative stillness.",
+      "note": "Storycraft · Descriptive Precision: 'Contemplative' or 'serene' evokes atmosphere far better than 'special and peaceful'."
     },
     {
       "id": "mor-06",
-      "category": "oxford",
-      "tag": "Psychology · Precision",
-      "front": "Nuance check: 'Cognitive bias' vs. 'Blind spot'",
-      "back": "Cognitive bias = a systematic pattern in how the brain distorts judgment.\nBlind spot = a specific area an individual fails to notice in themselves.",
-      "example": "Confirmation bias is universal, yet each of us has personal blind spots."
+      "category": "custom",
+      "term": "Nuance Check: 'Cognitive bias' vs. 'Blind spot'",
+      "definition": "Cognitive bias = a systematic pattern in how the brain distorts judgment. Blind spot = a specific area an individual fails to notice.",
+      "example": "Confirmation bias is universal, yet each of us has personal blind spots.",
+      "note": "Psychology & Philosophy: Pair both terms to contrast universal human tendencies with personal awareness."
     },
     {
       "id": "mor-07",
-      "category": "oxford",
-      "tag": "Grammar · Present Simple",
-      "front": "Fix the tense and verb pattern:\n\"Psychology is showing that people tend resisting sudden change.\"",
-      "back": "\"Psychology shows that people tend to resist sudden change.\"\n\nRule: Use Present Simple ('shows') for general findings, and 'tend + to + infinitive'.",
-      "example": "History shows that gradual shifts often outlast abrupt revolutions."
+      "category": "custom",
+      "term": "Fix tense & pattern: \"Psychology is showing that people tend resisting sudden change.\"",
+      "definition": "\"Psychology shows that people tend to resist sudden change.\"",
+      "example": "History shows that gradual shifts often outlast abrupt revolutions.",
+      "note": "Grammar · Present Simple & Verb Patterns: Use Present Simple ('shows') for general truths, and 'tend + to + infinitive'."
     },
     {
       "id": "mor-08",
-      "category": "oxford",
-      "tag": "Storycraft · Narrative Pivot",
-      "front": "How do you pivot smoothly from a story back to its deeper meaning?",
-      "back": "\"Looking back, what struck me wasn't [X]—it was [Y].\"\n\nUse this frame to transition from Past Simple events to a Present Simple insight.",
-      "example": "Looking back, what struck me wasn't the architecture—it was how unhurried everyone seemed."
+      "category": "custom",
+      "term": "Narrative Pivot: How do you transition from a story back to its deeper meaning?",
+      "definition": "\"Looking back, what struck me wasn't [X]—it was [Y].\"",
+      "example": "Looking back, what struck me wasn't the architecture—it was how unhurried everyone seemed.",
+      "note": "Storycraft · Narrative Arc: Bridges Past Simple storytelling into a Present Simple philosophical takeaway."
     }
   ]
 }
