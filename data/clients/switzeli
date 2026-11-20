@@ -1,0 +1,129 @@
+{
+  "clientId": "switzeli",
+  "profileName": "Switzeli — Fractional CFO Clarity & Executive Synthesis (C1)",
+  "watchOuts": [
+    {
+      "tag": "Executive Synthesis · Clarity",
+      "title": "Headline First (BLUF), Then Supporting Detail",
+      "detail": "When working through an idea out loud, German sentence-end logic can delay your main point until the final clause. Lock in the core conclusion in your opening sentence ('The core risk is cash conversion, not margin'), then unpack two or three supporting reasons."
+    },
+    {
+      "tag": "Syntax & Flow · C1 Precision",
+      "title": "Breaking Up Nested Clauses & Nominalizations",
+      "detail": "German academic and financial prose rewards long, multi-clause chains ('The implementation of the restructuring of the capital allocation...'). In spoken English, split heavy noun stacks into crisp active verbs: 'We need to restructure how we allocate capital before Q3.'"
+    },
+    {
+      "tag": "L1 Transfer · German False Friends",
+      "title": "'Actual / Actually', 'Become', 'Eventually' & 'Respectively'",
+      "detail": "Watch classic German crossovers in boardroom speech: 'aktuell' is 'current / currently' (not 'actual'); 'bekommen' is 'receive / secure' (not 'become'); 'eventuell' is 'possibly / potentially' (not 'eventually'); and avoid overusing 'respectively' where 'and' or 'or' sounds far more natural."
+    },
+    {
+      "tag": "L1 Transfer · Prepositions & Tense",
+      "title": "'Since' vs. 'For' with Ongoing Financial States",
+      "detail": "German 'seit' covers both duration and starting points in present tense ('We track this since two years'). Pair Present Perfect with 'for' (duration) and 'since' (point in time): 'We've tracked working capital weekly for two years' / 'since Q1.'"
+    },
+    {
+      "tag": "Delivery & Prosody",
+      "title": "Lightening Dark 'L' & Final Consonant Devoicing",
+      "detail": "Your speech is already clear and authoritative; softening heavy back-of-the-throat 'L' sounds ('capital', 'model', 'global') and keeping final voiced consonants audible ('fund' vs. 'funt', 'rise' vs. 'rice') adds effortless polish."
+    },
+    {
+      "tag": "Storycraft · Retelling",
+      "title": "Distilling Complex Presentations into a 3-Beat Arc",
+      "detail": "When retelling a deck, book, or case study, resist summarizing slide by slide. Anchor the listener with three beats: Context (what was at stake), Tension (what broke or surprised), and Takeaway (the principle that transfers)."
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "The 90-Second Boardroom Diagnosis",
+      "category": "Fractional CFO · Executive Pitch",
+      "prompt": "A founder hands you a messy P&L and asks what you would fix in your first 30 days as Fractional CFO. Deliver your diagnosis headline-first—stating the single biggest financial lever before walking through your reasoning."
+    },
+    {
+      "title": "Distilling a Presentation You Just Attended",
+      "category": "Synthesis & Retelling",
+      "prompt": "Retell the core argument of a recent finance talk, podcast, or article in under two minutes without chronological slide-by-slide recap. Lead with why it matters, highlight one counterintuitive insight, and close with your own verdict."
+    },
+    {
+      "title": "Behavioral Finance: Why Smart Founders Misread Risk",
+      "category": "Finance & Psychology",
+      "prompt": "Explain a cognitive bias—such as sunk-cost fallacy, overconfidence, or loss aversion—to an executive team weighing a major capital decision. Bridge psychological insight with concrete financial discipline."
+    },
+    {
+      "title": "Stewardship, Debt & Ethical Capital",
+      "category": "Islamic Studies & Philosophy",
+      "prompt": "Explore how classical ethical frameworks—such as stewardship (amanah), risk-sharing, or Stoic temperance—challenge modern assumptions about leverage and short-term quarterly growth."
+    },
+    {
+      "title": "Turning a Travel Observation into a Leadership Principle",
+      "category": "Culture & Storycraft",
+      "prompt": "Share a brief story from living across Latvia and Switzerland—or from your travels—where a cultural contrast revealed something unexpected about trust, incentives, or decision-making."
+    }
+  ],
+  "customCards": [
+    {
+      "id": "switz-01",
+      "category": "custom",
+      "term": "Executive Pivot: How do you buy 3 seconds to organize a complex answer without sounding hesitant?",
+      "definition": "\"There are two dimensions to this—let me start with the immediate cash impact.\"",
+      "example": "There are two dimensions to this—let me start with liquidity, and then address unit economics.",
+      "note": "Clarity & Pacing: Numbering your structure upfront signals command while giving your brain a clean track to speak on."
+    },
+    {
+      "id": "switz-02",
+      "category": "custom",
+      "term": "Fix the German false friend: \"Actual, we are still waiting to become the final audit figures.\"",
+      "definition": "\"Currently, we are still waiting to receive the final audit figures.\"",
+      "example": "Currently, our priority is securing clean bridge financing before year-end.",
+      "note": "L1 Transfer: 'Aktuell' = currently (not actual); 'bekommen' = receive/secure (not become)."
+    },
+    {
+      "id": "switz-03",
+      "category": "custom",
+      "term": "De-clutter the syntax: \"The optimization of the working capital cycle is what will enable the improvement of liquidity.\"",
+      "definition": "\"Tightening the working capital cycle will free up liquidity.\"",
+      "example": "Shortening receivables by ten days immediately frees up working capital.",
+      "note": "C1 Conciseness: Replace stacked '-tion' nouns with direct, active verbs so executives grasp the causality instantly."
+    },
+    {
+      "id": "switz-04",
+      "category": "custom",
+      "term": "Fix the tense & preposition: \"We advise mid-market founders in Zurich since 2021.\"",
+      "definition": "\"We've advised mid-market founders in Zurich since 2021.\"",
+      "example": "I've worked across cross-border finance roles for over a decade.",
+      "note": "L1 Transfer ('seit'): Ongoing states anchored to a past starting point take Present Perfect + 'since' (or 'for' + duration)."
+    },
+    {
+      "id": "switz-05",
+      "category": "custom",
+      "term": "Retelling Hook: How do you summarize a long presentation without getting bogged down in details?",
+      "definition": "\"Stripped down to its core, the speaker's thesis was [X]—which challenges how we think about [Y].\"",
+      "example": "Stripped down to its core, the thesis was that pricing power matters far more than top-line volume.",
+      "note": "Storycraft · Distillation: Frames the takeaway before any supporting evidence."
+    },
+    {
+      "id": "switz-06",
+      "category": "custom",
+      "term": "Fix the false friend: \"Eventually, we might need to restructure the debt if rates stay high.\"",
+      "definition": "\"Potentially, we may need to restructure the debt if rates stay high.\"",
+      "example": "We may eventually restructure the facility, though it isn't necessary this quarter.",
+      "note": "L1 Transfer ('eventuell'): In English, 'eventually' means 'in the end / over time', whereas 'eventuell' translates to 'potentially' or 'possibly'."
+    },
+    {
+      "id": "switz-07",
+      "category": "custom",
+      "term": "C1 Fractional CFO Upgrade: \"The numbers show the company is losing money because costs grew faster than sales.\"",
+      "definition": "\"The P&L points to margin compression—operating costs have outpaced top-line growth.\"",
+      "example": "Until we address margin compression, scaling revenue will only amplify the cash burn.",
+      "note": "Executive Register: 'Margin compression' and 'outpaced top-line growth' distill a 15-word explanation into crisp CFO shorthand."
+    },
+    {
+      "id": "switz-08",
+      "category": "custom",
+      "term": "Clarifying Mid-Thought: What do you say when an explanation starts feeling tangled?",
+      "definition": "\"Let me put that more simply—the takeaway is [X].\"",
+      "example": "Let me put that more simply—if we don't fix collections, profitability on paper won't save cash flow.",
+      "note": "Self-Correction with Authority: Resetting openly reads as strategic clarity, never as a language slip."
+    }
+  ]
+}
