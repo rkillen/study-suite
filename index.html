@@ -1384,7 +1384,11 @@
         clientProfile.scenarios = incoming.scenarios;
       }
       if (Array.isArray(incoming.customCards)) {
-        state.customCards = [...state.customCards, ...incoming.customCards.filter(c => !state.customCards.some(x => x.id === c.id))];
+        const incomingIds = new Set(incoming.customCards.map(c => c.id));
+        state.customCards = [
+          ...incoming.customCards,
+          ...state.customCards.filter(c => !incomingIds.has(c.id))
+        ];
       }
     }
 
