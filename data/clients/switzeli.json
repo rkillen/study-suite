@@ -60,6 +60,26 @@
       "prompt": "Share a brief story from living across Latvia and Switzerland—or from your travels—where a cultural contrast revealed something unexpected about trust, incentives, or decision-making."
     }
   ],
+  "beachcombing": {
+    "tier1": [
+      "Morning mist over Lake Zurich",
+      "A handwritten ledger beside an espresso",
+      "Rye bread and cold Baltic wind",
+      "A silent train compartment at 7:00 AM"
+    ],
+    "tier2": [
+      "A founder defending a flawed forecast",
+      "A scholar debating ethics over coffee",
+      "A mentor who asks only one sharp question",
+      "A boardroom ten minutes before a vote"
+    ],
+    "tier3": [
+      "Stewardship (amanah) versus short-term profit",
+      "Why certainty is often an illusion in finance",
+      "Distilling complexity without losing truth",
+      "What separates composure from detachment"
+    ]
+  },
   "customCards": [
     {
       "id": "switz-01",
