@@ -1,0 +1,136 @@
+{
+  "clientId": "ukrcountry",
+  "profileName": "UkrCountry — Marketing, Media Buying & Fluent Storytelling (B2 → B2+)",
+  "watchOuts": [
+    {
+      "tag": "Grammar Gap · Articles ('A / An / The')",
+      "title": "Countable Singular Nouns Always Need a Determiner",
+      "detail": "Because Ukrainian has no articles, singular countable nouns often slip out bare ('We launched new campaign for brand'). Always anchor singular countable nouns with 'a', 'the', 'my', or 'this': 'We launched a new campaign for the brand.'"
+    },
+    {
+      "tag": "Grammar Gap · Tense Consistency",
+      "title": "Past Simple for Finished Campaigns vs. Present Perfect for Ongoing Results",
+      "detail": "Keep finished actions locked in Past Simple ('Last month we tested three creatives and cut CPA by 18%') and use Present Perfect when connecting past work to right now ('Conversions have climbed steadily since Tuesday')."
+    },
+    {
+      "tag": "L1 Transfer · Marketing Uncountables",
+      "title": "'Feedback', 'Traffic', 'Data' & 'Advice' Never Take '-s'",
+      "detail": "In ad purchasing and client calls, keep uncountable nouns singular with 'much' or 'a lot of' rather than plural '-s': 'We got great feedback on the video ad' (not 'feedbacks') and 'a lot of traffic' (not 'traffics')."
+    },
+    {
+      "tag": "Prepositions · Media & Metrics",
+      "title": "'Spend On', 'Invest In', 'Increase By' & 'On Social Media'",
+      "detail": "Lock in natural marketing preposition pairs: we spend budget *on* ads, invest *in* creative testing, see CTR rise *by* 2%, and launch campaigns *on* Instagram or TikTok (not 'in' social media)."
+    },
+    {
+      "tag": "Vocabulary Expansion · B2 Range",
+      "title": "Upgrading 'Good / Bad / Big' Results with Crisp Marketing Verbs",
+      "detail": "Replace basic adjectives ('The ad had good results', 'Costs got bigger') with natural B2+ verbs and collocations: 'The creative outperformed benchmarks', 'Acquisition costs spiked', or 'Engagement took off.'"
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "Pitching a Fresh Creative Angle for a Lifestyle Brand",
+      "category": "Marketing & Ad Purchasing · Creative Pitch",
+      "prompt": "A client's current ad set is experiencing creative fatigue and rising costs. Pitch two fresh visual or messaging angles in an upbeat, confident tone—using Past Simple for last week's test results and crisp marketing verbs like 'boost', 'target', and 'convert'."
+    },
+    {
+      "title": "Explaining a Sudden Ad Spend Spike Without Stress",
+      "category": "Media Buying · Client Update",
+      "prompt": "Walk a brand manager through why cost-per-click jumped over the weekend and how you already reallocated the budget. Keep your articles ('a', 'the') sharp and explain the fix in three clear, positive steps."
+    },
+    {
+      "title": "Spotting a Viral Trend Before It Peaks",
+      "category": "Social Culture · Trend Storytelling",
+      "prompt": "Tell a lively story about a recent trend, reel, or brand campaign that caught your eye—and explain why it connected with audiences in their 20s while another big-budget ad fell flat."
+    },
+    {
+      "title": "Planning a Dream Weekend Escape Outside the City",
+      "category": "Lifestyle & Travel · Upbeat Conversation",
+      "prompt": "Describe an ideal weekend getaway with friends—from the playlist and coffee stops to the countryside scenery. Focus on smooth past-to-present storytelling and natural descriptive vocabulary."
+    },
+    {
+      "title": "Negotiating Better Placement Rates with a Media Partner",
+      "category": "Ad Purchasing · Confident Communication",
+      "prompt": "You are booking a multi-week sponsorship package and want bonus story placements included. Make a warm, persuasive case for why a long-term partnership benefits both sides."
+    }
+  ],
+  "beachcombing": {
+    "tier1": [
+      "Iced matcha on a sunny Kyiv terrace",
+      "A moodboard covered in bold color palettes",
+      "Golden hour light through a train window",
+      "A playlist built for a spontaneous road trip"
+    ],
+    "tier2": [
+      "A creative director who loves bold ideas",
+      "A small local brand ready for its first big launch",
+      "Friends debating where to travel next over brunch",
+      "A content creator filming in the middle of a busy street"
+    ],
+    "tier3": [
+      "Why authenticity beats polished perfection in modern ads",
+      "What makes a story memorable in the first three seconds",
+      "Finding creative energy outside of screen time",
+      "How small daily rituals keep work feeling light"
+    ]
+  },
+  "customCards": [
+    {
+      "id": "ukrcountry-01",
+      "category": "custom",
+      "term": "Fix the articles & uncountable noun: \"Yesterday we launched new ad and got great feedbacks from client.\"",
+      "definition": "\"Yesterday we launched a new ad and got great feedback from the client.\"",
+      "example": "We tested a fresh headline on Tuesday and received positive feedback right away.",
+      "note": "Articles + Uncountables: Singular countable 'ad' and 'client' need 'a / the', while 'feedback' never takes '-s'."
+    },
+    {
+      "id": "ukrcountry-02",
+      "category": "custom",
+      "term": "B2 Vocabulary Upgrade: \"Our new TikTok video had very good results and brought many new visitors.\"",
+      "definition": "\"Our new TikTok creative outperformed expectations and drove a surge in traffic.\"",
+      "example": "Short-form video consistently drives high-intent traffic to the landing page.",
+      "note": "Marketing Collocations: 'Outperform expectations' and 'drive traffic' sound natural and confident."
+    },
+    {
+      "id": "ukrcountry-03",
+      "category": "custom",
+      "term": "Fix the prepositions: \"We spent half of budget in Instagram ads, and clicks increased on 15%.\"",
+      "definition": "\"We spent half of the budget on Instagram ads, and clicks increased by 15%.\"",
+      "example": "Shifting spend onto short video boosted our click-through rate by 15%.",
+      "note": "Preposition Pairs: Spend money *on* a platform, and measure percentage changes with *by*."
+    },
+    {
+      "id": "ukrcountry-04",
+      "category": "custom",
+      "term": "Fix the verb tense: \"Last week we pause the expensive campaign because CPA goes too high.\"",
+      "definition": "\"Last week we paused the expensive campaign because CPA went too high.\"",
+      "example": "Once we paused the underperforming ad set, overall return on ad spend recovered.",
+      "note": "Past Simple Consistency: Finished actions anchored to 'last week' stay in Past Simple throughout."
+    },
+    {
+      "id": "ukrcountry-05",
+      "category": "custom",
+      "term": "B2 Vocabulary Upgrade: \"People are tired of seeing the same ad again and again, so they ignore it.\"",
+      "definition": "\"The audience is experiencing ad fatigue, so engagement is dropping off.\"",
+      "example": "Whenever ad fatigue sets in, we rotate in fresh user-generated creatives.",
+      "note": "Industry Lexis: 'Ad fatigue' and 'drop off' express a full sentence in two crisp phrases."
+    },
+    {
+      "id": "ukrcountry-06",
+      "category": "custom",
+      "term": "Fix the grammar & phrasing: \"I am working in digital marketing since three years, and I really enjoy to test creatives.\"",
+      "definition": "\"I've been working in digital marketing for three years, and I really enjoy testing creatives.\"",
+      "example": "I've been managing paid social campaigns for three years and love experimenting with hooks.",
+      "note": "Present Perfect Continuous + Gerunds: Use 'have been + -ing' with 'for' (duration), and follow 'enjoy' with '-ing'."
+    },
+    {
+      "id": "ukrcountry-07",
+      "category": "custom",
+      "term": "B2 Vocabulary Upgrade: \"The landing page wasn't clear, so many users left without buying anything.\"",
+      "definition": "\"The landing page lacked a clear call to action, so users bounced before converting.\"",
+      "example": "Simplifying the checkout flow kept visitors from bouncing on mobile.",
+      "note": "Conversion Lexis: 'Call to action', 'bounce', and 'convert' are everyday B2+ staples in media buying."
+    }
+  ]
+}
