@@ -1,0 +1,648 @@
+{
+  "version": "2.1",
+  "generatedAt": "2026-11-20T15:27:10.662Z",
+  "beachcombing": {
+    "tier1": [
+      "Apple",
+      "Bicycle",
+      "Harbor",
+      "Lantern",
+      "River",
+      "Tent",
+      "Lighthouse",
+      "Gravel",
+      "Campfire",
+      "Key",
+      "Bridge",
+      "Orchard",
+      "Compass",
+      "Window",
+      "Clocktower",
+      "Apron",
+      "Staircase",
+      "Postcard",
+      "Raincoat",
+      "Keystone"
+    ],
+    "tier2": [
+      "Astronaut",
+      "Detective",
+      "Baker",
+      "Gardener",
+      "Castaway",
+      "Serene",
+      "Neon",
+      "Hidden",
+      "Timeless",
+      "Bustling",
+      "Lighthouse Keeper",
+      "Apprentice",
+      "Archivist",
+      "Crossroads",
+      "Observatory",
+      "Courtyard",
+      "Train Station",
+      "Workshop"
+    ],
+    "tier3": [
+      "Absolution",
+      "Belonging",
+      "Consequence",
+      "Entropy",
+      "Fragility",
+      "Intuition",
+      "Longing",
+      "Resilience",
+      "Solitude",
+      "Wonder",
+      "Momentum",
+      "Legacy",
+      "Threshold",
+      "Integrity",
+      "Silence",
+      "Transition",
+      "Stewardship",
+      "Clarity"
+    ]
+  },
+  "preOutliningQuestions": [
+    "What does success mean to you at this stage of your life?",
+    "How did you choose your current career path?",
+    "What do you wish you had known ten years ago?",
+    "Describe a time you changed your mind on an important issue.",
+    "What quality do you value most in a leader or mentor?",
+    "How do you decide when to take a calculated risk versus playing it safe?",
+    "What is a common misconception people hold about your industry?",
+    "How has a book, conversation, or travel experience shifted your worldview?",
+    "What role does patience play in long-term professional growth?",
+    "If you could redesign one aspect of modern work culture, what would it be?"
+  ],
+  "storyPrompts": [
+    "How/Why did your business get started?",
+    "Describe a successful client (internal or external) transaction.",
+    "Describe the future story of the successful accomplishment of your organizational vision.",
+    "Share a story illustrating one of your organization's values.",
+    "What led you to your current field of work?",
+    "What are you passionate about outside of work?",
+    "Share a failure that you learned from and are better because of.",
+    "What moment illustrates one of your core characteristics?",
+    "What experience best illustrates why you do what you do?"
+  ],
+  "flashcards": {
+    "oxford": [
+      {
+        "id": "ox1",
+        "term": "Articulate",
+        "definition": "Able to express complex ideas clearly, fluently, and coherently.",
+        "example": "She articulated the strategic rationale behind the merger in three concise points.",
+        "note": ""
+      },
+      {
+        "id": "ox2",
+        "term": "Substantiate",
+        "definition": "To provide concrete evidence or proof to support a claim.",
+        "example": "Can you substantiate those projections with data from last quarter?",
+        "note": ""
+      },
+      {
+        "id": "ox3",
+        "term": "Mitigate",
+        "definition": "To make something harmful, severe, or risky less intense.",
+        "example": "Diversifying our suppliers helped mitigate the impact of shipping delays.",
+        "note": ""
+      },
+      {
+        "id": "ox4",
+        "term": "Nuance",
+        "definition": "A subtle distinction or shade of meaning in expression or judgment.",
+        "example": "Effective cross-cultural leadership requires sensitivity to unspoken nuance.",
+        "note": ""
+      },
+      {
+        "id": "ox5",
+        "term": "Pragmatic",
+        "definition": "Dealing with things sensibly and realistically based on practical considerations.",
+        "example": "We took a pragmatic approach to launching the pilot before scaling globally.",
+        "note": ""
+      },
+      {
+        "id": "ox6",
+        "term": "Catalyst",
+        "definition": "A person or event that precipitates significant change or action.",
+        "example": "That unexpected setback served as a catalyst for redesigning our workflow.",
+        "note": ""
+      },
+      {
+        "id": "ox7",
+        "term": "Resilient",
+        "definition": "Able to recover quickly from difficulty or adapt well to adversity.",
+        "example": "Resilient teams treat early mistakes as diagnostic feedback rather than defeat.",
+        "note": ""
+      },
+      {
+        "id": "ox8",
+        "term": "Ambiguous",
+        "definition": "Open to more than one interpretation; not having one obvious meaning.",
+        "example": "The initial client brief was somewhat ambiguous, so we scheduled a discovery call.",
+        "note": ""
+      },
+      {
+        "id": "ox9",
+        "term": "Consensus",
+        "definition": "General agreement among a group of stakeholders.",
+        "example": "It took two rounds of dialogue to build consensus around the new timeline.",
+        "note": ""
+      },
+      {
+        "id": "ox10",
+        "term": "Bolster",
+        "definition": "To support, strengthen, or reinforce an argument or position.",
+        "example": "Client testimonials helped bolster our credibility in a new market.",
+        "note": ""
+      },
+      {
+        "id": "ox11",
+        "term": "Conducive",
+        "definition": "Making a certain situation or outcome likely or possible.",
+        "example": "A calm, unhurried environment is far more conducive to deep reflection.",
+        "note": ""
+      },
+      {
+        "id": "ox12",
+        "term": "Discern",
+        "definition": "To perceive, recognize, or distinguish something subtle with clarity.",
+        "example": "Experienced facilitators can discern hesitation behind a polite agreement.",
+        "note": ""
+      },
+      {
+        "id": "ox13",
+        "term": "Enduring",
+        "definition": "Continuing or long-lasting over time.",
+        "example": "Trust is the most enduring asset in any advisory relationship.",
+        "note": ""
+      },
+      {
+        "id": "ox14",
+        "term": "Feasible",
+        "definition": "Possible and practical to achieve easily or conveniently.",
+        "example": "Let's test whether a two-week turnaround is operationally feasible.",
+        "note": ""
+      },
+      {
+        "id": "ox15",
+        "term": "Inherent",
+        "definition": "Existing in something as a permanent, essential, or characteristic attribute.",
+        "example": "Every entrepreneurial venture carries an inherent degree of uncertainty.",
+        "note": ""
+      },
+      {
+        "id": "ox16",
+        "term": "Lucrative",
+        "definition": "Producing a great deal of profit or tangible return.",
+        "example": "They pivoted away from low-margin volume toward a more lucrative niche.",
+        "note": ""
+      },
+      {
+        "id": "ox17",
+        "term": "Meticulous",
+        "definition": "Showing great attention to detail; very careful and precise.",
+        "example": "Her meticulous preparation was evident throughout the board presentation.",
+        "note": ""
+      },
+      {
+        "id": "ox18",
+        "term": "Obsolete",
+        "definition": "No longer produced or used; out of date.",
+        "example": "Rapid automation has rendered several legacy reporting steps obsolete.",
+        "note": ""
+      },
+      {
+        "id": "ox19",
+        "term": "Paramount",
+        "definition": "More important than anything else; supreme.",
+        "example": "Maintaining confidentiality is paramount when coaching senior executives.",
+        "note": ""
+      },
+      {
+        "id": "ox20",
+        "term": "Scrutinize",
+        "definition": "To examine or inspect closely and thoroughly.",
+        "example": "Investors will scrutinize your unit economics before committing capital.",
+        "note": ""
+      },
+      {
+        "id": "ox21",
+        "term": "Tangible",
+        "definition": "Perceptible by touch; clear and definite; real.",
+        "example": "Clients appreciate seeing tangible progress within the first thirty days.",
+        "note": ""
+      },
+      {
+        "id": "ox22",
+        "term": "Ubiquitous",
+        "definition": "Present, appearing, or found everywhere.",
+        "example": "Asynchronous collaboration tools have become ubiquitous across distributed teams.",
+        "note": ""
+      },
+      {
+        "id": "ox23",
+        "term": "Viable",
+        "definition": "Capable of working successfully; feasible.",
+        "example": "We narrowed twelve proposals down to three commercially viable options.",
+        "note": ""
+      },
+      {
+        "id": "ox24",
+        "term": "Alleviate",
+        "definition": "To make suffering, deficiency, or a problem less severe.",
+        "example": "Clear onboarding documentation helped alleviate early client friction.",
+        "note": ""
+      }
+    ],
+    "phrasal": [
+      {
+        "id": "pv1",
+        "term": "Boil down to",
+        "definition": "To have something as the main or essential point.",
+        "example": "Ultimately, most retention challenges boil down to unmet expectations.",
+        "note": ""
+      },
+      {
+        "id": "pv2",
+        "term": "Zero in on",
+        "definition": "To focus all attention or effort precisely on a specific target.",
+        "example": "Let's zero in on the bottleneck slowing down client approvals.",
+        "note": ""
+      },
+      {
+        "id": "pv3",
+        "term": "Phase out",
+        "definition": "To gradually discontinue a practice, product, or system in stages.",
+        "example": "We plan to phase out manual spreadsheets over the next two quarters.",
+        "note": ""
+      },
+      {
+        "id": "pv4",
+        "term": "Come across as",
+        "definition": "To give a particular impression to others through tone or demeanor.",
+        "example": "Over-rehearsed answers can sometimes come across as rigid in interviews.",
+        "note": ""
+      },
+      {
+        "id": "pv5",
+        "term": "Account for",
+        "definition": "To explain the reason for something, or constitute a proportion.",
+        "example": "Repeat referrals account for nearly sixty percent of our annual growth.",
+        "note": ""
+      },
+      {
+        "id": "pv6",
+        "term": "Bring about",
+        "definition": "To cause something to happen or make a change occur.",
+        "example": "Listening closely to frontline staff brought about our best process improvements.",
+        "note": ""
+      },
+      {
+        "id": "pv7",
+        "term": "Iron out",
+        "definition": "To resolve minor difficulties, misunderstandings, or remaining details.",
+        "example": "We met briefly on Monday to iron out the final contract terms.",
+        "note": ""
+      },
+      {
+        "id": "pv8",
+        "term": "Step up",
+        "definition": "To take on greater responsibility or improve performance when needed.",
+        "example": "When our lead facilitator fell ill, two senior coaches stepped up seamlessly.",
+        "note": ""
+      },
+      {
+        "id": "pv9",
+        "term": "Rule out",
+        "definition": "To exclude something as a possibility.",
+        "example": "We shouldn't rule out a phased rollout until we review the budget.",
+        "note": ""
+      },
+      {
+        "id": "pv10",
+        "term": "Follow through",
+        "definition": "To continue an action or commitment until it is completed.",
+        "example": "Credibility is built when leaders consistently follow through on small promises.",
+        "note": ""
+      },
+      {
+        "id": "pv11",
+        "term": "Weigh in on",
+        "definition": "To offer an opinion or perspective during a discussion.",
+        "example": "Several department heads weighed in on the proposed hybrid schedule.",
+        "note": ""
+      },
+      {
+        "id": "pv12",
+        "term": "Draw on",
+        "definition": "To use one's experience, knowledge, or resources as a source.",
+        "example": "In her keynote, she drew on fifteen years of cross-border negotiations.",
+        "note": ""
+      },
+      {
+        "id": "pv13",
+        "term": "Narrow down",
+        "definition": "To reduce the number of possibilities or choices.",
+        "example": "Let's narrow down our core values to three actionable behaviors.",
+        "note": ""
+      },
+      {
+        "id": "pv14",
+        "term": "Push back on",
+        "definition": "To resist, question, or challenge a proposal or assumption constructively.",
+        "example": "Good advisors push back on assumptions that haven't been tested.",
+        "note": ""
+      },
+      {
+        "id": "pv15",
+        "term": "Map out",
+        "definition": "To plan or arrange something in clear, structured detail.",
+        "example": "Before speaking, take thirty seconds to map out your opening and close.",
+        "note": ""
+      },
+      {
+        "id": "pv16",
+        "term": "Fall short of",
+        "definition": "To fail to reach an expected standard or target.",
+        "example": "The initial prototype fell short of our usability benchmarks.",
+        "note": ""
+      },
+      {
+        "id": "pv17",
+        "term": "Taper off",
+        "definition": "To gradually decrease in intensity, volume, or frequency.",
+        "example": "Inbound inquiries usually taper off slightly in late August.",
+        "note": ""
+      },
+      {
+        "id": "pv18",
+        "term": "Double down on",
+        "definition": "To strengthen one's commitment to a strategy or effort.",
+        "example": "Rather than chasing new channels, we doubled down on client referrals.",
+        "note": ""
+      },
+      {
+        "id": "pv19",
+        "term": "Brush up on",
+        "definition": "To refresh or improve knowledge or skills that have grown rusty.",
+        "example": "I spent the morning brushing up on industry terminology before the panel.",
+        "note": ""
+      },
+      {
+        "id": "pv20",
+        "term": "Lay out",
+        "definition": "To explain or present ideas clearly and systematically.",
+        "example": "He laid out the three-stage roadmap with remarkable clarity.",
+        "note": ""
+      },
+      {
+        "id": "pv21",
+        "term": "Carry out",
+        "definition": "To perform or execute a task, study, or plan.",
+        "example": "We carried out twenty structured interviews before drafting the curriculum.",
+        "note": ""
+      }
+    ],
+    "idioms": [
+      {
+        "id": "id1",
+        "term": "On a knife's edge",
+        "definition": "In a very precarious or uncertain situation where the outcome could go either way.",
+        "example": "Negotiations remained on a knife's edge until the final hour.",
+        "note": "Idioms & Metaphors"
+      },
+      {
+        "id": "id2",
+        "term": "Read between the lines",
+        "definition": "To perceive an implicit or unstated meaning beneath literal words.",
+        "example": "In executive negotiations, you often have to read between the lines to spot real priorities.",
+        "note": "Idioms & Metaphors"
+      },
+      {
+        "id": "id3",
+        "term": "A double-edged sword",
+        "definition": "Something that offers both notable advantages and potential drawbacks.",
+        "example": "Rapid expansion is a double-edged sword if quality control lags behind.",
+        "note": "Idioms & Metaphors"
+      },
+      {
+        "id": "id4",
+        "term": "Miss the mark",
+        "definition": "To fail to achieve the intended effect, accuracy, or core point.",
+        "example": "Generic sales pitches usually miss the mark with seasoned decision-makers.",
+        "note": "Idioms & Metaphors"
+      },
+      {
+        "id": "id5",
+        "term": "Err on the side of caution",
+        "definition": "To deliberately choose the safer, more prudent course of action.",
+        "example": "When estimating delivery timelines, we prefer to err on the side of caution.",
+        "note": "Idioms & Metaphors"
+      },
+      {
+        "id": "id6",
+        "term": "Food for thought",
+        "definition": "An idea or observation that warrants serious reflection.",
+        "example": "Her question about long-term stewardship gave the leadership team plenty of food for thought.",
+        "note": "Idioms & Metaphors"
+      },
+      {
+        "id": "id7",
+        "term": "Move the needle",
+        "definition": "To make a noticeable, measurable difference in performance or outcomes.",
+        "example": "Focus on the two habits that genuinely move the needle rather than busywork.",
+        "note": "Business Idioms"
+      },
+      {
+        "id": "id8",
+        "term": "On the same page",
+        "definition": "In agreement or sharing the same understanding of a situation.",
+        "example": "A five-minute pre-brief ensures everyone enters the client meeting on the same page.",
+        "note": "Business Idioms"
+      },
+      {
+        "id": "id9",
+        "term": "Back to the drawing board",
+        "definition": "Returning to the planning stage after an approach fails to work.",
+        "example": "When early user testing stalled, we went back to the drawing board with fresh humility.",
+        "note": "Business Idioms"
+      },
+      {
+        "id": "id10",
+        "term": "Cut to the chase",
+        "definition": "To get directly to the most important point without unnecessary preamble.",
+        "example": "With only ten minutes left on the agenda, she cut straight to the chase.",
+        "note": "Idioms & Metaphors"
+      },
+      {
+        "id": "id11",
+        "term": "Weather the storm",
+        "definition": "To endure and survive a period of serious difficulty or disruption.",
+        "example": "Strong cash reserves and transparent communication helped the firm weather the storm.",
+        "note": "Weather Metaphors"
+      },
+      {
+        "id": "id12",
+        "term": "Gain traction",
+        "definition": "To begin to attract support, momentum, or measurable progress.",
+        "example": "The advisory program gained traction once early participants shared their results.",
+        "note": "Motion Metaphors"
+      },
+      {
+        "id": "id13",
+        "term": "Connect the dots",
+        "definition": "To synthesize separate pieces of information into a coherent insight.",
+        "example": "Great storytellers help their audience connect the dots between data and human impact.",
+        "note": "Idioms & Metaphors"
+      },
+      {
+        "id": "id14",
+        "term": "Touch base",
+        "definition": "To briefly make contact or reconnect with someone for an update.",
+        "example": "Let's touch base next Thursday after you've reviewed the draft proposal.",
+        "note": "Sports Metaphors"
+      },
+      {
+        "id": "id15",
+        "term": "Raise the bar",
+        "definition": "To set a higher standard of quality or performance.",
+        "example": "Each cohort of facilitators has raised the bar for thoughtful dialogue.",
+        "note": "Sports Metaphors"
+      },
+      {
+        "id": "id16",
+        "term": "In the driver's seat",
+        "definition": "In control of a situation or responsible for guiding direction.",
+        "example": "Clear frameworks put clients in the driver's seat of their own communication growth.",
+        "note": "Travel Metaphors"
+      },
+      {
+        "id": "id17",
+        "term": "Silver lining",
+        "definition": "A hopeful or constructive aspect within an otherwise difficult situation.",
+        "example": "The silver lining of losing that bid was discovering a far better strategic niche.",
+        "note": "Weather Metaphors"
+      },
+      {
+        "id": "id18",
+        "term": "Play devil's advocate",
+        "definition": "To argue a counter-perspective in order to test the strength of an idea.",
+        "example": "Before finalizing the strategy, let's play devil's advocate and examine potential blind spots.",
+        "note": "Idioms & Metaphors"
+      },
+      {
+        "id": "id19",
+        "term": "Test the waters",
+        "definition": "To try out an idea cautiously to gauge reaction before full commitment.",
+        "example": "We tested the waters with a small workshop series before launching the full curriculum.",
+        "note": "Water Metaphors"
+      },
+      {
+        "id": "id20",
+        "term": "Steer clear of",
+        "definition": "To deliberately avoid a topic, risk, or unproductive pattern.",
+        "example": "Strong narratives steer clear of jargon and anchor ideas in concrete scenes.",
+        "note": "Navigation Metaphors"
+      },
+      {
+        "id": "id21",
+        "term": "Bridge the gap",
+        "definition": "To reduce a divide or connect two distinct perspectives or skill levels.",
+        "example": "Structured practice bridges the gap between passive comprehension and spontaneous fluency.",
+        "note": "Architecture Metaphors"
+      }
+    ],
+    "interview": [
+      {
+        "id": "iq1",
+        "term": "Tell me about yourself and what led you to your current work.",
+        "definition": "Frame as a 3-part arc: Past Foundation → Pivot / Turning Point → Present Value & Future Direction.",
+        "example": "\"My background began in operations, where I noticed technical teams often struggled to translate insights for clients—which led me into advisory facilitation...\"",
+        "note": "Classic Interview Question"
+      },
+      {
+        "id": "iq2",
+        "term": "Describe a professional failure or setback and what you learned from it.",
+        "definition": "Own the misjudgment candidly without blame, explain the structural adjustment you made, and show the lasting benefit.",
+        "example": "\"Early on, I underestimated discovery time on a complex rollout. Now I build structured alignment checkpoints upfront, which has prevented scope drift ever since.\"",
+        "note": "Classic Interview Question"
+      },
+      {
+        "id": "iq3",
+        "term": "What is your greatest professional strength, and when can it become a liability?",
+        "definition": "Pair a core strength with high self-awareness of its overuse ('double-edged sword') and how you regulate it.",
+        "example": "\"My meticulousness ensures high accuracy, though I've learned to guard against over-polishing early drafts when rapid feedback is more valuable.\"",
+        "note": "Classic Interview Question"
+      },
+      {
+        "id": "iq4",
+        "term": "Tell me about a time you had to influence a stakeholder without formal authority.",
+        "definition": "Highlight active listening, uncovering the stakeholder's underlying concern, and framing the solution around shared goals.",
+        "example": "\"Rather than pushing our timeline, I asked what risks concerned them most and redesigned the pilot to mitigate those exact issues.\"",
+        "note": "Classic Interview Question"
+      },
+      {
+        "id": "iq5",
+        "term": "How do you handle ambiguity or shifting priorities under pressure?",
+        "definition": "Demonstrate calm triage: separating fixed constraints from variables, clarifying what is known, and taking iterative action.",
+        "example": "\"When priorities shift rapidly, I zero in on the two deliverables that move the needle most and confirm alignment before executing.\"",
+        "note": "Classic Interview Question"
+      },
+      {
+        "id": "iq6",
+        "term": "Describe a difficult client or colleague relationship you successfully turned around.",
+        "definition": "Focus on empathy, de-escalation, and concrete follow-through rather than personal friction.",
+        "example": "\"By scheduling a candid reset conversation and reading between the lines of their frustration, we uncovered a communication gap and rebuilt trust.\"",
+        "note": "Classic Interview Question"
+      },
+      {
+        "id": "iq7",
+        "term": "What is a decision you made that was unpopular at the time, and how did it turn out?",
+        "definition": "Explain the long-term principle behind the call, how you communicated the 'why', and the eventual outcome.",
+        "example": "\"We chose to pause new feature requests for a month to resolve core reliability issues—a tough call initially, but client retention rose markedly afterward.\"",
+        "note": "Classic Interview Question"
+      },
+      {
+        "id": "iq8",
+        "term": "Where do you see your work evolving over the next three to five years?",
+        "definition": "Connect your current mastery to deeper impact, mentorship, or strategic leadership rather than rigid job titles.",
+        "example": "\"I aim to deepen my work at the intersection of executive communication and cross-cultural leadership, scaling frameworks that help teams collaborate clearly.\"",
+        "note": "Classic Interview Question"
+      },
+      {
+        "id": "iq9",
+        "term": "Tell me about a time you received critical feedback that surprised you.",
+        "definition": "Show non-defensive curiosity: pause, verify the pattern, and turn the critique into a visible habit upgrade.",
+        "example": "\"A mentor noted that my concise emails sometimes came across as abrupt—so I began opening with brief context before diving into action items.\"",
+        "note": "Classic Interview Question"
+      },
+      {
+        "id": "iq10",
+        "term": "Why should we choose you over other equally qualified candidates?",
+        "definition": "Synthesize your unique combination of skills, cross-functional perspective, and proven track record of execution.",
+        "example": "\"Beyond domain fluency, I bring the ability to bridge technical execution and executive storytelling—turning complex strategy into clear team alignment.\"",
+        "note": "Classic Interview Question"
+      },
+      {
+        "id": "iq11",
+        "term": "Describe a project or achievement you are particularly proud of.",
+        "definition": "Anchor the story in stakes, obstacles overcome, collaborative execution, and measurable human or business impact.",
+        "example": "\"Launching our cross-regional advisory cohort required aligning four time zones, yet 95% of participants reported measurable gains within sixty days.\"",
+        "note": "Classic Interview Question"
+      },
+      {
+        "id": "iq12",
+        "term": "What questions do you have for us?",
+        "definition": "Ask forward-looking questions about strategic priorities, team culture, and what success looks like in the first 90 days.",
+        "example": "\"Looking ahead six months, what is the single most important challenge you hope the person in this role will help solve?\"",
+        "note": "Classic Interview Question"
+      }
+    ]
+  },
+  "specialtyPacks": []
+}
