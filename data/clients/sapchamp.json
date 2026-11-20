@@ -1,0 +1,139 @@
+{
+  "clientId": "sapchamp",
+  "profileName": "SapChamp — Executive Tech & Service Leadership (B2.4 → C1)",
+  "watchOuts": [
+    {
+      "tag": "First Conditional · 6% Mastery",
+      "title": "Keep Present Simple in the 'If' Clause (No 'Will' After 'If')",
+      "detail": "Portuguese future subjunctive ('se nós migrarmos...') often pulls 'will' into the 'if' clause ('If we will migrate early, we will save...'). Keep the condition in Present Simple and put 'will' only in the result: 'If we migrate the core ERP before Q3, we'll cut downtime by 40%.'"
+    },
+    {
+      "tag": "Reported Speech · 8% Mastery",
+      "title": "Backshifting Tense & Dropping 'That' Overhead in Executive Updates",
+      "detail": "When summarizing board or stakeholder conversations in interviews, backshift the verb cleanly ('The CEO told me the US unit was winding down' — not 'is winding down') and keep 'say' vs. 'tell' sharp ('They told us...' vs. 'They said that...')."
+    },
+    {
+      "tag": "Zero Conditional · 15% Mastery",
+      "title": "Present Simple + Present Simple for System Rules & Tech Architecture",
+      "detail": "When explaining how your service or tech stack operates reliably, anchor both halves in Present Simple rather than mixing 'would' or 'will': 'When an API latency spike hits, the failover cluster reroutes traffic automatically.'"
+    },
+    {
+      "tag": "Modals of Obligation · 21% Mastery",
+      "title": "'Have to' / 'Need to' vs. 'Must' & 'Don't Have to' vs. 'Mustn't'",
+      "detail": "In US executive interviews, 'must' can sound overly rigid, while 'mustn't' means forbidden rather than optional. Use 'had to' for past constraints ('We had to rebuild the support tier in 60 days') and 'don't have to' for zero obligation."
+    },
+    {
+      "tag": "Modals of Probability · 28% Mastery",
+      "title": "Calibrating Risk with 'Could', 'Might' & 'Should' (No 'To' After Modals)",
+      "detail": "Never insert 'to' after a modal ('It might to delay' → 'It might delay'). Use 'should' for high probability ('The rollout should stabilize by Friday') and 'could' or 'might' for realistic contingencies."
+    },
+    {
+      "tag": "Present Perfect Continuous · 44% Mastery",
+      "title": "'I've Been Living in Miami Since 2021' (Not 'I Am Living')",
+      "detail": "Portuguese 'moro em Miami desde 2021' triggers Present Continuous ('I am living here since 2021'). For actions that started in the past and are still active, lock into 'have/has been + -ing': 'I've been leading US service operations since 2021.'"
+    },
+    {
+      "tag": "L1 Transfer · Portuguese False Friends & Missing 'It'",
+      "title": "'Living' vs. 'Leaving', 'Actually' vs. 'Currently' & Dummy 'It'",
+      "detail": "Watch the short /ɪ/ vs. long /iː/ vowel pair ('living' in Miami vs. 'leaving' a company), use 'currently' instead of 'actually' (atual) for time, and always include 'it' as a subject ('It is critical to align...' — never 'Is critical...')."
+    },
+    {
+      "tag": "Pronunciation · Brazilian Portuguese Traps",
+      "title": "Crisp Ending Consonants, Retroflex 'R' & Resonant Chest Placement",
+      "detail": "Avoid adding a phantom '-ee' vowel after final stops ('tech' not 'tech-ee', 'support' not 'support-ee'), curl the tongue back for initial 'R' so 'role' and 'risk' don't sound like 'hole' and 'hisk', and drop pitch slightly from nasal/forward placement for executive gravitas."
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "Explaining the US Operations Wind-Down with Executive Composure",
+      "category": "High-Stakes Interview · Career Transition",
+      "prompt": "An executive recruiter asks why you are leaving your Chief Service & Technology Officer role after five years. Frame the US closure cleanly—highlighting what you built, what you've been leading since 2021, and why you're ready for a US-based enterprise challenge."
+    },
+    {
+      "title": "The Hands-On CSTO: Scaling Strategy While Still Coding When Needed",
+      "category": "High-Stakes Interview · Leadership Identity",
+      "prompt": "A CTO panel asks how you balance C-level service strategy with stepping in as an individual contributor during critical incidents. Tell a concise story using Zero and First Conditionals to explain your escalation philosophy."
+    },
+    {
+      "title": "Running a High-Tension Cross-Border Incident Standup",
+      "category": "Meeting Management · Stakeholder Alignment",
+      "prompt": "A major SAP integration is lagging two days before go-live, and engineering and client-success leads are talking past each other. Take control of the room, assign clear obligations ('need to' / 'have to'), and state realistic probability timelines ('should' / 'might')."
+    },
+    {
+      "title": "Retelling a Turnaround Story Under Pressure",
+      "category": "Storycraft · Executive Presence",
+      "prompt": "Tell a 90-second story about a failing client implementation or service bottleneck you rescued. Use Reported Speech to summarize what stakeholders initially warned you about, then walk through the decisive move that turned the account around."
+    },
+    {
+      "title": "Life Between Miami, Brazil & Global Tech Teams",
+      "category": "Culture & Travel · Warm Rapport",
+      "prompt": "An interviewer breaks the ice by asking what traveling back and forth between the US and Brazil has taught you about leadership and communication. Keep your pacing unhurried, hitting crisp ending consonants and natural Present Perfect Continuous."
+    }
+  ],
+  "customCards": [
+    {
+      "id": "sap-01",
+      "category": "custom",
+      "term": "Fix the tense & vowel: \"I am leaving in Miami since 2021, and I am working with cross-border tech teams.\"",
+      "definition": "\"I've been living in Miami since 2021, and I've been working with cross-border tech teams.\"",
+      "example": "I've been leading US service delivery since 2021.",
+      "note": "Present Perfect Continuous (44%) + Pronunciation: Use 'have been + -ing' with 'since', and keep 'living' (/lɪvɪŋ/) distinct from 'leaving' (/liːvɪŋ/)."
+    },
+    {
+      "id": "sap-02",
+      "category": "custom",
+      "term": "Fix the First Conditional: \"If the board will approve the budget Friday, we start migration Monday.\"",
+      "definition": "\"If the board approves the budget on Friday, we'll start the migration on Monday.\"",
+      "example": "If you bring me on board, I'll audit the service pipeline in my first 30 days.",
+      "note": "First Conditional (6%): Never put 'will' inside the 'if' clause—use Present Simple after 'if' and 'will' in the result clause."
+    },
+    {
+      "id": "sap-03",
+      "category": "custom",
+      "term": "Convert to Reported Speech: Executive said: \"We are closing the US operation next quarter.\"",
+      "definition": "\"Leadership told us that they were closing the US operation the following quarter.\"",
+      "example": "The board told me the decision was driven by global consolidation, not team performance.",
+      "note": "Reported Speech (8%): Backshift 'are closing' → 'were closing' and pair 'told' with a direct object ('told us / told me')."
+    },
+    {
+      "id": "sap-04",
+      "category": "custom",
+      "term": "Fix the Zero Conditional: \"When a critical ticket would come in, our SLA clock starts automatically.\"",
+      "definition": "\"When a critical ticket comes in, our SLA clock starts automatically.\"",
+      "example": "Whenever an integration fails, the monitoring layer alerts the on-call engineer immediately.",
+      "note": "Zero Conditional (15%): System rules and repeatable tech processes take Present Simple in both clauses."
+    },
+    {
+      "id": "sap-05",
+      "category": "custom",
+      "term": "Fix obligation & subject: \"Is mandatory that we must to stabilize the ERP before scaling.\"",
+      "definition": "\"It is essential that we stabilize the ERP before scaling.\" / \"We have to stabilize the ERP first.\"",
+      "example": "We didn't have to rebuild from scratch, so we saved four months of engineering time.",
+      "note": "Modals of Obligation (21%) + Dummy 'It': Never omit 'It' at the start of a sentence, and never put 'to' after 'must'."
+    },
+    {
+      "id": "sap-06",
+      "category": "custom",
+      "term": "Calibrate probability: \"The patch will maybe fix the latency, or it can to break the legacy connector.\"",
+      "definition": "\"The patch should fix the latency, though it could affect the legacy connector.\"",
+      "example": "Given our test coverage, deployment should go smoothly, though we might see minor latency.",
+      "note": "Modals of Probability (28%): Drop 'to' after modals, use 'should' for strong likelihood, and 'could / might' for risk."
+    },
+    {
+      "id": "sap-07",
+      "category": "custom",
+      "term": "Interview Reframe: \"My company is closing in the US and I'm freaking out because I need a job.\"",
+      "definition": "\"Our parent company is consolidating its US footprint, which creates a natural inflection point for my next leadership role.\"",
+      "example": "I'm proud of what we built in Miami, and I'm energized to bring that operational playbook to a US-focused enterprise.",
+      "note": "Executive Presence: Reframe external restructuring into calm, forward-looking momentum."
+    },
+    {
+      "id": "sap-08",
+      "category": "custom",
+      "term": "Pronunciation Drill: \"Our risk-free rollout requires rapid root-cause support.\"",
+      "definition": "Curl the tongue back for every initial 'R' (not 'H'), and clip final consonants cleanly ('risk', 'support' — no extra '-ee').",
+      "example": "Practice slowly at chest resonance: risk · rollout · requires · rapid · root-cause · support.",
+      "note": "Portuguese L1 Pronunciation: Anchoring 'R' and final stops eliminates the two biggest clarity distractors in US interviews."
+    }
+  ]
+}
