@@ -70,6 +70,26 @@
       "prompt": "An interviewer breaks the ice by asking what traveling back and forth between the US and Brazil has taught you about leadership and communication. Keep your pacing unhurried, hitting crisp ending consonants and natural Present Perfect Continuous."
     }
   ],
+  "beachcombing": {
+    "tier1": [
+      "Red blinking server rack at 2:00 AM",
+      "Miami rain hitting warm asphalt",
+      "A boarding pass between São Paulo and Florida",
+      "A clean terminal window after a hotfix"
+    ],
+    "tier2": [
+      "An exhausted on-call engineer on a bridge call",
+      "A skeptical CTO during a final-round interview",
+      "A client director whose go-live is slipping",
+      "A bilingual team bridging two time zones"
+    ],
+    "tier3": [
+      "Leading from the bridge versus coding in the trenches",
+      "Turning an unexpected career ending into momentum",
+      "Why calm clarity beats urgency in a crisis",
+      "Building trust across two cultures and languages"
+    ]
+  },
   "customCards": [
     {
       "id": "sap-01",
