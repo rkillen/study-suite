@@ -85,6 +85,26 @@
       "prompt": "Reflect on the difference between exchanging information and having a genuine dialogue. Use reflective verb patterns naturally ('avoid rushing', 'tend to listen', 'worth exploring')."
     }
   ],
+  "beachcombing": {
+    "tier1": [
+      "Mint tea pouring at dusk",
+      "Cedarwood smoke in the old medina",
+      "An unscheduled ferry crossing at dawn",
+      "Sun-warmed terracotta courtyard tiles"
+    ],
+    "tier2": [
+      "A merchant who never rushes a sale",
+      "An elder sharing tea after Friday prayer",
+      "A fellow traveler lost without a map",
+      "A quiet mountain guesthouse at dusk"
+    ],
+    "tier3": [
+      "The difference between stillness and hesitation",
+      "Hospitality as a moral obligation",
+      "What travel strips away from identity",
+      "Patience when plans unravel unexpectedly"
+    ]
+  },
   "customCards": [
     {
       "id": "mor-01",
