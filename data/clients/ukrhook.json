@@ -1,0 +1,144 @@
+{
+  "clientId": "ukrhook",
+  "profileName": "UkrHook — C2 Idiomatic Nuance, Systems Wit & Academic Polish (C+)",
+  "watchOuts": [
+    {
+      "tag": "C2 Lexical Precision · Idiomaticity",
+      "title": "Trading 'Correct Textbook English' for Native Subtext & Color",
+      "detail": "At C+, your grammar is airtight—the real edge lies in idiomatic economy and register shifts. Swap flat academic descriptors ('very complex', 'suddenly changed') for vivid, high-precision idioms ('a labyrinthine legacy codebase', 'moved the goalposts mid-sprint')."
+    },
+    {
+      "tag": "Subtle Slavic-to-C2 Polish · Articles & Collocations",
+      "title": "Zero-Article Generalizations vs. Specific System Instances",
+      "detail": "Even near-native Ukrainian speakers occasionally slip on abstract vs. concrete article boundaries in fast technical debate ('the distributed consensus' in general → 'distributed consensus', vs. 'the consensus algorithm we shipped')."
+    },
+    {
+      "tag": "Register Agility · CS Master's vs. Engineering Standup",
+      "title": "Code-Switching Between Formal Thesis Prose and Dry Developer Wit",
+      "detail": "Watch out for letting academic thesis phrasing ('furthermore, one must consider...') bleed into casual engineering banter, or vice versa. Master the pivot from dry, understated humor in standups to razor-sharp analytical prose in your defense."
+    },
+    {
+      "tag": "Idiomatic Prepositions & Phrasal Verbs",
+      "title": "Nuanced Phrasal Verbs That Carry Executive & Peer Punch",
+      "detail": "Elevate standard Latinate verbs with native phrasal equivalents where punchiness counts: 'iron out' edge cases, 'boil down to' a core invariant, 'shoehorn' a feature into an architecture, or 'double down on' an optimization."
+    },
+    {
+      "tag": "Delivery & Prosody · Understated Wit",
+      "title": "Deadpan Timing & Pitch Drop for Dry Humor",
+      "detail": "Native-level wit relies on contrast and timing—delivering an absurd technical metaphor ('duct-taping a rocket booster onto a bicycle') with calm, unhurried downward inflection makes the punchline land effortlessly."
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "Defending a Wild CS Master's Thesis Idea to a Skeptical Professor",
+      "category": "Academic Wit · Intellectual Sparring",
+      "prompt": "Pitch an unconventional computer science research angle over virtual coffee. Balance rigorous theoretical vocabulary with effortless, conversational idioms—turning a dense algorithmic trade-off into an engaging, crystal-clear story."
+    },
+    {
+      "title": "World of Warcraft Guild Leadership as Distributed Systems Architecture",
+      "category": "Playful Analogy · Systems Thinking",
+      "prompt": "Explain why coordinating a 25-player raid in WoW is the ultimate stress test for fault tolerance, latency, and human consensus protocols. Lean into vivid idioms, dry humor, and sharp technical metaphors."
+    },
+    {
+      "title": "Rescuing a 'Curse-of-the-Legacy-Monolith' Sprint Without Losing Your Cool",
+      "category": "Lead Developer · Lighthearted War Story",
+      "prompt": "Tell an upbeat, entertaining story about untangling a bizarre production bug or architectural rabbit hole. Use at least three natural idioms (e.g., 'opened a can of worms', 'silver bullet', 'cut corners') without forcing them."
+    },
+    {
+      "title": "The 'Rubber Duck' Debate: Will AI Replace Lead Architects or Just Create Better Bugs?",
+      "category": "Tech Philosophy · Rapid-Fire Banter",
+      "prompt": "Take a playful, nuanced stance on modern developer tooling. Practice hedging with C2 sophistication ('by and large', 'a double-edged sword', 'for all intents and purposes') while keeping the tone light and sharp."
+    },
+    {
+      "title": "Designing the Ultimate Co-Op Strategy Game Over Late-Night Coffee",
+      "category": "Creative Worldbuilding · Idiomatic Flow",
+      "prompt": "Brainstorm the mechanics, economy, and lore of a dream game with a fellow designer. Focus on evocative descriptive vocabulary and natural conversational rhythm rather than rehearsed bullet points."
+    }
+  ],
+  "beachcombing": {
+    "tier1": [
+      "Fresh espresso beside a glowing mechanical keyboard",
+      "Late-night rain tapping against a Kyiv window",
+      "A whiteboard covered in half-erased graph algorithms",
+      "The ambient hum of a bustling Saturday coffee shop"
+    ],
+    "tier2": [
+      "A raid leader calling a last-second audible on voice chat",
+      "A thesis advisor raising one skeptical eyebrow",
+      "A junior dev who accidentally found a brilliant shortcut",
+      "An old friend debating game lore until midnight"
+    ],
+    "tier3": [
+      "Elegance in code versus elegance in human language",
+      "Why the best games feel like well-crafted worlds, not spreadsheets",
+      "The fine line between healthy skepticism and over-engineering",
+      "How humor keeps sharp minds resilient"
+    ]
+  },
+  "customCards": [
+    {
+      "id": "ukrhook-01",
+      "category": "custom",
+      "term": "C2 Idiomatic Upgrade: \"Fixing that one tiny bug unexpectedly revealed twenty deeper architectural problems.\"",
+      "definition": "\"Pulling on that one thread opened a whole can of worms in the legacy layer.\"",
+      "example": "We thought it was a five-minute patch, only to realize we'd opened a massive can of worms.",
+      "note": "Idiomatic Precision: 'Pulling on a thread' + 'can of worms' captures cascading technical debt with native economy."
+    },
+    {
+      "id": "ukrhook-02",
+      "category": "custom",
+      "term": "Nuance Check: What is the difference between 'a silver bullet' and 'a double-edged sword' in tech architecture?",
+      "definition": "'A silver bullet' is a mythical one-size-fits-all cure; 'a double-edged sword' is a tool whose strengths carry equal risks.",
+      "example": "Microservices are no silver bullet—for a small team, they're often a double-edged sword.",
+      "note": "C2 Metaphor Control: Both idioms are staples of senior engineering debates; keep their distinct logic sharp."
+    },
+    {
+      "id": "ukrhook-03",
+      "category": "custom",
+      "term": "C2 Academic Upgrade: \"Even though the algorithm is slow in theory, in real life it works very well.\"",
+      "definition": "\"Notwithstanding its worst-case complexity, the algorithm holds up remarkably well in the wild.\"",
+      "example": "In the wild, heuristic pruning beats theoretical worst-case bounds almost every time.",
+      "note": "Register & Color: 'In the wild' bridges formal CS theory and real-world engineering effortlessly."
+    },
+    {
+      "id": "ukrhook-04",
+      "category": "custom",
+      "term": "Idiom in Context: What does it mean when product leadership 'moves the goalposts' mid-sprint?",
+      "definition": "Unfairly changing the acceptance criteria or definition of success after work is already underway.",
+      "example": "Every time we're close to shipping, stakeholders move the goalposts on performance benchmarks.",
+      "note": "Workplace Idiom: Crisp, diplomatic shorthand for shifting scope without sounding overly confrontational."
+    },
+    {
+      "id": "ukrhook-05",
+      "category": "custom",
+      "term": "C2 Upgrade: \"We forced a quick solution into the system even though it didn't really fit.\"",
+      "definition": "\"We shoehorned a hotfix into the pipeline to get through the release.\"",
+      "example": "You can only shoehorn so many workarounds into a schema before it collapses under its own weight.",
+      "note": "Vivid Verbs: 'Shoehorn' instantly paints the picture of forcing an ill-fitting piece into tight space."
+    },
+    {
+      "id": "ukrhook-06",
+      "category": "custom",
+      "term": "Nuance Check: 'By and large' vs. 'For all intents and purposes' — how do their shades of meaning differ?",
+      "definition": "'By and large' = generally / on the whole (allowing minor exceptions); 'For all intents and purposes' = practically / in effect (even if not technically).",
+      "example": "By and large, the migration went smoothly, and for all intents and purposes the old cluster is retired.",
+      "note": "C2 Discourse Markers: Mastering subtle hedges separates near-native precision from textbook C1."
+    },
+    {
+      "id": "ukrhook-07",
+      "category": "custom",
+      "term": "Playful Wit Upgrade: \"That new framework looks impressive, but underneath it has no real substance.\"",
+      "definition": "\"That framework is all smoke and mirrors—great landing page, zero resilience under load.\"",
+      "example": "Once you benchmark past the demo, half of these AI wrappers are pure smoke and mirrors.",
+      "note": "Idiomatic Punch: 'Smoke and mirrors' delivers dry, memorable skepticism in four words."
+    },
+    {
+      "id": "ukrhook-08",
+      "category": "custom",
+      "term": "Phasal Verb Upgrade: \"Ultimately, distributed systems design reduces to a trade-off between consistency and availability.\"",
+      "definition": "\"At the end of the day, distributed systems design boils down to consistency versus availability.\"",
+      "example": "Strip away the jargon, and the whole architectural debate boils down to latency budgets.",
+      "note": "Natural Synthesis: 'Boils down to' distills complex Master's-level concepts into crisp conversational English."
+    }
+  ]
+}
