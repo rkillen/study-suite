@@ -2541,7 +2541,7 @@
 
       document.getElementById("sc-body-input").addEventListener("input", updateStoryWordCount);
 
-      // Spacebar flips card when viewing Flashcards tab outside text inputs
+      // Spacebar flips card when viewing Flashcards tab outside text inputs.
       document.addEventListener("keydown", (e) => {
         if (state.activeTab === "flashcards" && e.code === "Space" && !["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement.tagName)) {
           e.preventDefault();
