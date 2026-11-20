@@ -1390,6 +1390,19 @@
           ...state.customCards.filter(c => !incomingIds.has(c.id))
         ];
       }
+      if (incoming.beachcombing && typeof incoming.beachcombing === "object") {
+        ["tier1", "tier2", "tier3"].forEach(tier => {
+          if (Array.isArray(incoming.beachcombing[tier]) && incoming.beachcombing[tier].length > 0) {
+            const existing = Array.isArray(library.beachcombing[tier]) ? library.beachcombing[tier] : [];
+            const customSet = new Set(incoming.beachcombing[tier]);
+            library.beachcombing[tier] = [
+              ...incoming.beachcombing[tier],
+              ...existing.filter(item => !customSet.has(item))
+            ];
+          }
+        });
+        state.beachIndex = 0;
+      }
     }
 
     // =========================================================================
