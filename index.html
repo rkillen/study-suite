@@ -696,6 +696,9 @@
 
           <!-- Category Pills -->
           <div class="flex flex-wrap items-center gap-2">
+            <button type="button" id="fc-pill-custom" onclick="setFlashcardCategory('custom')" data-fcat="custom" class="hidden fc-cat-btn px-3.5 py-2 rounded-xl text-xs font-medium transition-colors">
+              Personal Focus
+            </button>
             <button type="button" onclick="setFlashcardCategory('oxford')" data-fcat="oxford" class="fc-cat-btn px-3.5 py-2 rounded-xl text-xs font-medium transition-colors">
               Oxford 3000 B2
             </button>
@@ -1265,7 +1268,7 @@
       storyPromptIndex: 0,
       stories: [],
       activeCardCat: "oxford",
-      activeDecks: { oxford: [], phrasal: [], idioms: [], interview: [] },
+      activeDecks: { oxford: [], phrasal: [], idioms: [], interview: [], custom: [] },
       masteredIds: [],
       currentCardPos: 0,
       customCards: [],
@@ -1325,7 +1328,11 @@
       } catch (e) {
         // Silent fallback to embedded client profile
       }
-
+      if (Array.isArray(state.customCards) && state.customCards.length > 0) {
+        const customPill = document.getElementById("fc-pill-custom");
+        if (customPill) customPill.classList.remove("hidden");
+        state.activeCardCat = "custom";
+      }
       // Merge any locally added per-client watch-outs
       if (Array.isArray(state.customWatchOuts) && state.customWatchOuts.length) {
         clientProfile.watchOuts = [...state.customWatchOuts, ...clientProfile.watchOuts];
@@ -2113,9 +2120,8 @@
     let isCardFlipped = false;
 
     function getCategoryMasterPool(cat) {
-      const base = library.flashcards[cat] || [];
-      const custom = (state.customCards || []).filter(c => c.category === cat);
-      return [...base, ...custom];
+    if (cat === "custom") return state.customCards || [];
+    return library.flashcards[cat] || [];
     }
 
     function syncActiveDeck(cat) {
@@ -2174,6 +2180,7 @@
         `Active Deck: ${activeIds.length} | Mastered: ${masteredCount} | Queued: ${queuedCount}`;
 
       const catLabels = {
+        custom: "Personal Focus",
         oxford: "Oxford 3000 B2",
         phrasal: "Phrasal Verbs",
         idioms: "Idioms & Metaphors",
