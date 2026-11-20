@@ -1,0 +1,167 @@
+{
+  "clientId": "morocco",
+  "displayName": "Morocco — Narrative Fluency & Foundations",
+  "targetBridge": "B2.1 → C1",
+  "lastUpdated": "2026-11-20",
+  "watchOuts": [
+    {
+      "category": "Grammar · Articles (77% Mastery)",
+      "pattern": "Zero Article with Abstract & Philosophical Nouns",
+      "watchOut": "French 'l’' and Arabic 'al-' tempt you to add 'the' before general concepts (e.g., 'The psychology helps us understand the human nature').",
+      "upgrade": "Drop 'the' for universal truths: 'Psychology helps us understand human nature, particularly the psychology of habit.'"
+    },
+    {
+      "category": "Grammar · Articles (77% Mastery)",
+      "pattern": "Generic Plural Nouns vs. Specific Groups",
+      "watchOut": "Avoid saying 'The historians often debate...' when speaking generally about a profession or group.",
+      "upgrade": "Use a bare plural for general statements: 'Historians often debate how trade routes shaped philosophy.'"
+    },
+    {
+      "category": "Grammar · Present Simple (82% Mastery)",
+      "pattern": "Timeless Truths & Philosophical Principles",
+      "watchOut": "Avoid slipping into Present Continuous ('I am thinking that stoicism is teaching...') when stating enduring ideas or personal beliefs.",
+      "upgrade": "Anchor timeless ideas in Present Simple: 'Stoicism teaches that perception shapes our emotional response.'"
+    },
+    {
+      "category": "Grammar · Present Simple (82% Mastery)",
+      "pattern": "Narrative Present for Vivid Storytelling",
+      "watchOut": "Watch third-person '-s' consistency when switching into the historical or narrative present during a story.",
+      "upgrade": "Keep '-s' sharp across the beat: 'So the traveler arrives at dawn, knocks on the gate, and realizes the city is empty.'"
+    },
+    {
+      "category": "Grammar · Verb Patterns (83% Mastery)",
+      "pattern": "Gerund (-ing) vs. Infinitive after Reflective Verbs",
+      "watchOut": "French 'de + infinitive' causes slips like 'avoid to rush' or 'suggest to read' or 'enjoy to travel.'",
+      "upgrade": "Pair reflective verbs with -ing: 'I enjoy wandering through old quarters without a map' / 'I recommend reading Ibn Khaldun.'"
+    },
+    {
+      "category": "Grammar · Past Simple (83% Mastery)",
+      "pattern": "Past Simple Anchors vs. Present Perfect Drift",
+      "watchOut": "French 'passé composé' ('J'ai visité...') often triggers 'I have visited Fez in 2019' instead of Past Simple.",
+      "upgrade": "Whenever a finished time or past trip is anchored, lock into Past Simple: 'When I visited Fez in 2019, we spent hours in the library.'"
+    },
+    {
+      "category": "L1 Transfer · French False Friends",
+      "pattern": "'Actually' vs. 'Currently' & 'Sensible' vs. 'Sensitive'",
+      "watchOut": "'Actually' means 'in fact' (not 'actuellement'), and 'sensible' means 'practical/wise' (not 'emotionally perceptive').",
+      "upgrade": "Use 'currently' for time and 'sensitive' or 'perceptive' for emotional nuance: 'She is remarkably perceptive about group dynamics.'"
+    },
+    {
+      "category": "L1 Transfer · Preposition Precision",
+      "pattern": "Direct Objects after 'Discuss', 'Emphasize' & 'Approach'",
+      "watchOut": "Avoid 'discuss about philosophy' or 'approach to the question'—both take direct objects in English.",
+      "upgrade": "Say: 'We discussed ethics at length' and 'How you approach a difficult question reveals your assumptions.'"
+    },
+    {
+      "category": "Delivery & Prosody · French/Arabic Transfer",
+      "pattern": "Word Stress on Multi-Syllable Reflective Verbs & Nouns",
+      "watchOut": "French flat/final-syllable rhythm can pull stress onto the wrong syllable in words like 'de-VEL-op-ment', 'PHI-los-o-phy', and 'PSY-chol-o-gy'.",
+      "upgrade": "Hit the stressed syllable cleanly and reduce unstressed vowels to a soft schwa (/ə/): phi-LOS-o-phy, psy-CHOL-o-gy."
+    },
+    {
+      "category": "Delivery & Prosody · Consonant & Vowel Clarity",
+      "pattern": "Aspirated 'H', 'TH' (/θ/ vs. /ð/), and Crisp 'P' vs. 'B'",
+      "watchOut": "Silent French 'h' ('onest' for 'honest' or dropping 'h' in 'history/habit') and Arabic P/B or TH substitutions.",
+      "upgrade": "Give initial 'H' a clear breath ('history, habit, humility') and place the tongue lightly between teeth for 'thought' vs. 'though'."
+    },
+    {
+      "category": "Storycraft · Narrative Pacing",
+      "pattern": "Setting the Scene Before the Insight",
+      "watchOut": "Executive habits often jump straight to the abstract conclusion before grounding the listener in a concrete moment.",
+      "upgrade": "Open with sensory detail in Past Simple ('Three years ago, sitting in a quiet courtyard in Cordoba...'), then pivot to the insight."
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "A Place That Changed How You See Time",
+      "category": "Travel & Reflection",
+      "prompt": "Describe a city, landscape, or historic site you visited that shifted your perspective on pace, ambition, or permanence. Ground it in a specific sensory memory (Past Simple), then explain the principle you took away (Present Simple)."
+    },
+    {
+      "title": "The Paradox of Choice in Modern Life",
+      "category": "Psychology & Philosophy",
+      "prompt": "A friend argues that having unlimited options always makes people freer and happier. Push back thoughtfully using an example from human psychology or everyday life—pay close attention to zero articles before abstract nouns (freedom, happiness, choice)."
+    },
+    {
+      "title": "Bridging Classical Wisdom and Modern Habits",
+      "category": "Islamic Studies & Philosophy",
+      "prompt": "Explain a classical concept—such as intentionality (niyyah), hospitality, or self-discipline—to someone unfamiliar with the tradition, connecting it to how people navigate distraction today."
+    },
+    {
+      "title": "The Unplanned Detour",
+      "category": "Storycraft · Narrative Arc",
+      "prompt": "Tell a 90-second story about a travel plan or personal assumption that went completely off-script. Focus on smooth transitions between Past Simple background and vivid turning points without rushing the ending."
+    },
+    {
+      "title": "What Makes a Conversation Truly Memorable?",
+      "category": "Human Nature & Culture",
+      "prompt": "Reflect on the difference between exchanging information and having a genuine dialogue. Use reflective verb patterns naturally ('avoid rushing', 'tend to listen', 'worth exploring')."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "mor-01",
+      "deck": "client",
+      "category": "Grammar · Articles",
+      "front": "Fix the article usage:\n\"The curiosity and the humility are essential in the philosophy.\"",
+      "back": "\"Curiosity and humility are essential in philosophy.\"\n\nRule: Omit 'the' before uncountable abstract nouns used in a general sense.",
+      "example": "Curiosity drives discovery, whereas certainty often stops it."
+    },
+    {
+      "id": "mor-02",
+      "deck": "client",
+      "category": "Grammar · Verb Patterns",
+      "front": "Complete with the natural verb pattern:\n\"When traveling, I avoid ______ (follow) rigid itineraries so I can explore.\"",
+      "back": "\"...I avoid following rigid itineraries...\"\n\nRule: 'Avoid', 'enjoy', 'consider', and 'recommend' always take a gerund (-ing), never 'to + verb'.",
+      "example": "I always recommend wandering through a neighborhood early in the morning."
+    },
+    {
+      "id": "mor-03",
+      "deck": "client",
+      "category": "Grammar · Past Simple vs. Present Perfect",
+      "front": "Choose the accurate tense:\n\"I ______ (read) Al-Ghazali's reflections on habit when I was in university.\"",
+      "back": "\"I read (/rɛd/) Al-Ghazali's reflections on habit when I was in university.\"\n\nRule: A finished past time marker ('when I was in university') requires Past Simple.",
+      "example": "That book stayed with me long after I finished it."
+    },
+    {
+      "id": "mor-04",
+      "deck": "client",
+      "category": "Storycraft · Lexical Upgrade",
+      "front": "Upgrade the B2 phrase:\n\"It made me think a lot about how people behave.\"",
+      "back": "\"It prompted me to reflect on human nature.\"\n\nC1 Upgrade: 'Prompted me to reflect on' replaces 'made me think about' with effortless precision.",
+      "example": "Watching how strangers treated one another prompted me to reflect on civic trust."
+    },
+    {
+      "id": "mor-05",
+      "deck": "client",
+      "category": "Storycraft · Lexical Upgrade",
+      "front": "Upgrade the B2 phrase:\n\"The atmosphere of the old city was very special and peaceful.\"",
+      "back": "\"The old quarter had a deeply contemplative atmosphere.\"\n\nC1 Upgrade: 'Contemplative' or 'serene' captures mood far better than 'special and peaceful'.",
+      "example": "At dusk, the courtyard takes on a quiet, contemplative stillness."
+    },
+    {
+      "id": "mor-06",
+      "deck": "client",
+      "category": "Psychology & Philosophy · Precision",
+      "front": "Nuance check: 'Cognitive bias' vs. 'Blind spot'",
+      "back": "Cognitive bias = a systematic pattern in how the brain distorts judgment.\nBlind spot = a specific area an individual fails to notice in themselves.",
+      "example": "Confirmation bias is universal, yet each of us has personal blind spots."
+    },
+    {
+      "id": "mor-07",
+      "deck": "client",
+      "category": "Grammar · Present Simple & Verb Patterns",
+      "front": "Fix the tense and verb pattern:\n\"Psychology is showing that people tend resisting sudden change.\"",
+      "back": "\"Psychology shows that people tend to resist sudden change.\"\n\nRule: Use Present Simple ('shows') for general findings, and 'tend + to + infinitive'.",
+      "example": "History shows that gradual shifts often outlast abrupt revolutions."
+    },
+    {
+      "id": "mor-08",
+      "deck": "client",
+      "category": "Storycraft · Narrative Connectors",
+      "front": "How do you pivot smoothly from a story back to its deeper meaning?",
+      "back": "\"Looking back, what struck me wasn't [X]—it was [Y].\"\n\nUse this frame to transition from Past Simple events to a Present Simple insight.",
+      "example": "Looking back, what struck me wasn't the architecture—it was how unhurried everyone seemed."
+    }
+  ]
+}
