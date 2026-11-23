@@ -1,0 +1,136 @@
+{
+  "clientId": "gearhead",
+  "profileName": "Gearhead — Executive Pitching, Tonality & Concise Banking Authority (C1)",
+  "watchOuts": [
+    {
+      "tag": "Executive Conciseness · Anti-Overexplaining",
+      "title": "Stop Talking at the Period: Land the Point, Then Hold Silence",
+      "detail": "When searching for the exact nuance under C-level scrutiny, it is tempting to keep adding qualifying clauses. Deliver one clean, decisive sentence ('AI-assisted underwriting cuts credit turnaround from twelve days to forty-eight hours'), drop your pitch at the period, and let the room absorb it."
+    },
+    {
+      "tag": "Vocal Tonality · Boardroom Gravitas",
+      "title": "Shifting From 'Operational Update' Tone to 'Strategic Conviction' Tone",
+      "detail": "Monotone or upward-inflecting delivery makes strategic initiatives sound like routine status reports. Slow down by 15% on your thesis sentence, lower your vocal register slightly, and use deliberate pauses before key numbers or trade-offs."
+    },
+    {
+      "tag": "Lexical Precision · Finding the Right Word Fast",
+      "title": "High-Leverage Banking & AI Transformation Verbs on Standby",
+      "detail": "When a precise word stalls mid-pitch, bridge cleanly with high-authority executive verbs rather than circling: 'streamline' (bottlenecks), 'de-risk' (credit exposure), 'embed' (AI guardrails), 'calibrate' (risk appetite), and 'scale' (governance)."
+    },
+    {
+      "tag": "Swiss-German-to-C1 Polish · Syntax & False Friends",
+      "title": "Trimming German Clause Weight & False Friends ('Actual', 'Eventually', 'Information')",
+      "detail": "Watch out for front-loading long Swiss-German style subordinate clauses before the main verb, and keep classic false friends crisp: 'actual' = real/current (not 'aktuell' → use 'current'), 'eventually' = finally (not 'eventuell' → use 'potentially'), and 'information' is never plural ('informations')."
+    },
+    {
+      "tag": "Delivery & Prosody · Swiss-German L1 Polish",
+      "title": "Softening Hard Glottal Stops & Linking Connected Phrases",
+      "detail": "Swiss-German crisply separates words with glottal stops and devoices final consonants ('credit' vs. 'credid', 'fund' vs. 'funt'). Let consonant-to-vowel words link smoothly ('an_initiative', 'risk_appetite') for effortless executive flow."
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "The 90-Second C-Level Pitch: AI-Powered Credit Redesign",
+      "category": "C-Level Pitch · Conciseness & Gravitas",
+      "prompt": "You are standing in front of the Chief Risk Officer and Chief Operating Officer in Zurich. Pitch your AI-enabled credit process redesign in under 90 seconds—using no more than five crisp sentences, deliberate pauses, and a grounded downward inflection on your closing ask."
+    },
+    {
+      "title": "Defending AI Governance & Human-in-the-Loop Controls to Risk Leadership",
+      "category": "Executive Q&A · Word Precision Under Pressure",
+      "prompt": "A skeptical board member asks: 'How do we prevent black-box AI models from weakening our credit standards?' Answer with calm authority—avoiding over-explanation by framing your response around three clear guardrails."
+    },
+    {
+      "title": "Shifting Tonality: From Technical Working Group to Executive Steering Committee",
+      "category": "Vocal Presence · Register & Pacing Shift",
+      "prompt": "First, summarize a credit workflow bottleneck the way you would to your project team (fast, collaborative, granular). Then immediately switch gears and deliver the exact same takeaway to C-levels (unhurried, lower register, commercial impact only)."
+    },
+    {
+      "title": "High-Speed Precision: What Twin-Turbo Engineering & Credit Architecture Have in Common",
+      "category": "Gearhead Analogy · Vivid Executive Storytelling",
+      "prompt": "Use a crisp automotive metaphor—like pairing raw horsepower with precision braking and telemetry—to explain why faster credit decisions require stronger real-time risk controls. Keep the analogy tight and memorable."
+    },
+    {
+      "title": "Reading the Slope: Navigating Uncertainty Like an Early-Morning Alpine Descent",
+      "category": "Skiing & Strategy · Poised Reflection",
+      "prompt": "Tell a concise story about skiing variable alpine terrain with your kids or solo—how looking three turns ahead beats reacting late—and connect that mindset to steering a complex banking transformation."
+    }
+  ],
+  "beachcombing": {
+    "tier1": [
+      "Fresh corduroy",
+      "Cold start",
+      "Carbon brakes",
+      "Alpine glare"
+    ],
+    "tier2": [
+      "Pit lane",
+      "Boardroom",
+      "Chairlift",
+      "Underwriter"
+    ],
+    "tier3": [
+      "Traction",
+      "Conviction",
+      "Restraint",
+      "Leverage"
+    ]
+  },
+  "customCards": [
+    {
+      "id": "gearhead-01",
+      "category": "custom",
+      "term": "Executive Conciseness: Cut this 34-word ramble down to one decisive C-level sentence: \"So basically what we are trying to do with the new AI tool is look at the credit files faster so our relationship managers don't spend so much time on manual checks.\"",
+      "definition": "\"Integrating AI into initial credit screening cuts manual review time by 60% and frees relationship managers to focus on complex structuring.\"",
+      "example": "One headline metric plus one strategic outcome—then stop talking and hold the pause.",
+      "note": "Anti-Overexplaining: C-levels buy outcomes and capacity, not step-by-step workflow narration."
+    },
+    {
+      "id": "gearhead-02",
+      "category": "custom",
+      "term": "Tonality Cue: How do you shift your voice in the final 10 seconds of a C-level pitch so your recommendation lands with authority?",
+      "definition": "Slow your pace by 15%, drop your pitch slightly on the last two words of each sentence, and pause silently for two full seconds after stating your ask.",
+      "example": "\"The architecture is validated. The risk guardrails are built in. We are ready for green-light approval.\"",
+      "note": "Vocal Gravitas: Upward inflection asks for permission; downward inflection signals executive ownership."
+    },
+    {
+      "id": "gearhead-03",
+      "category": "custom",
+      "term": "Swiss-German False Friend Check: \"In our actual credit process, we could eventually automate the standard SME checks.\"",
+      "definition": "\"In our current credit process, we could potentially automate the standard SME checks.\"",
+      "example": "'Actual' means real/existing (not 'aktuell'); 'eventually' means finally over time (not 'eventuell').",
+      "note": "Swiss-German L1 Polish: Catching 'actual' and 'eventually' prevents subtle ambiguity in risk committees."
+    },
+    {
+      "id": "gearhead-04",
+      "category": "custom",
+      "term": "Word-Finding Bridge: What crisp executive phrase buys you 2 seconds to find the exact word without sounding hesitant?",
+      "definition": "\"Let me frame that in terms of risk and cycle time—\" (followed by a calm breath).",
+      "example": "Using a structural pivot sounds intentional and analytical rather than searching for vocabulary.",
+      "note": "Poise Under Scrutiny: Intentional framing bridges eliminate filler words ('uh', 'so to say', 'basically')."
+    },
+    {
+      "id": "gearhead-05",
+      "category": "custom",
+      "term": "Banking & AI Lexis Upgrade: \"We are putting rules inside the AI system so it cannot make dangerous credit decisions by itself.\"",
+      "definition": "\"We are embedding deterministic risk guardrails and human-in-the-loop sign-off into the credit engine.\"",
+      "example": "C-level risk officers immediately trust terms like 'deterministic guardrails' and 'human-in-the-loop'.",
+      "note": "Domain Authority: High-precision governance terms compress a long explanation into four words."
+    },
+    {
+      "id": "gearhead-06",
+      "category": "custom",
+      "term": "Syntax Tightening: \"Because we in Switzerland very strict regulatory requirements regarding client data privacy have, we host the model on-premise.\"",
+      "definition": "\"Given Switzerland's strict client-confidentiality mandates, we deploy the model entirely on-premise.\"",
+      "example": "Keep the English subject and main verb close together near the front of the clause.",
+      "note": "German-to-English Word Order: Avoid pushing the verb to the end of dense regulatory sentences."
+    },
+    {
+      "id": "gearhead-07",
+      "category": "custom",
+      "term": "Metaphor Compression (Gearhead Edition): How do you explain why faster credit decisions don't mean higher risk in one vivid line?",
+      "definition": "\"You don't build a faster car just by adding horsepower—you upgrade the brakes and telemetry at the same time.\"",
+      "example": "AI gives us the acceleration; automated audit trails give us the braking power.",
+      "note": "Executive Storytelling: A tight mechanical analogy makes risk governance intuitive in five seconds."
+    }
+  ]
+}
