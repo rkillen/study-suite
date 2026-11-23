@@ -1,0 +1,136 @@
+{
+  "clientId": "ukrband",
+  "profileName": "UkrBand — Tech Fluency, Pronunciation Polish & Stage Energy (B2+ → C1)",
+  "watchOuts": [
+    {
+      "tag": "Pronunciation · Ukrainian L1 Traps",
+      "title": "Crisp 'W' vs. 'V' & Interdental 'TH' (/θ/ & /ð/)",
+      "detail": "In fast speech, Ukrainian /v/ or /w/ can blur ('work' vs. 'verk', 'view' vs. 'wiew') and 'th' can drift toward /z/ or /s/ ('this' → 'zis', 'think' → 'sink'). Round your lips forward without touching your teeth for 'w', and place your tongue tip lightly between your teeth for 'th'."
+    },
+    {
+      "tag": "Pronunciation · Ending Consonants & Word Stress",
+      "title": "Keeping Final Voiced Consonants Audible ('Code' vs. 'Coat')",
+      "detail": "Ukrainian devoices final consonants at word boundaries, turning 'bug' into 'buck' or 'gig' into 'gick'. Hold a brief vocal-cord buzz on final -b, -d, -g, -v, and -z so technical terms and song lyrics land cleanly."
+    },
+    {
+      "tag": "Grammar Polish · Articles ('A / An / The')",
+      "title": "Specific System Components vs. General Concepts",
+      "detail": "At B2+, your sentences flow well, so small missing articles stand out most: pair singular countable nouns with 'a' or 'the' ('We refactored the auth service' / 'We booked a new rehearsal studio'), while leaving plural generalizations bare ('APIs need clear rate limits')."
+    },
+    {
+      "tag": "Grammar Polish · Present Perfect vs. Past Simple",
+      "title": "Unfinished Timelines ('We've Played Three Gigs This Month') vs. Finished Events",
+      "detail": "Use Past Simple when a time window is closed ('Last Friday we nailed the encore'), and Present Perfect when connecting past work or rehearsals to right now ('We've been practicing that bridge all week')."
+    },
+    {
+      "tag": "Fluency & Rhythm · Connected Speech",
+      "title": "Relaxing Syllable-Timed Stress into Natural English Groove",
+      "detail": "Think of spoken English like a tight rhythm section: punch the content words (nouns, main verbs, adjectives) and let small function words ('to', 'for', 'the', 'and') glide lightly between beats."
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "Demoing a Cool Side-Project Feature in a Friday Team Standup",
+      "category": "Software Engineering · Upbeat Update",
+      "prompt": "Show off a clean performance win or clever automation you built this week to your engineering squad. Keep the energy enthusiastic, hit crisp 'w' and 'th' sounds, and explain both what you shipped (Past Simple) and what has improved since (Present Perfect)."
+    },
+    {
+      "title": "Pitching a Bold Mashup Idea to Your Cover Band at Rehearsal",
+      "category": "Cover Band · Creative Banter",
+      "prompt": "You want the band to try an unexpected genre-swap cover—like turning a classic 90s rock anthem into a tight funk or synth-wave track. Sell the arrangement idea to your bandmates with contagious enthusiasm and vivid musical vocabulary."
+    },
+    {
+      "title": "Debugging a Live Soundcheck Glitch Minutes Before a Set",
+      "category": "Problem-Solving · Lighthearted Story",
+      "prompt": "Tell an entertaining story about a funny technical hiccup—either on stage with a stubborn amp/pedalboard or during a last-minute deploy—and how you improvised a fix on the spot."
+    },
+    {
+      "title": "Coding Flow State vs. Band Groove: Are They the Same Brain?",
+      "category": "Tech & Music · Casual Conversation",
+      "prompt": "Compare locking into deep focus while writing clean code with locking into a tight pocket during a live song. Keep your pacing natural and unhurried, letting function words link smoothly."
+    },
+    {
+      "title": "Planning an Epic Summer Festival & Road-Trip Lineup",
+      "category": "Lifestyle & Travel · Positive Vibes",
+      "prompt": "Describe three bands or artists you'd put on a dream festival bill—and what makes their live energy unforgettable. Focus on expressive stress and clean article usage ('a', 'the')."
+    }
+  ],
+  "beachcombing": {
+    "tier1": [
+      "Guitar cable coiled beside a mechanical keyboard",
+      "Warm stage lights cutting through rehearsal-room haze",
+      "Freshly brewed filter coffee on a sunny Kyiv morning",
+      "The first crisp snare hit of a soundcheck"
+    ],
+    "tier2": [
+      "A sound engineer giving a thumbs-up from the back",
+      "A bandmate nailing a tricky solo on the third take",
+      "A teammate reviewing a pull request with great ideas",
+      "A crowd singing the chorus louder than the monitors"
+    ],
+    "tier3": [
+      "What makes a cover song feel fresh instead of copied",
+      "Finding rhythm and improvisation inside structured code",
+      "Why live energy beats studio perfection every time",
+      "How creative hobbies recharge an engineering brain"
+    ]
+  },
+  "customCards": [
+    {
+      "id": "ukrband-01",
+      "category": "custom",
+      "term": "Pronunciation Drill ('W' vs. 'V' + 'TH'): \"We thought the live vocal mix worked very well this week.\"",
+      "definition": "Round lips forward for 'we / worked / well / week', bite lower lip gently for 'live / vocal / very', and place tongue tip between teeth for 'thought / the / this'.",
+      "example": "Say it twice: once slowly for clean mouth shapes, once at natural conversational groove.",
+      "note": "Pronunciation Core: Separating 'w', 'v', and 'th' gives your spoken English immediate native clarity."
+    },
+    {
+      "id": "ukrband-02",
+      "category": "custom",
+      "term": "Fix the articles & ending voicing: \"Yesterday we fixed tricky bug in backend and booked studio for Friday.\"",
+      "definition": "\"Yesterday we fixed a tricky bug in the backend and booked a studio for Friday.\"",
+      "example": "We deployed a clean patch to the staging server right before band practice.",
+      "note": "Articles + Final Consonants: Singular countable nouns ('bug', 'backend', 'studio') take 'a / the'; keep the -g in 'bug' voiced."
+    },
+    {
+      "id": "ukrband-03",
+      "category": "custom",
+      "term": "Fix the verb tense: \"We play together in this cover band since two years, and we just add three new tracks.\"",
+      "definition": "\"We've been playing together in this cover band for two years, and we've just added three new tracks.\"",
+      "example": "I've been writing backend services in Python for three years.",
+      "note": "Present Perfect (Continuous): Actions spanning from the past into the present take 'have been + -ing' with 'for' (duration)."
+    },
+    {
+      "id": "ukrband-04",
+      "category": "custom",
+      "term": "B2+ Fluency Upgrade: \"The band played very well together, and the rhythm was really tight.\"",
+      "definition": "\"The band was completely locked in—the rhythm section was in the pocket all night.\"",
+      "example": "Once the drummer and bassist locked in, the whole room started moving.",
+      "note": "Music & Idiom Lexis: 'Locked in' and 'in the pocket' are authentic musician expressions that double great in tech team contexts."
+    },
+    {
+      "id": "ukrband-05",
+      "category": "custom",
+      "term": "Fix the conditional: \"If we will tighten the chorus transition, the whole setlist sounds much stronger.\"",
+      "definition": "\"If we tighten the chorus transition, the whole setlist will sound much stronger.\"",
+      "example": "If we cache those database queries, page load times will drop below 100 milliseconds.",
+      "note": "First Conditional: Keep Present Simple in the 'if' clause and put 'will' only in the result clause."
+    },
+    {
+      "id": "ukrband-06",
+      "category": "custom",
+      "term": "B2+ Tech Upgrade: \"I solved the problem quickly by trying different ideas until one worked.\"",
+      "definition": "\"I debugged the issue on the fly by isolating the bottleneck and testing a quick workaround.\"",
+      "example": "When the monitor feed cut out mid-song, we adapted on the fly without missing a beat.",
+      "note": "Versatile Idiom: 'On the fly' works seamlessly for both real-time coding and live stage improvisation."
+    },
+    {
+      "id": "ukrband-07",
+      "category": "custom",
+      "term": "Pronunciation Drill (Voiced Endings): \"The band's big gig had a wild crowd and zero bad bugs.\"",
+      "definition": "Hold a light vocal-cord buzz on every final consonant: band's · big · gig · had · wild · crowd · bad · bugs.",
+      "example": "Contrast: 'pig' vs. 'pick', 'code' vs. 'coat', 'buzz' vs. 'bus'.",
+      "note": "Final Devoicing Fix: Keeping final consonants voiced prevents subtle word-pair confusion in fast speech."
+    }
+  ]
+}
