@@ -9,6 +9,6 @@ Click any client below to launch their personalized Study Suite:
 - **[UkrHook](https://rkillen.github.io/study-suite/?client=ukrhook)** — `ukrhook.json`
 - **[UkrCountry](https://rkillen.github.io/study-suite/?client=ukrcountry)** — `ukrcountry.json`
 - **[UkrBand](https://rkillen.github.io/study-suite/?client=ukrband)** — `ukrband.json`
-- **[PolLead](https://rkillen.github.io/study-suite/?client=pollead)** — `pollead.json`
+- **[Sauna](https://rkillen.github.io/study-suite/?client=sauna)** — `sauna.json`
 - **[Gearhead](https://rkillen.github.io/study-suite/?client=gearhead)** — `gearhead.json`
 - **[TxtRPG](https://rkillen.github.io/study-suite/?client=txtrpg)** — `txtrpg.json`
