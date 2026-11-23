@@ -1,0 +1,136 @@
+{
+  "clientId": "pollead",
+  "profileName": "PolLead — Tech Team Leadership, Clarity & 1:1 Feedback (C1)",
+  "watchOuts": [
+    {
+      "tag": "Executive Clarity · Bottom-Line Up Front",
+      "title": "Lead With the Decision or Takeaway Before Unpacking Technical Context",
+      "detail": "Senior engineers naturally explain architecture chronologically before stating the conclusion. In team meetings and stakeholder presentations, flip the order: state the headline decision in sentence one ('We are deferring the migration to Q3 to protect checkout stability'), then give two crisp supporting reasons."
+    },
+    {
+      "tag": "Polish-to-C1 Polish · Directness vs. UK Diplomatic Hedging",
+      "title": "Softening Constructive 1:1 Feedback Without Losing Clarity",
+      "detail": "Polish workplace communication prizes directness, whereas UK tech teams expect warm framing around tough feedback. Pair explicit standards with collaborative curiosity: instead of 'Your PRs are too slow and unclear', use 'I'd like to tighten our PR turnaround—what's currently blocking smaller, clearer diffs?'"
+    },
+    {
+      "tag": "Grammar & Precision · Articles & Countability",
+      "title": "Zero-Article Generalizations vs. Specific Deliverables",
+      "detail": "Even at C1, fast-paced meeting speech can drop articles before singular deliverables ('We need clear rollout plan' → 'We need a clear rollout plan') or pluralize uncountables ('feedbacks', 'equipments', 'softwares'). Keep 'feedback', 'code', and 'progress' strictly singular."
+    },
+    {
+      "tag": "Pronunciation & Prosody · Polish L1 Polish",
+      "title": "Final Consonant Voicing & British/Neutral Stress Rhythm",
+      "detail": "Keep final consonants voiced in high-frequency leadership words ('lead' vs. 'leet', 'build' vs. 'built', 'merge' vs. 'merch') and let unstressed syllables reduce cleanly so key verbs and metrics punch through in hybrid calls."
+    },
+    {
+      "tag": "Meeting Facilitation · Concise Framing",
+      "title": "Cutting 'Let Me Just Quickly Explain...' Openers",
+      "detail": "Eliminate throat-clearing disclaimers before speaking in leadership forums. Replace 'Sorry, just to quickly jump in and add one small thing...' with 'One critical risk to flag here is...'"
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "Running a Crisp 10-Minute Architecture Decision Meeting",
+      "category": "Team Meetings · Executive Clarity",
+      "prompt": "Your squad is split between two technical approaches and spinning in circles. Step in as team lead, summarize the trade-off in two sentences, state the decision clearly, and align everyone on next steps without over-explaining."
+    },
+    {
+      "title": "Delivering Tough 1:1 Feedback to a Talented but Distracted Senior Dev",
+      "category": "1:1 Feedback · High-Care Candor",
+      "prompt": "A strong engineer on your team has been missing code-review SLAs and dominating sprint planning. Give direct, unambiguous feedback that sets clear expectations while keeping the tone grounded, respectful, and collaborative."
+    },
+    {
+      "title": "Presenting a Slipping Roadmap to Non-Technical Leadership",
+      "category": "Presentations · Stakeholder Alignment",
+      "prompt": "You need to tell product and commercial leads outside London that a release is shifting by two weeks. Present the revised timeline with calm authority—leading with business impact, trade-offs, and mitigation rather than defensive technical jargon."
+    },
+    {
+      "title": "Unplugging: Why Cold Plunges & Wood-Fired Saunas Sharpen Engineering Judgment",
+      "category": "Outdoors & Sauna · Persuasive Storytelling",
+      "prompt": "Pitch the real cognitive recovery benefits of serious sauna rounds and cold-water immersion to a burned-out engineering peer who never steps away from their screen. Keep your pacing unhurried and vivid."
+    },
+    {
+      "title": "Navigating a Rainy Ridge Walk in the Peaks or Chilterns When Plans Change",
+      "category": "Outdoor Pursuits · Calm Decision-Making",
+      "prompt": "Tell a concise story about an outdoor trail or weather detour outside London where calm assessment beat stubbornness—and draw a subtle parallel to leading a team through production uncertainty."
+    }
+  ],
+  "beachcombing": {
+    "tier1": [
+      "Birch whisk",
+      "Cedar steam",
+      "Muddy boots",
+      "Cold plunge"
+    ],
+    "tier2": [
+      "Trailhead",
+      "Standup",
+      "Whiteboard",
+      "Hearth"
+    ],
+    "tier3": [
+      "Clarity",
+      "Candor",
+      "Stillness",
+      "Threshold"
+    ]
+  },
+  "customCards": [
+    {
+      "id": "pollead-01",
+      "category": "custom",
+      "term": "Executive Clarity Upgrade: \"Because of database latency and legacy coupling, we need to delay the launch.\"",
+      "definition": "\"We're pushing the launch by two weeks to protect system reliability—here are the two bottlenecks we're resolving first.\"",
+      "example": "Lead with the headline decision so stakeholders know why the technical details matter.",
+      "note": "BLUF (Bottom Line Up Front): State the decision first, then unpack supporting evidence."
+    },
+    {
+      "id": "pollead-02",
+      "category": "custom",
+      "term": "1:1 Feedback Calibration: \"Your pull requests are too big and take too long for the team to review.\"",
+      "definition": "\"I want to make code reviews faster and easier for the whole squad—let's break upcoming PRs into smaller, self-contained chunks.\"",
+      "example": "What would help us get your changes reviewed within 24 hours this sprint?",
+      "note": "UK Tech Register: Pairs direct standards with shared problem-solving rather than blunt critique."
+    },
+    {
+      "id": "pollead-03",
+      "category": "custom",
+      "term": "Meeting Authority Upgrade: \"Sorry to interrupt, I just wanted to quickly mention one small concern about deployment.\"",
+      "definition": "\"Before we lock this in, I want to flag one deployment risk we need to account for.\"",
+      "example": "Cutting apologetic fillers immediately signals calm team-lead ownership.",
+      "note": "Presence & Conciseness: Drop 'just', 'quickly', and 'small' when raising substantive engineering points."
+    },
+    {
+      "id": "pollead-04",
+      "category": "custom",
+      "term": "Grammar & Countability Check: \"We got useful feedbacks from the team and made a good progress on the release.\"",
+      "definition": "\"We got useful feedback from the team and made good progress on the release.\"",
+      "example": "Both 'feedback' and 'progress' are uncountable—never add '-s' or 'a' before them.",
+      "note": "Polish-to-C1 Polish: Eliminate plural '-s' and indefinite articles on uncountable nouns."
+    },
+    {
+      "id": "pollead-05",
+      "category": "custom",
+      "term": "1:1 Coaching Question: How do you invite ownership from a quiet mid-level developer without putting them on the spot?",
+      "definition": "\"You've been closest to this service all week—how would you weigh the trade-off if it were your call?\"",
+      "example": "Inviting their judgment builds autonomy far faster than assigning instructions.",
+      "note": "Leadership Leverage: Open-ended ownership questions elevate team-wide thinking."
+    },
+    {
+      "id": "pollead-06",
+      "category": "custom",
+      "term": "Presentation Transition: \"Now I finished talking about the problem, so next I will show the solution.\"",
+      "definition": "\"That's the bottleneck in plain terms—now let's look at how we eliminate it in Q3.\"",
+      "example": "Clean signposting keeps executive audiences anchored during technical walkthroughs.",
+      "note": "Signposting: Replace mechanical narration with crisp, forward-looking transitions."
+    },
+    {
+      "id": "pollead-07",
+      "category": "custom",
+      "term": "Pronunciation Drill (Final Voicing): \"The lead dev merged a solid build and logged every edge case.\"",
+      "definition": "Hold a brief vocal-cord buzz on each final consonant: lead · dev · merged · solid · build · logged · edge.",
+      "example": "Contrast: 'lead' vs. 'leet', 'build' vs. 'built', 'code' vs. 'coat'.",
+      "note": "Polish L1 Polish: Preventing final-consonant devoicing sharpens intelligibility on headset mics."
+    }
+  ]
+}
