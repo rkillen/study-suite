@@ -1,0 +1,136 @@
+{
+  "clientId": "txtrpg",
+  "profileName": "TxtRPG — Narrative Systems, Documentary Lexis & Presentation Stamina (B2+ → C1)",
+  "watchOuts": [
+    {
+      "tag": "Sentence Architecture · Anti-Tangle",
+      "title": "Break Russian-Style Multi-Clause Chains into Two Crisp English Sentences",
+      "detail": "When explaining complex architecture or book ideas, stacking three subordinate clauses ('which..., that..., because...') drains your breath and confidence. Cap one idea at two clauses, land the period, breathe, and launch the next sentence."
+    },
+    {
+      "tag": "Presentation Stamina · Pacing & Energy",
+      "title": "Pacing Longer Presentations So Vocal Fatigue Never Sets In",
+      "detail": "In longer technical demos or talks, rushing through slides without pauses causes vocal fatigue and trailing volume. Anchor each slide with a 3-word headline, pause for a full breath after key points, and let intonation carry emphasis instead of pushing harder with your throat."
+    },
+    {
+      "tag": "Lexical Range · Documentaries & Non-Fiction",
+      "title": "Bridging Topic-Specific Vocabulary Gaps Without Freezing",
+      "detail": "When a documentary or memoir like 'Prozac Nation' throws dense psychological, cultural, or historical vocabulary at you, don't stall searching for the exact academic term—paraphrase cleanly ('an overwhelming sense of emotional numbness' / 'systemic inertia') and keep momentum."
+    },
+    {
+      "tag": "Slang & Conversational Register · Tech & Gaming",
+      "title": "Natural Everyday & Gamer Slang vs. Textbook Phrasing",
+      "detail": "Upgrade stiff textbook transitions ('It was very unexpected and difficult') with natural conversational and dev/gamer phrasing: 'that caught us completely off guard', 'clutch play', 'rabbit hole', 'sanity check', or 'nerfed'."
+    },
+    {
+      "tag": "Russian-to-English Polish · Articles & Word Order",
+      "title": "Definite/Indefinite Articles & Direct Subject-Verb Flow",
+      "detail": "Keep singular countable nouns anchored with 'a' or 'the' ('We built a branching dialogue engine' / 'The state machine handles inventory'), and place the subject directly before the verb rather than inverting for emphasis."
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "Pitching Your Ukrainian Text-RPG Engine & Branching Narrative Design",
+      "category": "Pet Project · Structured Storytelling",
+      "prompt": "Walk a fellow developer through the architecture and worldbuilding of your text-RPG project in three clear stages—concept, state/branching logic, and what makes the writing feel alive. Keep sentences crisp and pause cleanly between sections."
+    },
+    {
+      "title": "Unpacking a Heavy Non-Fiction Book or Documentary Without Losing Momentum",
+      "category": "Books & Documentaries · Topic Vocabulary",
+      "prompt": "Summarize a striking chapter from 'Prozac Nation' or a recent documentary you watched. Focus on explaining complex psychological or cultural themes in plain, vivid English—paraphrasing smoothly whenever a specialized word isn't right on your tongue."
+    },
+    {
+      "title": "10-Minute Tech Architecture Walkthrough Built for Vocal Stamina",
+      "category": "Longer Presentations · Pacing & Confidence",
+      "prompt": "Simulate the opening and midpoint of a longer engineering presentation. Practice slowing down by 15%, using clean signposts ('Here is the core bottleneck...', 'That brings us to the trade-off...'), and holding a relaxed breath at every period."
+    },
+    {
+      "title": "Counter-Strike Economy & Clutch Rounds as Real-Time Risk Management",
+      "category": "Gaming & Slang · Casual Fluency",
+      "prompt": "Explain to a non-gamer friend why a low-buy eco round or a 1v3 clutch in Counter-Strike is pure psychological warfare and resource allocation. Lean into natural slang ('eco round', 'tilt', 'clutch', 'read the play') with effortless confidence."
+    },
+    {
+      "title": "Late-Night Laptop Flow: Building Worlds in Code vs. Reading Quiet Non-Fiction",
+      "category": "Personal Reflection · Natural Voice",
+      "prompt": "Compare the mental state of coding a text-based game late at night with getting absorbed in an honest, unfiltered memoir. Keep your tone unhurried, grounded, and conversational."
+    }
+  ],
+  "beachcombing": {
+    "tier1": [
+      "Blinking cursor",
+      "Dog-eared paperback",
+      "Mechanical switches",
+      "Midnight tea"
+    ],
+    "tier2": [
+      "Narrator",
+      "Crossfire",
+      "Dungeon",
+      "Archivist"
+    ],
+    "tier3": [
+      "Agency",
+      "Catharsis",
+      "Momentum",
+      "Subtext"
+    ]
+  },
+  "customCards": [
+    {
+      "id": "txtrpg-01",
+      "category": "custom",
+      "term": "Anti-Tangle Split: Break this heavy sentence into two crisp, confident ones: \"Because the dialogue tree had too many nested conditions which depended on earlier player choices that weren't tracked globally, debugging became a nightmare.\"",
+      "definition": "\"The dialogue tree relied on deeply nested conditions tied to local player choices. Because none of that state was tracked globally, debugging quickly turned into a nightmare.\"",
+      "example": "Two short sentences give you a natural breath point and sound twice as confident.",
+      "note": "Sentence Architecture: Split long 'because... which... that...' chains at the natural cause-and-effect seam."
+    },
+    {
+      "id": "txtrpg-02",
+      "category": "custom",
+      "term": "Slang & Idiom Upgrade: \"Our junior developer made a brilliant last-second fix right before the demo crashed.\"",
+      "definition": "\"Our junior dev pulled off a total clutch fix seconds before the demo went live.\"",
+      "example": "'Clutch' (borrowed straight from Counter-Strike and sports) is everyday tech slang for performing under intense pressure.",
+      "note": "Natural Slang: Gamer and developer slang overlap heavily—use it to sound relaxed and authentic."
+    },
+    {
+      "id": "txtrpg-03",
+      "category": "custom",
+      "term": "Documentary & Non-Fiction Paraphrase: What do you say when you know the concept (e.g., emotional detachment in 'Prozac Nation') but blank on a fancy psychological term?",
+      "definition": "\"She describes a kind of heavy emotional numbness—where life keeps moving around you, but nothing actually registers.\"",
+      "example": "Descriptive paraphrasing sounds thoughtful and literate—never apologize for missing a niche word.",
+      "note": "Vocabulary Bridge: Vivid plain English beats stalling for a textbook noun."
+    },
+    {
+      "id": "txtrpg-04",
+      "category": "custom",
+      "term": "Presentation Stamina Cue: What three-step reset prevents vocal tiredness 15 minutes into a technical talk?",
+      "definition": "1) State a short signpost sentence, 2) Drop your pitch at the period and take a silent 2-second breath, 3) Let the slide carry the details while you highlight only the takeaway.",
+      "example": "\"That covers the ingestion layer. [2-second breath] Now let's look at why latency spikes under load.\"",
+      "note": "Vocal Endurance: Pauses protect your voice and project quiet authority."
+    },
+    {
+      "id": "txtrpg-05",
+      "category": "custom",
+      "term": "Slang in Context: What does it mean when a team goes 'down a rabbit hole' or needs a quick 'sanity check'?",
+      "definition": "'Down a rabbit hole' = getting lost researching an overly complex tangent; 'sanity check' = a quick second pair of eyes to confirm an idea makes basic sense.",
+      "example": "\"Before I go down a rabbit hole rewriting the parser, can we do a five-minute sanity check?\"",
+      "note": "Everyday Engineering Slang: High-frequency idioms in English-speaking dev teams."
+    },
+    {
+      "id": "txtrpg-06",
+      "category": "custom",
+      "term": "Russian-to-English Polish: \"In my text RPG, player enters dark room and finds old journal on table.\"",
+      "definition": "\"In my text RPG, the player enters a dark room and finds an old journal on the table.\"",
+      "example": "First mention of a countable noun takes 'a / an' ('a dark room', 'an old journal'); established context takes 'the' ('the player', 'the table').",
+      "note": "Articles & Narrative Flow: Clean articles make interactive fiction and live demos read seamlessly."
+    },
+    {
+      "id": "txtrpg-07",
+      "category": "custom",
+      "term": "Slang Upgrade: \"That new update reduced the weapon's power so much that nobody uses it anymore.\"",
+      "definition": "\"The latest patch nerfed that weapon into the ground—it's completely out of the meta now.\"",
+      "example": "In tech teams too, engineers joke about a feature getting 'nerfed' when compliance strips out capabilities.",
+      "note": "Cross-Over Slang: 'Nerfed' and 'meta' work effortlessly in both Counter-Strike and software engineering banter."
+    }
+  ]
+}
