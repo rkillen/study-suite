@@ -1,0 +1,128 @@
+{
+  "clientId": "swisscro",
+  "profileName": "SwissCRO — Composed Risk Leadership, Anti-Overpreparation & Boardroom Poise (B2–C1)",
+  "watchOuts": [
+    {
+      "tag": "Executive Composure · High-Pressure Reset",
+      "title": "Slow the Pace Before You Answer Tense Pushback",
+      "detail": "When a board or business-line leader challenges a risk call, rushing to defend your position amplifies internal tension. Buy yourself a calm 2-second breath, acknowledge the question neutrally ('That's the core trade-off we're weighing'), and speak 15% slower than the room."
+    },
+    {
+      "tag": "Anti-Overpreparation · 3-Bullet Anchor",
+      "title": "Replace 20-Page Mental Scripts With Three Core Pillars",
+      "detail": "Over-preparing creates fragility—the moment a meeting goes off-script, anxiety spikes. Anchor every topic to just three headlines (The Risk, The Impact, The Guardrail) so you can pivot effortlessly even when caught cold."
+    },
+    {
+      "tag": "Swiss-Banking Drift · Reclaiming Native US Crispness",
+      "title": "Trimming 'Euro-Banking' Clutter After 20+ Years in Switzerland",
+      "detail": "Two decades in Swiss banking naturally pulls German-influenced syntax and stiff phrasing into your English ('We have to take care about this topic', 'actual risk appetite'). Reclaim natural, idiomatic American directness: 'Here is where we draw the line' and 'Our current exposure sits at...'"
+    },
+    {
+      "tag": "Emotional Regulation · Reframing 'Worry' as 'Risk Foresight'",
+      "title": "Channeling a CRO's Vigilance Into Calm Authority",
+      "detail": "Your instinct to anticipate what could go wrong is literally your superpower as a CRO—it only hurts when it sounds defensive. Present risks as clear, unemotional options ('If we take Path A, here is the capital buffer we need') rather than personal warnings."
+    },
+    {
+      "tag": "Delivery & Prosody · Grounded Register",
+      "title": "Lowering Vocal Pitch at the Period Under Scrutiny",
+      "detail": "Tension pushes vocal pitch upward and clips breath support. Drop your pitch cleanly at the end of every recommendation—signaling quiet, unshakeable executive certainty even if your pulse is up."
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "Caught Cold in ExCo: Answering an Unscripted Risk Question Without Panicking",
+      "category": "Unscripted Poise · Anti-Overpreparation",
+      "prompt": "Midway through an Executive Committee meeting, the CEO pivots to an emerging regulatory or credit issue you didn't prepare slides for. Use a calm 3-step bridge (Acknowledge → Frame what is known → State next verification step) in 45 seconds without apologizing for not having every number memorized."
+    },
+    {
+      "title": "Holding Your Ground When Revenue Leaders Push Back on a Risk Limit",
+      "category": "Tense Discussion · Emotional Composure",
+      "prompt": "A commercial division head argues in a heated meeting that your risk controls are slowing down a major deal. Respond with zero defensiveness—separating the person from the risk math and holding the line in four calm, measured sentences."
+    },
+    {
+      "title": "The 'No-Notes' 60-Second Quarterly Risk Briefing",
+      "category": "Boardroom Clarity · Minimalist Prep",
+      "prompt": "Deliver a high-level quarterly risk summary using only three mental bullet points—no script, no exhaustive caveats. Practice trusting your 20+ years of banking instinct instead of over-explaining."
+    },
+    {
+      "title": "Climbing an Alpine Pass on Two Wheels: Pacing Effort When the Gradient Spikes",
+      "category": "Cycling & Mindset · Calm Under Load",
+      "prompt": "Tell a short story about pacing yourself up a steep Swiss climb or sport event—how staying smooth in the saddle beats fighting the gradient—and connect that physical composure to navigating tense boardroom debates."
+    },
+    {
+      "title": "Chicago Roots Meet Swiss Precision: Unplugging on a Family Trip",
+      "category": "Travel & Perspective · Natural Voice",
+      "prompt": "Share a favorite family holiday memory with your three kids where plans went sideways on the road—and how letting go of total control turned it into a great story. Keep the tone warm, humorous, and unhurried."
+    }
+  ],
+  "beachcombing": {
+    "tier1": [
+      "Peloton",
+      "Switchback",
+      "Passport",
+      "Lakefront"
+    ],
+    "tier2": [
+      "Boardroom",
+      "Summit",
+      "Departure",
+      "Sideline"
+    ],
+    "tier3": [
+      "Composure",
+      "Margin",
+      "Detachment",
+      "Cadence"
+    ]
+  },
+  "customCards": [
+    {
+      "id": "swisscro-01",
+      "category": "custom",
+      "term": "Caught-Cold Bridge: What do you say when asked an unexpected question in a tense meeting without sounding unprepared or defensive?",
+      "definition": "\"That's the right question to ask. Based on current exposures, here is the headline picture—and I'll confirm the exact stress-test figures by 2 PM.\"",
+      "example": "Acknowledge the question, give your directional CRO judgment, and set a crisp follow-up time.",
+      "note": "Anti-Overpreparation: Senior executives respect calm directional judgment far more than memorized spreadsheets."
+    },
+    {
+      "id": "swisscro-02",
+      "category": "custom",
+      "term": "Emotional Reset Cue: What physical and vocal reset stops tension from hijacking your delivery in a heated debate?",
+      "definition": "Exhale fully before speaking, drop your shoulders, speak 15% slower than the person who just challenged you, and end your first sentence on a firm downward pitch.",
+      "example": "\"Let's step back and look at the downside exposure objectively.\"",
+      "note": "Composure Under Pressure: Controlling your tempo forces the entire room's energy to slow down."
+    },
+    {
+      "id": "swisscro-03",
+      "category": "custom",
+      "term": "Swiss-Banking Drift Fix: \"We need to take care about our actual liquidity buffer in case the market makes a big movement.\"",
+      "definition": "\"We need to stay disciplined on our current liquidity buffer in case markets swing sharply.\"",
+      "example": "Reclaim natural US banking phrasing: 'current' (not Swiss/German 'actual') and 'stay disciplined on' (not 'take care about').",
+      "note": "Native Crispness: Twenty years in Switzerland subtly imports German prepositions and false friends."
+    },
+    {
+      "id": "swisscro-04",
+      "category": "custom",
+      "term": "Holding the Line Without Heat: How do you push back on an aggressive business-line proposal without sounding emotional or rigid?",
+      "definition": "\"I understand the commercial upside—my responsibility is making sure one bad quarter doesn't wipe out three years of margin. Here is the structure that works.\"",
+      "example": "Validate the commercial goal first, anchor your pushback in institutional protection, and offer a workable path.",
+      "note": "Executive Gravitas: Calmly framing risk as stewardship removes personal friction."
+    },
+    {
+      "id": "swisscro-05",
+      "category": "custom",
+      "term": "Anti-Overpreparation Rule: Before walking into a high-stakes meeting, what is the maximum prep you allow yourself?",
+      "definition": "Write down exactly three headlines on one index card: 1) Core Risk, 2) Worst-Case Impact, 3) Recommended Guardrail—then close the notebook.",
+      "example": "When you know your three pillars cold, you never lose your place when interrupted.",
+      "note": "Structural Confidence: Less script equals more agility under live questioning."
+    },
+    {
+      "id": "swisscro-06",
+      "category": "custom",
+      "term": "Reframing Worry: \"I'm really worried that if we approve this credit line, we could face serious regulatory trouble later.\"",
+      "definition": "\"Approving this credit line without tighter covenants exposes us to clear regulatory scrutiny—here is how we close that gap upfront.\"",
+      "example": "Shift from 'I'm worried...' (personal emotion) to 'This exposes us to...' (objective CRO analysis).",
+      "note": "Tone Shift: Objective risk framing turns anxiety into quiet boardroom authority."
+    }
+  ]
+}
