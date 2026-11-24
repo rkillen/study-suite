@@ -35,11 +35,15 @@ export async function fetchSharedLibrary() {
   };
 }
 
-// The ids of every client that exists (admins only).
-export async function listClientIds() {
+// Every client that exists, as { id, profileName } (admins only).
+export async function listClients() {
   const snapshot = await getDocs(collection(db, "clients"));
-  return snapshot.docs.map((d) => d.id).sort();
+  return snapshot.docs
+    .map((d) => ({ id: d.id, profileName: d.data().profileName || d.id }))
+    .sort((a, b) => a.profileName.localeCompare(b.profileName));
 }
+
+export const listClientIds = async () => (await listClients()).map((client) => client.id).sort();
 
 // Returns null when there is no such client.
 export async function fetchClientProfile(clientId) {

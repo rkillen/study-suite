@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useStudy } from "../../context/StudyContext.jsx";
+import ClientsAdmin from "./ClientsAdmin.jsx";
 import ImportBackup from "./ImportBackup.jsx";
 import SharedContent from "./SharedContent.jsx";
 
 // The sections of the Admin tab. To add one, add a line here.
 const SECTIONS = [
   { id: "content", label: "Shared content", Component: SharedContent },
+  { id: "clients", label: "Clients", Component: ClientsAdmin },
   { id: "data", label: "Import & backup", Component: ImportBackup },
 ];
 

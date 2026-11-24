@@ -1,4 +1,4 @@
-import { collection, doc, getDocs, query, serverTimestamp, setDoc, where, writeBatch } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, query, serverTimestamp, setDoc, updateDoc, where, writeBatch } from "firebase/firestore";
 import { db } from "../firebase/app.js";
 import { splitIntoChunks } from "./flashcardChunks.js";
 
@@ -66,14 +66,44 @@ export async function saveSharedLibrary(library) {
   ]);
 }
 
+// ---- Clients
+
+const SECTION_ID_PREFIX = { watchOuts: "wo", scenarios: "scn", cards: "card" };
+
+// The changes that make one list of a client (watch-outs, scenarios or cards) match "items".
+async function sectionOperations(clientId, section, items) {
+  const withIds = withUniqueIds(items, SECTION_ID_PREFIX[section]);
+  const keep = new Set(withIds.map((item) => item.id));
+  const existing = await getDocs(collection(db, "clients", clientId, section));
+
+  return [
+    ...withIds.map(({ id, ...data }, order) => (batch) =>
+      batch.set(doc(db, "clients", clientId, section, id), { ...data, order })
+    ),
+    ...existing.docs.filter((d) => !keep.has(d.id)).map((d) => (batch) => batch.delete(d.ref)),
+  ];
+}
+
+// Replaces one list of a client. section is "watchOuts", "scenarios" or "cards".
+export async function saveClientSection(clientId, section, items) {
+  await commitAll([
+    ...(await sectionOperations(clientId, section, items)),
+    (batch) => batch.update(doc(db, "clients", clientId), { updatedAt: serverTimestamp() }),
+  ]);
+}
+
+// beachcombing: the client's own extra words, { tier1: [...], tier2: [...], tier3: [...] }
+export const saveClientBeachcombing = (clientId, beachcombing) =>
+  updateDoc(doc(db, "clients", clientId), { beachcombing, updatedAt: serverTimestamp() });
+
+export const saveClientName = (clientId, profileName) =>
+  updateDoc(doc(db, "clients", clientId), { profileName, updatedAt: serverTimestamp() });
+
 // profile: the normalised shape from normalize.js (profileName, beachcombing, watchOuts, scenarios, customCards)
+// Replaces the whole client.
 export async function saveClientProfile(profile) {
   const { clientId } = profile;
-  const sections = {
-    watchOuts: withUniqueIds(profile.watchOuts, "wo"),
-    scenarios: withUniqueIds(profile.scenarios, "scn"),
-    cards: withUniqueIds(profile.customCards, "card"),
-  };
+  const sections = { watchOuts: profile.watchOuts, scenarios: profile.scenarios, cards: profile.customCards };
 
   const operations = [
     (batch) =>
@@ -83,18 +113,24 @@ export async function saveClientProfile(profile) {
         updatedAt: serverTimestamp(),
       }),
   ];
-
   for (const [section, items] of Object.entries(sections)) {
-    const keep = new Set(items.map((item) => item.id));
-    const existing = await getDocs(collection(db, "clients", clientId, section));
-
-    items.forEach(({ id, ...data }, order) => {
-      operations.push((batch) => batch.set(doc(db, "clients", clientId, section, id), { ...data, order }));
-    });
-    existing.docs
-      .filter((d) => !keep.has(d.id))
-      .forEach((d) => operations.push((batch) => batch.delete(d.ref)));
+    operations.push(...(await sectionOperations(clientId, section, items)));
   }
-
   await commitAll(operations);
+}
+
+// Makes a new client. content (optional) is a copy of another client's content, see cloneClientContent.
+// Refuses if a client with that id already exists.
+export async function createClient({ clientId, profileName, content }) {
+  if ((await getDoc(doc(db, "clients", clientId))).exists()) {
+    throw new Error(`There is already a client with the id "${clientId}".`);
+  }
+  await saveClientProfile({
+    clientId,
+    profileName,
+    beachcombing: content?.beachcombing ?? { tier1: [], tier2: [], tier3: [] },
+    watchOuts: content?.watchOuts ?? [],
+    scenarios: content?.scenarios ?? [],
+    customCards: content?.customCards ?? [],
+  });
 }
