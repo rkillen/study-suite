@@ -38,6 +38,8 @@ Inside a folder, the main file is named after the tab, for example `Beachcombing
 
    (Icons come from <https://lucide.dev/icons>. Import the one you pick at the top of the file.)
 
+   The `id` is also the tab's address: `id: "journal"` lives at `/journal`.
+
 3. Run `npm run dev` and the tab appears. Run `npm run typecheck` to check your new file for mistakes.
 
 ## What `useStudy()` gives you

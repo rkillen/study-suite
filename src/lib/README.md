@@ -2,6 +2,7 @@
 
 Small functions that don't draw anything on screen.
 
+- `routing.ts`: the address of each tab and Admin section, and links that keep the admin `?client=` preview.
 - `speech.ts`: reads text aloud (the Listen buttons) and the shared microphone engine used for dictation.
 - `useSpeechCapture.ts`: lets a screen know whether its microphone button is the one currently listening.
 - `chime.ts`: the soft sound when the Pre-Outlining timer ends.

@@ -4,8 +4,8 @@ This is the folder map. For the bigger picture, common changes and how to deploy
 
 | Path | What it does |
 |---|---|
-| `main.tsx` | Starts the app and wraps it in the shared pieces (notifications, sign-in, data, story draft). |
-| `App.tsx` | The page layout: header, tab bar, and the tabs themselves. |
+| `main.tsx` | Starts the app and wraps it in the shared pieces (router, notifications, sign-in, data, story draft). |
+| `App.tsx` | The page layout: header, tab bar, and the tabs themselves. The address (`/storycraft`) picks the open tab. |
 | `tabs.ts` | The list of tabs, in order. **Add a new tab here.** Mark a tab `adminOnly: true` to show it to admins only. |
 | `index.css` | Fonts, colours and a few custom styles. |
 | `types.ts` | **The shapes of all the data** (a client, a flashcard, a story...). Start here to see what the app stores. |

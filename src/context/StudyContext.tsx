@@ -1,7 +1,9 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useNavigate } from "react-router";
 import { loadStudyData, type StudyData } from "../data/index.ts";
 import { usePrefs, type Prefs, type PrefsUpdater } from "../data/usePrefs.ts";
 import { useProgress, type ProgressActions, type ProgressErrorHandler } from "../data/useProgress.ts";
+import { tabPath, useLinkTo } from "../lib/routing.ts";
 import type { ClientProfile, Library, Progress } from "../types.ts";
 import { useSignedIn } from "./AuthContext.tsx";
 import { useToast } from "./ToastContext.tsx";
@@ -110,7 +112,9 @@ function StudyReady({ clientId, data, reloadContent, children }: { clientId: str
     updatePrefs((p) => ({ activeCardCat: hasCustomCards ? "custom" : p.activeCardCat, currentCardPos: 0 }));
   }, [hasCustomCards, updatePrefs]);
 
-  const goToTab = useCallback((tabId: string) => updatePrefs({ activeTab: tabId }), [updatePrefs]);
+  const navigate = useNavigate();
+  const linkTo = useLinkTo();
+  const goToTab = useCallback((tabId: string) => navigate(linkTo(tabPath(tabId))), [navigate, linkTo]);
 
   const value = useMemo<StudyValue>(
     () => ({

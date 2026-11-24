@@ -8,7 +8,6 @@ export type TierNumber = 1 | 2 | 3;
 
 // Screen settings and "where was I" positions. These stay in this browser.
 export interface Prefs {
-  activeTab: string;
   accent: Accent;
   beachTier: TierNumber;
   beachIndex: number;
@@ -20,7 +19,6 @@ export interface Prefs {
 }
 
 const DEFAULT_PREFS: Prefs = {
-  activeTab: "overview",
   accent: "en-US",
   beachTier: 1,
   beachIndex: 0,

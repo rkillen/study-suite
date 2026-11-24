@@ -4,6 +4,7 @@ import { useStudy } from "../../context/StudyContext.tsx";
 import { useToast } from "../../context/ToastContext.tsx";
 import type { DeckCategory, Flashcard } from "../../types.ts";
 import { shuffled } from "../../lib/random.ts";
+import { useOpenTabId } from "../../lib/routing.ts";
 import { speakText } from "../../lib/speech.ts";
 import { syncDeck } from "./deck.ts";
 
@@ -20,6 +21,7 @@ const NO_CARDS: Flashcard[] = [];
 export default function Flashcards() {
   const { library, clientProfile, prefs, updatePrefs, progress, setActiveDeck, masterCard } = useStudy();
   const { showToast } = useToast();
+  const openTabId = useOpenTabId();
   const [flipped, setFlipped] = useState(false);
 
   const hasCustom = clientProfile.customCards.length > 0;
@@ -42,14 +44,14 @@ export default function Flashcards() {
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
-      if (prefs.activeTab !== "flashcards" || e.code !== "Space") return;
+      if (openTabId !== "flashcards" || e.code !== "Space") return;
       if (["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement?.tagName ?? "")) return;
       e.preventDefault();
       setFlipped((f) => !f);
     };
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
-  }, [prefs.activeTab]);
+  }, [openTabId]);
 
   const chooseCategory = (next: DeckCategory) => {
     updatePrefs({ activeCardCat: next, currentCardPos: 0 });

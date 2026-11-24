@@ -31,8 +31,8 @@ the page alone.
 ## Principles
 
 - **Few dependencies.** Runtime: `react`, `react-dom`, `firebase`, `lucide-react`. Everything else is a build or
-  type tool. There is deliberately no router (it is one page with tabs), no state library (a few React
-  contexts), no linter and no `firebase-admin`. Add a dependency only when the gain is clear, and tell the
+  type tool, plus `react-router` for the addresses of the tabs. There is deliberately no state library (a few
+  React contexts), no linter and no `firebase-admin`. Add a dependency only when the gain is clear, and tell the
   README.
 - **Rules first.** Change who may do what in `firestore.rules`, with tests, before changing the screens.
 - **Reads are limited.** The free plan allows 50,000 database reads a day. That is why flashcards
@@ -65,16 +65,16 @@ invitations, importing), prefer `npm run emulators` plus `npm run dev:emulator`:
 
 Start with `src/README.md` for the folder map. The path from opening the page to seeing a tab:
 
-1. `main.tsx` nests the app in this order: toasts, **sign-in** (`AuthProvider`), `AuthGate`, the study data
-   (`StudyProvider`), the story draft, and finally `App`.
+1. `main.tsx` nests the app in this order: the router (`BrowserRouter`), toasts, **sign-in** (`AuthProvider`),
+   `AuthGate`, the study data (`StudyProvider`), the story draft, and finally `App`.
 2. `features/auth/AuthGate.tsx` shows a setup message, the sign-in screen, "no access", or the app. Nothing inside
    it (including the data) loads until `status === "ready"`.
 3. `firebase/access.ts` (`resolveAccess`) decides who gets in: an existing profile (`users/<uid>`), or else an
    invitation (`invites/<email>`) that it turns into a profile, or else a refusal. The rules re-check all of it.
 4. `context/StudyContext.tsx` loads the content (`data/index.ts`: shared library + the person's client, merged)
    and the person's own work (`data/useProgress.ts`), and gives every screen one object through `useStudy()`.
-5. `App.tsx` draws the header and the tabs from `tabs.ts`. Every tab stays mounted and is only hidden, which is
-   why drafts and timers survive tab switches.
+5. `App.tsx` draws the header and the tabs from `tabs.ts`. The open tab comes from the address (`/storycraft`,
+   `/admin/people`). Every tab stays mounted and is only hidden, which is why drafts and timers survive tab switches.
 
 Things worth knowing before you change them:
 
@@ -92,7 +92,11 @@ Things worth knowing before you change them:
   open `http://localhost:5173`. Send real invitations from the live site.
 - **Content comes from Firebase only.** The `seed/` files are only read by the **Import starter data** button
   (`data/seedSource.ts`, `data/seedImport.ts`).
-- **Prefs stay in the browser.** Which tab, accent, last position: `data/usePrefs.ts`, in `localStorage`.
+- **The address says which tab is open.** A tab's address is its `id` in `tabs.ts` (`/beachcombing`), and an Admin
+  section's is `/admin/<section id>`. Links are built with `lib/routing.ts`, which keeps the admin `?client=` preview
+  in the address. Do not use `<Routes>` for the tabs: it would unmount the hidden ones. An address that names no tab
+  (including `/`) opens the first one.
+- **Prefs stay in the browser.** Accent, last position: `data/usePrefs.ts`, in `localStorage`.
 - **Admin code is lazy.** `tabs.ts` loads the Admin tab with `lazy()`, so clients never download it.
 
 ## Common changes
@@ -185,9 +189,9 @@ private window and check the sign-in screen, then sign in.
 - **Site settings** are the `hosting` part of `firebase.json`, and they matter:
   - The page itself (`index.html`) is sent with `no-cache`, so people get a new release on their next visit. The
     built files under `/assets/` have names that change with every build and are cached for a year.
-  - There is **no catch-all "send everything to index.html" rule**, on purpose. This app has no page routes, and with
-    that rule a request for a file that no longer exists after a deploy would get the home page, cached for a year.
-    Now it gets a plain 404. Add the rule back only if you add a router.
+  - Every address that is not a real file is sent to `index.html`, because the router handles `/storycraft`,
+    `/admin/people` and so on in the browser. The one exception is `/assets/**`: a request for a built file that no
+    longer exists after a deploy gets a plain 404. Without that exception it would get the home page, cached for a year.
 - **Open tabs** keep running the version they loaded. After a deploy, someone with the app already open may hit an
   error when they first open a part they had not used yet (Admin is loaded on demand). A reload fixes it.
 - **Limits:** the free plan allows 10 GB of site storage and about 10 GB of downloads a month. A first visit downloads

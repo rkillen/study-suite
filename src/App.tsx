@@ -1,20 +1,27 @@
 import { Suspense, useEffect } from "react";
+import { Navigate } from "react-router";
 import Header from "./components/Header.tsx";
 import { useSignedIn } from "./context/AuthContext.tsx";
 import { CONSENT_LINE } from "./features/auth/consent.ts";
 import { useStudy } from "./context/StudyContext.tsx";
+import { tabPath, useLinkTo, useOpenTabId } from "./lib/routing.ts";
 import { stopCapture } from "./lib/speech.ts";
 import { visibleTabs } from "./tabs.ts";
 
 export default function App() {
-  const { prefs, contentEmpty, goToTab } = useStudy();
+  const { contentEmpty, goToTab } = useStudy();
   const { isAdmin } = useSignedIn();
+  const linkTo = useLinkTo();
   const tabs = visibleTabs(isAdmin);
-  const activeTab = tabs.some((tab) => tab.id === prefs.activeTab) ? prefs.activeTab : tabs[0].id;
+  const openTabId = useOpenTabId();
+  const activeTab = tabs.find((tab) => tab.id === openTabId)?.id;
 
   useEffect(() => {
     stopCapture();
   }, [activeTab]);
+
+  // The address "/" or one that names no tab (or an Admin tab for someone who is not an admin) opens the first tab.
+  if (!activeTab) return <Navigate to={linkTo(tabPath(tabs[0].id))} replace />;
 
   return (
     <div className="min-h-screen flex flex-col selection:bg-crimson-700/15 selection:text-crimson-800">
