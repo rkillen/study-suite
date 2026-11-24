@@ -1,0 +1,116 @@
+{
+  "clientId": "fortwayne",
+  "profileName": "FortWayne — Conference Networking, Lecture Presence & Korean L1 Clarity (B2+ → C1)",
+  "watchOuts": [
+    {
+      "tag": "Conferences & Mingling · Low-Friction Small Talk",
+      "title": "Trade 'Interview Questions' for Warm Observational Hooks",
+      "detail": "At engineering conferences, rapid-fire questions ('Where are you from? What is your research?') stall quickly into polite small talk. Open with a shared-context observation plus an easy follow-up: 'That keynote on edge-AI sensors hit close to home—what stood out most to you?'"
+    },
+    {
+      "tag": "Lecture Engagement · Holding Student Attention",
+      "title": "Break Every 8 Minutes of Theory With a Real-World Hook or Question",
+      "detail": "Students tune out continuous derivations and slide reading. Reset the room's attention every few minutes by framing the engineering problem before the equation ('Before we look at the math, why did this brake assembly fail under load?') and pausing two full seconds after asking a question."
+    },
+    {
+      "tag": "Korean L1 Pronunciation · Consonants (/r/ vs /l/, /f/ vs /p/, /v/ vs /b/, /z/)",
+      "title": "Separating High-Confusion Consonant Pairs in Technical & Everyday Speech",
+      "detail": "Keep tongue-tip contact distinct for /l/ ('light', 'load', 'line') vs. bunched/retroflex /r/ with zero tongue-roof touch ('right', 'road', 'frame'). Anchor upper teeth cleanly onto the lower lip for /f/ and /v/ ('curve', 'valve', 'drive', 'leaf'), and add vocal-cord buzz to /z/ ('phase', 'zero', 'results')."
+    },
+    {
+      "tag": "Korean L1 Prosody · Syllable Timing & Vowel Insertion",
+      "title": "Trimming Epenthetic Vowels ('-eu') & Stressing Key Content Words",
+      "detail": "Korean syllable structure naturally adds a light vowel after final consonants ('fast-eu', 'test-eu', 'torque-eu'). Release final consonants cleanly without an extra syllable, and punch stressed syllables louder and longer while reducing small function words ('to', 'for', 'of')."
+    },
+    {
+      "tag": "Networking Exits & Follow-Ups · Conference Flow",
+      "title": "Exiting Conversations Smoothly Without Awkward Trailing Off",
+      "detail": "Knowing how to wrap up a 5-minute hallway chat removes half the anxiety of mingling. Use a warm, decisive close: 'I want to grab coffee before the next panel—let's swap badges and compare notes on your lab's setup.'"
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "Conference Coffee Break: Turning a 30-Second Hello Into a Real Conversation",
+      "category": "Conferences & Mingling · Small Talk",
+      "prompt": "You are standing by the coffee station at an engineering symposium next to a researcher whose badge shows a Midwest university or automotive supplier. Start a relaxed conversation using a session observation or travel hook, keep the back-and-forth natural, and wrap up smoothly before the next talk."
+    },
+    {
+      "title": "The First 3 Minutes of Lecture: Hooking Restless Engineering Students Immediately",
+      "category": "Classroom Presence · Student Engagement",
+      "prompt": "Open a Monday morning engineering lecture without saying 'Today we will cover Chapter 4.' Hook your students in 90 seconds using a real-world automotive, baseball physics, or consumer tech failure—then transition cleanly into the core concept."
+    },
+    {
+      "title": "Midwest Small Talk: From Atlanta Braves & Cubs Banter to Weekend Dad Life",
+      "category": "Everyday Rapport · Conversational Ease",
+      "prompt": "Practice a casual hallway chat with a colleague in Fort Wayne about baseball rivalries (16 years split between Atlanta and Indiana), classic cars, or keeping up with an energetic 3-year-old son—focusing on relaxed pacing and natural idioms."
+    },
+    {
+      "title": "Re-Engaging a Quiet Classroom When Energy Drops Mid-Lecture",
+      "category": "Lecture Dynamics · Pacing & Vocal Variety",
+      "prompt": "Simulate the moment 25 minutes into a dense lecture when students start staring at laptops. Shift your vocal volume, ask a concrete prediction question ('Raise your hand if you think the torque spikes here—or drops'), and bring the room back to life."
+    },
+    {
+      "title": "Reception Mingling: Explaining Your Research in Plain English Without Jargon Overload",
+      "category": "Networking · Elevator Framing",
+      "prompt": "At an evening conference reception, someone outside your exact subfield asks, 'So what are you working on these days?' Explain your work in three vivid, jargon-free sentences that invite curiosity rather than shutting down the chat."
+    }
+  ],
+  "beachcombing": {
+    "tier1": [
+      "Seventh-inning stretch",
+      "Torque wrench",
+      "Chalk dust",
+      "Toy trucks"
+    ],
+    "tier2": [
+      "Ballpark",
+      "Lecture hall",
+      "Garage",
+      "Name badge"
+    ],
+    "tier3": [
+      "Curiosity",
+      "Momentum",
+      "Clarity",
+      "Playfulness"
+    ]
+  },
+  "customCards": [
+    {
+      "id": "fortwayne-01",
+      "category": "custom",
+      "term": "Conference Opener: Replace \"Hello, what is your name and what do you research?\" with a natural, low-pressure conversation starter.",
+      "definition": "\"Hey there—did you catch that last talk on battery thermal management? I'm still thinking about their test setup.\"",
+      "example": "Commenting on a shared moment gives the other person an easy story to jump into.",
+      "note": "Conference Mingling: Shared observations feel like peer-to-peer banter instead of an interrogation."
+    },
+    {
+      "id": "fortwayne-02",
+      "category": "custom",
+      "term": "Pronunciation Drill (/r/ vs /l/ & /f/ vs /p/): Read aloud cleanly without extra final vowels: \"The left rear wheel valve failed under full load.\"",
+      "definition": "Touch the ridge behind top teeth for 'left / wheel / full / load'; pull tongue back without touching for 'rear'; bite lower lip gently for 'valve / failed / full'.",
+      "example": "Keep 'load' and 'failed' to one crisp syllable—avoid adding a trailing '-eu' vowel.",
+      "note": "Korean L1 Clarity: Distinct lip and tongue targets prevent minimal-pair confusion in engineering demos."
+    },
+    {
+      "id": "fortwayne-03",
+      "category": "custom",
+      "term": "Lecture Attention Reset: Upgrade this flat slide transition: \"Next slide, here is the formula for angular momentum.\"",
+      "definition": "\"Before I put the equation up—picture a fastball spinning at 2,400 RPM. What happens to the seam drag if we tilt the axis?\"",
+      "example": "A concrete physical picture wakes up engineering brains before the math appears.",
+      "note": "Classroom Engagement: Curiosity first, derivation second."
+    },
+    {
+      "id": "fortwayne-04",
+      "category": "custom",
+      "term": "Graceful Mingling Exit: How do you end a pleasant 5-minute conference chat without hovering or feeling awkward?",
+      "definition": "\"It was great swapping notes—I'm going to grab a quick refill before the next session starts. Let's stay in touch!\"",
+      "example": "Name a simple physical next step ('grab a refill', 'say hello to a colleague') plus a warm closer.",
+      "note": "Networking Confidence: Having a clean exit line makes starting conversations effortless."
+    },
+    {
+      "id": "fortwayne-05",
+      "category": "custom",
+      "term": "Pronunciation Drill (/v/ vs /b/ & /z/): Read aloud with strong lip-teeth contact and vocal buzz: \"Verify every sensor phase before zeroing the curve.\"",
+      "definition": "Upper teeth touch lower lip on 'verify / every / curve' (never closing both lips like /b/); vocal cords buzz continuously through 'phase / zeroing'.",
+      "example": "Notice the clear contrast between 'curve' (/
