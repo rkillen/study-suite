@@ -12,9 +12,23 @@ straight away.
 | `AddClientForm.jsx` | Makes a new client, empty or as a copy of an existing one, and can invite their person at the same time. |
 | `PeoplePanel.jsx` | On each client: who has an account or an invitation, and a form to invite someone. |
 | `InviteMessage.jsx` | The message to send someone you invited, with a Copy button. |
-| `ImportBackup.jsx` | Import the starter data from `seed/`, download a backup, restore from a backup file. |
+| `ImportBackup.jsx` | Import the starter data from `seed/`, import AppSheet CSVs, download a backup, restore from a backup file. |
+| `CsvImport.jsx` | The AppSheet CSV card: choose the files, see a before/after preview, confirm. |
 | `ListEditor.jsx` | The reusable list: search, pages, add, edit, delete (with "are you sure"), add several at once, reorder. Every list in the Admin area is one of these. |
 | `AdminCard.jsx` | The titled card and the two button styles used on the Admin screens. |
+
+## The AppSheet CSV import
+
+- **Which category becomes what** is one short list at the top of `src/data/appsheetCsv.js` (`CATEGORY_RULES`).
+  If AppSheet categories change, change that list; nothing else needs touching. The screen shows the same
+  list under "Which AppSheet categories go where?".
+- It only replaces the lists the file has something for. A file with only questions replaces only the questions.
+  The interview flashcards, the story prompts and every client are never touched.
+- Rows in other categories are skipped and counted in the preview. Repeated words or questions (ignoring
+  capitals) are left out. A card's id is the row's `Prompt_ID`, so re-importing keeps people's progress on cards that
+  are still in the file. If an id repeats, or clashes with a deck that is staying, it gets `_2`, `_3`...
+- Nothing is saved until you press **Yes, replace these lists**. The tip in the preview applies: download a
+  backup first, then you can undo it with **Restore from a backup file**.
 
 ## Clients
 

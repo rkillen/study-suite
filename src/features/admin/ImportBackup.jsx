@@ -4,6 +4,7 @@ import { useStudy } from "../../context/StudyContext.jsx";
 import { useToast } from "../../context/ToastContext.jsx";
 import { triggerDownload } from "../../lib/download.js";
 import AdminCard, { primaryButton, secondaryButton } from "./AdminCard.jsx";
+import CsvImport from "./CsvImport.jsx";
 
 const errorText = (error) => (error instanceof Error ? error.message : String(error));
 
@@ -210,6 +211,7 @@ export default function ImportBackup() {
   return (
     <div className="space-y-5">
       <StarterContent />
+      <CsvImport />
       <Backup />
       <Restore />
     </div>
