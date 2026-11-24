@@ -4,12 +4,21 @@ A practice studio for executive communication: Beachcombing (memory prompts), Pr
 structure), Storycraft (story log), Speaking Arena (rehearse aloud), and a rolling 20-card Flashcard deck.
 Each coaching client sees their own focus points, scenarios and personal cards.
 
-> **Status: being rebuilt.** The page used to be a single `index.html` with data in JSON files. It is now a
-> React app that uses Firebase (Google sign-in and a database) instead of files.
-> Done so far: the app itself, Google sign-in with an invitation list, the security rules, and storing
-> content and each person's progress in Firebase, and the admin screens for editing content, importing
-> AppSheet CSVs, backing up and restoring, adding clients, and managing people (invite, move, switch access off and
-> on, and read their stories and progress). Still to come: the full guides and the live deployment. See "Roadmap" below.
+**Live at <https://study-suite-65822.web.app>.** Access is by invitation, with Google sign-in. Admins can edit
+all content, invite and manage people, and read (never change) their stories and progress.
+
+Built with React, TypeScript and Firebase (Google sign-in, a database, and hosting on the free plan). The page
+used to be a single `index.html` with data in JSON files; that version is still online at
+<https://rkillen.github.io/study-suite/>.
+
+## Which guide do I need?
+
+| I want to... | Read |
+|---|---|
+| Run the site: invite clients, edit content, check on people, make backups | `docs/ADMIN-GUIDE.md` |
+| Set Firebase up from scratch, or put the site online | `docs/SETUP-FIREBASE.md` |
+| Change the code, the security rules, or deploy and roll back | `docs/DEVELOPER-GUIDE.md` |
+| Know what is stored where | `docs/DATA-MODEL.md` |
 
 ## Run it on your computer
 
@@ -49,19 +58,19 @@ npm run deploy         # builds the site and publishes everything to Firebase
 | `tsconfig.json` | Settings for the TypeScript checker. You rarely need to touch it. |
 | `src/index.css` | Colours and fonts. Change a colour here and it changes everywhere. |
 | `src/tabs.ts` | The list of tabs. Add or reorder tabs here. |
-| `docs/` | Guides. Start with `docs/SETUP-FIREBASE.md`; `docs/DATA-MODEL.md` explains what is stored where. |
+| `docs/` | The guides (see the table above). |
 | `firestore.rules` | **Who may read and write what.** The most important file for privacy. Test it with `npm run test:rules`. |
 | `rules-tests/` | Automatic checks for `firestore.rules`. |
 | `firebase.json`, `.firebaserc` | Tell Firebase what to publish and to which project. |
 | `.env.example` | Template for the Firebase settings. Copy it to `.env` and fill it in. |
 | `index.html` | The single page the app loads into. You rarely need to touch it. |
 
-## Roadmap
+## How it was built
 
-1. ~~Scaffold (Vite, React, Tailwind)~~
-2. ~~Port every screen, using the starter data~~
-3. ~~Firebase and Google sign-in (invite-only), with tested security rules~~
-4. ~~Content and progress stored in Firebase instead of files and the browser~~
-5. ~~Admin area: edit shared content and clients, import CSVs, backup and restore, add clients, invite people~~
-6. ~~People and progress: invite, move, switch access off and on, read stories and progress~~
-7. Full guides for setup, admins and developers; deployment
+1. Scaffold (Vite, React, Tailwind)
+2. Port every screen, using the starter data
+3. Firebase and Google sign-in (invite-only), with tested security rules
+4. Content and progress stored in Firebase instead of files and the browser
+5. Admin area: edit shared content and clients, import CSVs, backup and restore, add clients, invite people
+6. People and progress: invite, move, switch access off and on, read stories and progress
+7. Guides for setup, admins and developers; live deployment

@@ -68,7 +68,7 @@ content. Until you publish them, the database stays locked, which is safe but me
 npm run deploy:rules
 ```
 
-Run this again whenever `firestore.rules` changes.
+Run this again whenever `firestore.rules` changes. (`npm run deploy` in step 8 publishes the rules too.)
 
 ## 5. Invite yourself as the first admin
 
@@ -118,6 +118,30 @@ Until it has been done, people who sign in see "Nothing to practise yet".
 To check, look in **Build > Firestore Database > Data**: you should see `library`, `flashcards` and
 `clients`. What each collection holds is explained in `docs/DATA-MODEL.md`.
 
+## 8. Put the site online
+
+So far you have only used the app on your own computer. To make it available at a web address:
+
+```
+npm run deploy
+```
+
+This checks the code for mistakes, builds the site (your `.env` settings are built into it), and publishes the
+site, the rules and the database indexes. The last lines show the address:
+
+> **<https://study-suite-65822.web.app>** (the same site is also at `study-suite-65822.firebaseapp.com`)
+
+Open it in a private window. You should see the **Sign in** page. Sign in with your admin account and check the
+**Admin** tab opens. Both addresses are on the approved list from step 2, so Google sign-in works on them without
+anything more.
+
+Run `npm run deploy` again after any change to the app. Nothing is lost by doing so: people's stories live in the
+database, not in the site. If the command says Hosting is not set up, open **Build > Hosting** in the console, click
+**Get started**, click through, and run it again.
+
+Then invite your clients: **Admin > Clients > Add client**, and send them the address. `docs/ADMIN-GUIDE.md` walks
+through that and everything else you will do from the Admin tab.
+
 ## Trying things safely: the emulators
 
 The emulators are a pretend Firebase that runs on your computer, so you can test sign-in, rules and
@@ -151,12 +175,20 @@ See `rules-tests/README.md`.
 
 | What you see | What it means |
 |---|---|
-| "Firebase is not set up yet" | `.env` is missing or empty (step 1). |
+| "Firebase is not set up yet" | `.env` is missing or empty (step 1). If you see it on the **live** site, the site was built without `.env`: create it and run `npm run deploy` again. |
 | "This account has not been invited" | That email has no document in `invites` (step 5), or it was typed with capital letters. |
 | "Could not check your access" | No internet, or the rules were not published (step 4). |
 | "This web address is not approved for sign-in" | Add the address under Authorized domains (step 2). |
 | "New sign-ins are switched off in Firebase" (`auth/admin-restricted-operation`) | Tick **Enable create (sign-up)** under Authentication > Settings > User actions (step 2). |
 | "Google sign-in is not switched on" (`auth/operation-not-allowed`) | Enable the **Google** provider under Authentication > Sign-in method (step 2). |
+| `npm run deploy` says "Failed to authenticate" or "credentials are no longer valid" | Log in again with `npx firebase-tools login` (step 3). |
+| The live site still shows the old version after a deploy | Reload the page. The page itself is never cached, but a tab that was already open keeps the version it loaded. |
 | The sign-in window does not appear | The browser blocked the pop-up. Allow pop-ups for the site. |
 | `Port 8080 is not open` or similar when starting emulators | Another program uses that port. The ports are set in `firebase.json`. |
 | `npm audit` warns about `@grpc/grpc-js` | Harmless here: that part of Firebase is for servers and is not included in the website. Do **not** run `npm audit fix --force`; it would install a 2022 version of Firebase. |
+
+## Where to go next
+
+- `docs/ADMIN-GUIDE.md`: running the site day to day (inviting people, content, backups). For non-technical admins.
+- `docs/DEVELOPER-GUIDE.md`: changing the code, the security rules, deploying and rolling back.
+- `docs/DATA-MODEL.md`: what is stored where.

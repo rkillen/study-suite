@@ -1,5 +1,7 @@
 # The app (`src/`)
 
+This is the folder map. For the bigger picture, common changes and how to deploy, see `docs/DEVELOPER-GUIDE.md`.
+
 | Path | What it does |
 |---|---|
 | `main.tsx` | Starts the app and wraps it in the shared pieces (notifications, sign-in, data, story draft). |
