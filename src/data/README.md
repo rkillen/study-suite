@@ -19,6 +19,7 @@ stored, and where, is described in `docs/DATA-MODEL.md`.
 | File | Job |
 |---|---|
 | `firestoreWriters.js` | Saves content: one list at a time (`saveBeachcombing`, `saveFlashcardCategory`, `saveClientSection`...), a whole client (`saveClientProfile`, `createClient`) or everything (`saveSharedLibrary`). Each one replaces what is stored. |
+| `people.js` | Invitations and who is attached to a client: list them, check an email can be invited, invite, cancel. |
 | `clientIds.js` | Making a client's short id from a name, checking an id is allowed, and copying a client's content with fresh ids. |
 | `replaceContent.js` | Saves a whole set of content (the shared library plus a list of clients). Used by both the starter import and the backup restore. |
 | `seedSource.js` | Reads the starter files in `/seed`. Loaded only when an admin imports. |

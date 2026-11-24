@@ -6,6 +6,7 @@ import { saveClientBeachcombing, saveClientName, saveClientSection } from "../..
 import { normalizeClientProfile } from "../../data/normalize.js";
 import { newId } from "../../lib/ids.js";
 import ListEditor from "./ListEditor.jsx";
+import PeoplePanel from "./PeoplePanel.jsx";
 
 const WORD = [{ name: "text", label: "Word", required: true }];
 
@@ -237,6 +238,8 @@ export default function ClientEditor({ client, onRenamed }) {
           reloadContent();
         }}
       />
+
+      <PeoplePanel clientId={client.id} />
 
       {usesDefaults && (
         <p className="text-xs text-charcoal-600 leading-relaxed p-3.5 rounded-xl bg-gold-100/60 border border-gold-300/60">

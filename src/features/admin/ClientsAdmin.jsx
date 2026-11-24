@@ -3,13 +3,14 @@ import { Plus } from "lucide-react";
 import { listClients } from "../../data/firestoreSource.js";
 import AddClientForm from "./AddClientForm.jsx";
 import ClientEditor from "./ClientEditor.jsx";
+import InviteMessage from "./InviteMessage.jsx";
 
 // Pick a client to edit, or add a new one.
 export default function ClientsAdmin() {
   const [clients, setClients] = useState(null);
   const [selectedId, setSelectedId] = useState("");
   const [adding, setAdding] = useState(false);
-  const [notice, setNotice] = useState("");
+  const [notice, setNotice] = useState(null); // { text, invitedEmail?, inviteError? }
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -31,11 +32,11 @@ export default function ClientsAdmin() {
 
   const selected = clients.find((client) => client.id === selectedId);
 
-  const handleCreated = (client) => {
+  const handleCreated = (client, result = {}) => {
     setClients([...clients, client].sort((a, b) => a.profileName.localeCompare(b.profileName)));
     setSelectedId(client.id);
     setAdding(false);
-    setNotice(`Created ${client.profileName}.`);
+    setNotice({ text: `Created ${client.profileName}.`, ...result });
   };
 
   const handleRenamed = (id, profileName) => {
@@ -54,7 +55,7 @@ export default function ClientsAdmin() {
           onChange={(e) => {
             setSelectedId(e.target.value);
             setAdding(false);
-            setNotice("");
+            setNotice(null);
           }}
           disabled={clients.length === 0}
           className="min-w-[220px] rounded-xl bg-white border border-alabaster-200 px-3.5 py-2 text-sm text-charcoal-900 focus:outline-none focus:border-crimson-700"
@@ -69,7 +70,7 @@ export default function ClientsAdmin() {
           type="button"
           onClick={() => {
             setAdding(true);
-            setNotice("");
+            setNotice(null);
           }}
           className="px-3.5 py-2 rounded-xl bg-crimson-700 hover:bg-crimson-800 text-white text-xs font-medium flex items-center gap-1.5"
         >
@@ -79,9 +80,13 @@ export default function ClientsAdmin() {
       </div>
 
       {notice && (
-        <p role="status" className="text-xs text-charcoal-600">
-          {notice}
-        </p>
+        <div className="space-y-3 max-w-2xl">
+          <p role="status" className="text-xs text-charcoal-600">
+            {notice.text}
+          </p>
+          {notice.inviteError && <p className="text-xs text-crimson-700">The client was created, but the invitation was not: {notice.inviteError}</p>}
+          {notice.invitedEmail && <InviteMessage email={notice.invitedEmail} />}
+        </div>
       )}
 
       {adding ? (
