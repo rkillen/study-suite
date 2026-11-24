@@ -1,7 +1,7 @@
 import type { RawClientProfile, RawLibrary } from "../types.ts";
 
 // Reads the starter files in the /seed folder. Only the admin "Import starter data" button uses
-// this (through seedImport.js); the app itself reads everything from Firebase.
+// this (through seedImport.ts); the app itself reads everything from Firebase.
 // The files are loaded on demand, so regular users never download them.
 const sharedFiles = import.meta.glob<RawLibrary>("../../seed/shared-library.json", { import: "default" });
 const clientFiles = import.meta.glob<RawClientProfile>("../../seed/clients/*.json", { import: "default" });

@@ -1,6 +1,6 @@
 // Turns the two AppSheet CSV exports ("SC Training Dashboard - Prompts.csv" and, optionally,
 // "... - Categories.csv") into shared content. Nothing here talks to Firebase: it only reads text
-// and says what would change. See CsvImport.jsx for the screen and csvImport.js for saving.
+// and says what would change. See CsvImport.tsx for the screen and csvImport.ts for saving.
 
 import type { BeachWords, Flashcard, Library } from "../types.ts";
 

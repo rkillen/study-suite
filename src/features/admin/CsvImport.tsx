@@ -18,7 +18,7 @@ interface Preview {
   report: CsvReport;
 }
 
-// Import the AppSheet CSV exports. The rules (which category goes where) are in data/appsheetCsv.js.
+// Import the AppSheet CSV exports. The rules (which category goes where) are in data/appsheetCsv.ts.
 export default function CsvImport() {
   const { reloadContent } = useStudy();
   const { showToast } = useToast();
@@ -99,7 +99,7 @@ export default function CsvImport() {
           <li>C1 to C16, C21, C27 and C37: idiom and metaphor flashcards</li>
           <li>Any other category is skipped. The interview flashcards and story prompts are never changed by this import.</li>
         </ul>
-        <p className="mt-2 text-charcoal-400">This list lives at the top of src/data/appsheetCsv.js if it ever needs changing.</p>
+        <p className="mt-2 text-charcoal-400">This list lives at the top of src/data/appsheetCsv.ts if it ever needs changing.</p>
       </details>
 
       <div className="grid gap-3 sm:grid-cols-2 pt-1">
