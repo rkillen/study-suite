@@ -1,0 +1,128 @@
+{
+  "clientId": "radiology",
+  "profileName": "Radiology — International Moderation, Mayo Readiness & Authentic Presence (C1)",
+  "watchOuts": [
+    {
+      "tag": "Executive Presence · Showing Personality",
+      "title": "Trade Purely Clinical 'Neutral Mode' for Warm US Academic Framing",
+      "detail": "In high-stakes international calls and Mayo Clinic interviews, staying overly formal or strictly clinical can unintentionally mask your warmth and humor. Open meetings with a brief human bridge ('Before we pull up the scans, how is everyone's week shaping up in Rochester and Zurich?') and let dry, understated wit surface naturally."
+    },
+    {
+      "tag": "Meeting Moderation · International Audiences",
+      "title": "Guiding Multi-Accent Panels Without Sounding Rigid or Bossy",
+      "detail": "Facilitating global clinical boards requires crisp transitions that keep dominant speakers brief and invite quieter colleagues in. Use inclusive US academic pivots: 'Let's pause there to bring in the interventional perspective' or 'I want to make sure we leave ten minutes for consensus on protocol.'"
+    },
+    {
+      "tag": "Hungarian-to-C1 Polish · Prosody & Rhythm",
+      "title": "Varying Pitch Contour Beyond Hungarian First-Syllable Stress",
+      "detail": "Hungarian places fixed stress on the first syllable of every word with a relatively level pitch contour, which can make C1 English sound slightly flat or guarded when you actually feel enthusiastic. Let your pitch rise on key content words and use expressive pacing when sharing clinical insights or personal stories."
+    },
+    {
+      "tag": "Mayo Clinic Positioning · Collaborative Leadership",
+      "title": "Balancing 'Team-First' Academic Humility With Clear Personal Impact",
+      "detail": "US academic medical centers like Mayo prize collegiality ('The needs of the patient come first'), yet selection committees still need to hear what *you* built and led. Frame achievements as collaborative leadership: 'I spearheaded the multi-center imaging workflow that cut diagnostic turnaround across four sites.'"
+    },
+    {
+      "tag": "Grammar & Precision · Articles & Prepositions",
+      "title": "Countable Imaging Findings vs. Uncountable Clinical Concepts",
+      "detail": "Even at C1 after two years in the US, fast moderation can drop articles before singular countable nouns ('We reviewed complex case' → 'We reviewed a complex case') or mix subtle prepositions ('insight into', 'consensus on', 'collaborate with')."
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "Moderating a Tense Multi-Center Case Conference With Warm Authority",
+      "category": "Meeting Facilitation · International Panel",
+      "prompt": "You are chairing a global radiology tumor board where two senior specialists disagree on imaging protocol and time is running short. Step in with warmth, humor, and crisp structure—validating both views, summarizing the diagnostic trade-off, and guiding the room to a clear next step."
+    },
+    {
+      "title": "Mayo Clinic Panel Interview: 'Why Mayo, and What Will You Bring to Our Department?'",
+      "category": "US Academic Medicine · High-Stakes Interview",
+      "prompt": "Answer a Mayo Clinic search committee question about your vision for international collaboration and clinical mentorship. Blend two years of US clinical familiarity, Hungarian diagnostic rigor, and your genuine personality so the panel sees both a top specialist and a colleague they want on their team."
+    },
+    {
+      "title": "Breaking the Ice: Opening an International Call With Personality Instead of Cold Bullet Points",
+      "category": "Authentic Presence · Warmth & Wit",
+      "prompt": "Practice the first 60 seconds of a recurring international working group call. Use a light, human hook—such as a recent weekend trip in Italy or comparing coffee culture across time zones—before pivoting smoothly into the clinical agenda."
+    },
+    {
+      "title": "Translating Complex Imaging Nuance for a Non-Radiology Clinical Audience",
+      "category": "Executive Clarity · Cross-Specialty Communication",
+      "prompt": "Present an ambiguous diagnostic finding to surgeons and oncologists who want a simple yes-or-no answer. Communicate uncertainty with calm confidence, clear probability framing, and zero defensive jargon."
+    },
+    {
+      "title": "Unplugging in Italy: Why Slowing Down in a Piazza Sharpens Diagnostic Focus",
+      "category": "Travel & Reflection · Storytelling With Personality",
+      "prompt": "Tell a vivid, personal story about a favorite Italian town, espresso ritual, or unexpected detour—and explain what stepping away from high-resolution screens teaches you about pattern recognition and human connection."
+    }
+  ],
+  "beachcombing": {
+    "tier1": [
+      "Lightbox",
+      "Espresso bar",
+      "Cobblestones",
+      "Red-eye flight"
+    ],
+    "tier2": [
+      "Tumor board",
+      "Piazza",
+      "Fellowship",
+      "Moderator"
+    ],
+    "tier3": [
+      "Clarity",
+      "Collegiality",
+      "Warmth",
+      "Discernment"
+    ]
+  },
+  "customCards": [
+    {
+      "id": "radiology-01",
+      "category": "custom",
+      "term": "Moderation Pivot: How do you politely cut off a long-winded speaker on an international call and bring in a quieter colleague?",
+      "definition": "\"That's a critical point on protocol—let me pause you right there so we can hear how Dr. Chen's team is handling this in practice.\"",
+      "example": "Validate their contribution in four words, then redirect the floor smoothly without awkwardness.",
+      "note": "Facilitator Authority: Warm, decisive redirection makes international meetings feel effortless."
+    },
+    {
+      "id": "radiology-02",
+      "category": "custom",
+      "term": "Personality Hook: Upgrade this cold meeting opener: \"Good morning everyone, let's look at slide one and begin reviewing the cases.\"",
+      "definition": "\"Morning everyone—I'm running on Italian espresso today, so let's dive into three fascinating cases and get you out right on the hour.\"",
+      "example": "A two-second human touch immediately signals warmth and confidence before you touch the agenda.",
+      "note": "Showing Personality: Micro-moments of humanity make leaders memorable without wasting meeting time."
+    },
+    {
+      "id": "radiology-03",
+      "category": "custom",
+      "term": "Mayo Clinic Framing: Upgrade this modest summary: \"I was part of a team that improved our cross-border imaging consultations.\"",
+      "definition": "\"I spearheaded our cross-border case conference workflow, bringing four international centers into alignment and cutting diagnostic turnaround by 30%.\"",
+      "example": "US academic search committees look for collaborative builders who take clear ownership of results.",
+      "note": "US Academic Register: Own your leadership role while keeping the focus on patient and team outcomes."
+    },
+    {
+      "id": "radiology-04",
+      "category": "custom",
+      "term": "Prosody & Expressiveness Cue: How do you keep Hungarian first-syllable stress from sounding overly serious or guarded in English?",
+      "definition": "Slow down slightly on your key takeaway word, let your vocal pitch rise before a contrast, and smile subtly as you deliver your opening line.",
+      "example": "\"The scan looks subtle at first glance—but look closely at the vascular margin.\"",
+      "note": "Vocal Warmth: Pitch variation carries enthusiasm and personality across video calls."
+    },
+    {
+      "id": "radiology-05",
+      "category": "custom",
+      "term": "Consensus Building: What crisp phrase moves a divided clinical panel from endless debate to an actionable decision?",
+      "definition": "\"We're aligned on ninety percent of the workup—for the remaining ten percent, let's run the targeted sequence first and reconvene Thursday.\"",
+      "example": "Highlighting existing agreement lowers tension and turns gridlock into a concrete step.",
+      "note": "International Moderation: Naming consensus early keeps multi-cultural clinical panels moving."
+    },
+    {
+      "id": "radiology-06",
+      "category": "custom",
+      "term": "Preposition & Article Polish: \"We reached consensus about the protocol after reviewing unusual pediatric case.\"",
+      "definition": "\"We reached consensus on the protocol after reviewing an unusual pediatric case.\"",
+      "example": "Reach consensus *on* a topic, and anchor singular countable nouns ('an unusual case') with 'a / an'.",
+      "note": "C1 Precision: Clean prepositions and articles keep your academic English spotless."
+    }
+  ]
+}
