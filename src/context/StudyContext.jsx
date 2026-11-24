@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { loadStudyData } from "../data/index.js";
+import { useAuth } from "./AuthContext.jsx";
 import { usePrefs } from "../data/usePrefs.js";
 import { useProgress } from "../data/useProgress.js";
 
@@ -7,13 +8,18 @@ const StudyContext = createContext(null);
 
 export const useStudy = () => useContext(StudyContext);
 
-function getRequestedClientId() {
-  const raw = new URLSearchParams(window.location.search).get("client") || "default";
-  return raw.replace(/[^a-zA-Z0-9_-]/g, "") || "default";
+const cleanId = (raw) => (raw || "").replace(/[^a-zA-Z0-9_-]/g, "");
+
+// A person sees the client their account was invited for. Admins can look at any
+// client by adding "?client=<id>" to the address (a preview; the real switcher comes later).
+function resolveClientId(profile, isAdmin) {
+  const requested = isAdmin ? cleanId(new URLSearchParams(window.location.search).get("client")) : "";
+  return requested || cleanId(profile.clientId) || "default";
 }
 
 export function StudyProvider({ children }) {
-  const clientId = useMemo(getRequestedClientId, []);
+  const { profile, isAdmin } = useAuth();
+  const clientId = useMemo(() => resolveClientId(profile, isAdmin), [profile, isAdmin]);
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 

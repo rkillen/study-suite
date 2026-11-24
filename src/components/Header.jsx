@@ -1,10 +1,12 @@
-import { UserCheck } from "lucide-react";
+import { LogOut, ShieldCheck, UserCheck } from "lucide-react";
+import { useAuth } from "../context/AuthContext.jsx";
 import { useStudy } from "../context/StudyContext.jsx";
 import { useToast } from "../context/ToastContext.jsx";
 import TabNav from "./TabNav.jsx";
 
 export default function Header({ activeTab }) {
   const { clientId, sourceLabel, prefs, updatePrefs } = useStudy();
+  const { user, isAdmin, signOut } = useAuth();
   const { showToast } = useToast();
 
   const toggleAccent = () => {
@@ -39,7 +41,14 @@ export default function Header({ activeTab }) {
             <span>client: {clientId}</span>
           </div>
 
-          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-alabaster-50 border border-alabaster-200 text-[11px] font-mono text-charcoal-600">
+          {isAdmin && (
+            <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-crimson-50 border border-crimson-700/20 text-[11px] font-mono text-crimson-700">
+              <ShieldCheck className="w-3 h-3" />
+              <span>admin</span>
+            </div>
+          )}
+
+          <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-alabaster-50 border border-alabaster-200 text-[11px] font-mono text-charcoal-600">
             <span className="w-2 h-2 rounded-full bg-crimson-700"></span>
             <span>{sourceLabel}</span>
           </div>
@@ -48,9 +57,18 @@ export default function Header({ activeTab }) {
             type="button"
             onClick={toggleAccent}
             title="Toggle Pronunciation Voice"
-            className="px-2.5 py-1.5 rounded-lg bg-alabaster-50 hover:bg-alabaster-100 border border-alabaster-200 text-charcoal-800 text-[11px] font-mono transition-colors"
+            className="px-2.5 py-1.5 rounded-lg bg-alabaster-50 hover:bg-alabaster-100 border border-alabaster-200 text-charcoal-800 text-[11px] font-mono whitespace-nowrap transition-colors"
           >
             {prefs.accent}
+          </button>
+
+          <button
+            type="button"
+            onClick={signOut}
+            title={user?.email ? `Signed in as ${user.email}` : "Sign out"}
+            className="px-2.5 py-1.5 rounded-lg bg-alabaster-50 hover:bg-alabaster-100 border border-alabaster-200 text-charcoal-800 text-[11px] font-medium whitespace-nowrap transition-colors flex items-center gap-1.5"
+          >
+            <LogOut className="w-3 h-3" /> Sign out
           </button>
         </div>
       </div>

@@ -8,6 +8,7 @@
 | `storycraft/` | Storycraft: write stories and keep the story log |
 | `speaking/` | Speaking Arena: scenarios and live transcripts |
 | `flashcards/` | Flashcards: the rolling 20-card deck |
+| `auth/` | Not a tab: the sign-in, "not invited" and setup screens shown before the app opens |
 
 Inside a folder, the main file is named after the tab, for example `Beachcombing.jsx`.
 

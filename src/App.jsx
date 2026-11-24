@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Header from "./components/Header.jsx";
+import { CONSENT_LINE } from "./features/auth/consent.js";
 import { useStudy } from "./context/StudyContext.jsx";
 import { stopCapture } from "./lib/speech.js";
 import { TABS } from "./tabs.js";
@@ -23,6 +24,7 @@ export default function App() {
           </div>
         ))}
       </main>
+      <footer className="border-t border-alabaster-200 py-4 text-center text-[11px] text-charcoal-400">{CONSENT_LINE}</footer>
     </div>
   );
 }

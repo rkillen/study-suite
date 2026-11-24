@@ -1,7 +1,7 @@
 node_modules
 dist
 .firebase
-firebase-debug.log
+*-debug.log
 *.local
 .DS_Store
 
@@ -9,3 +9,7 @@ firebase-debug.log
 .env
 .env.*
 !.env.example
+!.env.emulator
+
+# Playwright MCP test output
+.playwright-mcp

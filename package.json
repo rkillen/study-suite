@@ -5,10 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:emulator": "vite --mode emulator",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "emulators": "npx --yes firebase-tools emulators:start --project demo-study-suite",
+    "test:rules": "npx --yes firebase-tools emulators:exec --only firestore --project demo-study-suite \"npm --prefix rules-tests test\"",
+    "deploy:rules": "npx --yes firebase-tools deploy --only firestore:rules",
+    "deploy": "npm run build && npx --yes firebase-tools deploy"
   },
   "dependencies": {
+    "firebase": "^13.4.0",
     "lucide-react": "^1.79.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
