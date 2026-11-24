@@ -1,0 +1,96 @@
+{
+  "clientId": "default",
+  "profileName": "Default Client Profile",
+  "watchOuts": [
+    {
+      "id": "wo1",
+      "tag": "Narrative Framing",
+      "title": "Anchor Abstract Claims in Concrete Scenes",
+      "detail": "Before stating a general principle, ground the listener in a specific moment, place, or sensory detail so your point lands memorably."
+    },
+    {
+      "id": "wo2",
+      "tag": "Tense Precision",
+      "title": "Separate Finished Past from Present Relevance",
+      "detail": "Whenever you anchor an event to a finished time marker (last year, in 2022, yesterday), use Past Simple rather than Present Perfect."
+    },
+    {
+      "id": "wo3",
+      "tag": "Pacing & Brevity",
+      "title": "Pause After Your Opening Stance",
+      "detail": "Deliver your core thesis cleanly in one sentence, then allow a one-second breath before introducing your supporting points."
+    },
+    {
+      "id": "wo4",
+      "tag": "Lexical Precision",
+      "title": "Replace Vague Intensifiers with Exact Verbs",
+      "detail": "Instead of 'very important' or 'really helped', reach for precise verbs like 'paramount', 'bolstered', or 'mitigated'."
+    },
+    {
+      "id": "wo5",
+      "tag": "Pre-Outlining Discipline",
+      "title": "Resist Drafting Full Sentences During Prep",
+      "detail": "In 15–60 second prep windows, jot only 2–3 noun or verb anchors—writing full sentences locks you into reading rather than speaking."
+    },
+    {
+      "id": "wo6",
+      "tag": "Transitions",
+      "title": "Signal Contrast Explicitly",
+      "detail": "Use clear signposts ('Conversely', 'That said', 'On the other hand') when pivoting from advantages to trade-offs."
+    },
+    {
+      "id": "wo7",
+      "tag": "Clarity Under Pressure",
+      "title": "Land the Plane on Your Final Sentence",
+      "detail": "Avoid trailing off with 'so yeah, that's basically it.' Close by restating your core takeaway in crisp, deliberate words."
+    },
+    {
+      "id": "wo8",
+      "tag": "Active Listening",
+      "title": "Mirror the Question's Core Term First",
+      "detail": "Briefly echo the interviewer's or partner's key concept in your opening clause to signal direct alignment."
+    },
+    {
+      "id": "wo9",
+      "tag": "Idiomatic Restraint",
+      "title": "One Well-Placed Idiom Beats Three Forced Ones",
+      "detail": "Weave in a single natural expression where it genuinely sharpens meaning rather than stacking idioms in every sentence."
+    },
+    {
+      "id": "wo10",
+      "tag": "Register Control",
+      "title": "Match Warmth with Authority",
+      "detail": "Conversational phrasing ('boil down to', 'iron out') keeps executive explanations human without sacrificing analytical rigor."
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "scn1",
+      "domain": "Executive Meetings",
+      "title": "Framing a Strategic Pivot",
+      "context": "You are updating senior stakeholders on why your team is pausing a legacy initiative to reallocate resources toward higher-margin work.",
+      "prompt": "Walk us through why we should pause the current rollout now rather than waiting until the end of the quarter."
+    },
+    {
+      "id": "scn2",
+      "domain": "Client Storytelling",
+      "title": "Turning a Setback into Credibility",
+      "context": "A prospective client asks how your organization handles unforeseen operational delays or misalignments.",
+      "prompt": "Tell me about a time a project didn't go according to plan and how you rebuilt trust with the client."
+    },
+    {
+      "id": "scn3",
+      "domain": "1:1 Leadership Feedback",
+      "title": "Addressing Directness vs. Diplomacy",
+      "context": "You are coaching a high-performing technical lead whose concise emails sometimes come across as abrupt to cross-functional partners.",
+      "prompt": "How would you open a constructive 1:1 conversation to help them adjust their tone without dampening their candor?"
+    },
+    {
+      "id": "scn4",
+      "domain": "Technical & Operational Leadership",
+      "title": "Translating Complexity for Decision-Makers",
+      "context": "A non-technical executive wants to know the real business trade-offs behind two competing architectural proposals.",
+      "prompt": "In sixty seconds, what does this decision actually boil down to for our timeline, risk, and budget?"
+    }
+  ]
+}

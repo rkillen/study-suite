@@ -1,0 +1,11 @@
+node_modules
+dist
+.firebase
+firebase-debug.log
+*.local
+.DS_Store
+
+# Firebase settings live in .env (copy .env.example). Never commit it.
+.env
+.env.*
+!.env.example
