@@ -8,6 +8,7 @@
 | `storycraft/` | Storycraft: write stories and keep the story log |
 | `speaking/` | Speaking Arena: scenarios and live transcripts |
 | `flashcards/` | Flashcards: the rolling 20-card deck |
+| `admin/` | The Admin tab (admins only): content management. Today: importing the starter data |
 | `auth/` | Not a tab: the sign-in, "not invited" and setup screens shown before the app opens |
 
 Inside a folder, the main file is named after the tab, for example `Beachcombing.jsx`.
@@ -42,6 +43,6 @@ Inside a folder, the main file is named after the tab, for example `Beachcombing
 ## What `useStudy()` gives you
 
 `clientId`, `clientProfile` (watch-outs, scenarios, personal cards), `library` (shared words, questions,
-prompts, flashcards), `progress` (the person's jots, stories and mastered cards), and the actions that
+prompts, flashcards), `progress` (the person's stories, mastered cards, decks and `jotCount`), and the actions that
 change them (`addJot`, `addStory`, `updateStory`, `removeStory`, `masterCard`, ...). Use these rather
 than saving things yourself, so that the data ends up in the right place.

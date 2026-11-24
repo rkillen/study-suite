@@ -4,7 +4,7 @@
 |---|---|
 | `main.jsx` | Starts the app and wraps it in the shared pieces (notifications, sign-in, data, story draft). |
 | `App.jsx` | The page layout: header, tab bar, and the tabs themselves. |
-| `tabs.js` | The list of tabs, in order. **Add a new tab here.** |
+| `tabs.js` | The list of tabs, in order. **Add a new tab here.** Mark a tab `adminOnly: true` to show it to admins only. |
 | `index.css` | Fonts, colours and a few custom styles. |
 | `features/` | One folder per tab (Overview, Beachcombing, ...). See `features/README.md`. |
 | `components/` | Small pieces used in several places (header, tab bar, microphone button). |

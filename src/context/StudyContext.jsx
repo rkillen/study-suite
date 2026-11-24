@@ -1,6 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { loadStudyData } from "../data/index.js";
 import { useAuth } from "./AuthContext.jsx";
+import { useToast } from "./ToastContext.jsx";
 import { usePrefs } from "../data/usePrefs.js";
 import { useProgress } from "../data/useProgress.js";
 
@@ -22,10 +23,21 @@ export function StudyProvider({ children }) {
   const clientId = useMemo(() => resolveClientId(profile, isAdmin), [profile, isAdmin]);
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
+  const [version, setVersion] = useState(0);
 
+  // Loads the content for this client. Bumping "version" (see reloadContent) loads it again,
+  // keeping the old content on screen until the new content arrives.
   useEffect(() => {
-    loadStudyData(clientId).then(setData).catch(setError);
-  }, [clientId]);
+    let cancelled = false;
+    loadStudyData(clientId)
+      .then((loaded) => !cancelled && setData(loaded))
+      .catch((e) => !cancelled && setError(e));
+    return () => {
+      cancelled = true;
+    };
+  }, [clientId, version]);
+
+  const reloadContent = useCallback(() => setVersion((v) => v + 1), []);
 
   if (error) {
     return <div className="p-10 text-sm text-crimson-700">Could not load Study Suite: {String(error.message || error)}</div>;
@@ -34,16 +46,30 @@ export function StudyProvider({ children }) {
     return <div className="p-10 text-sm font-mono text-charcoal-400">Loading Study Suite…</div>;
   }
   return (
-    <StudyReady clientId={clientId} data={data}>
+    <StudyReady clientId={clientId} data={data} reloadContent={reloadContent}>
       {children}
     </StudyReady>
   );
 }
 
-function StudyReady({ clientId, data, children }) {
-  const { library, clientProfile, sourceLabel } = data;
+function StudyReady({ clientId, data, reloadContent, children }) {
+  const { library, clientProfile, sourceLabel, contentEmpty } = data;
+  const { user } = useAuth();
+  const { showToast } = useToast();
   const [prefs, updatePrefs] = usePrefs(clientId);
-  const { progress, actions } = useProgress(clientId);
+
+  const handleError = useCallback(
+    (error, kind) => {
+      console.error(`Could not ${kind}:`, error);
+      showToast(
+        kind === "save"
+          ? "Could not save your last change. Check your connection and try again."
+          : "Could not load your progress. Please reload the page."
+      );
+    },
+    [showToast]
+  );
+  const { progress, ready, actions } = useProgress(user.uid, handleError);
 
   // Clients who have personal cards always start on that deck (runs once, on open).
   const hasCustomCards = clientProfile.customCards.length > 0;
@@ -59,14 +85,19 @@ function StudyReady({ clientId, data, children }) {
       library,
       clientProfile,
       sourceLabel,
+      contentEmpty,
+      reloadContent,
       prefs,
       updatePrefs,
       goToTab,
       progress,
       ...actions,
     }),
-    [clientId, library, clientProfile, sourceLabel, prefs, updatePrefs, goToTab, progress, actions]
+    [clientId, library, clientProfile, sourceLabel, contentEmpty, reloadContent, prefs, updatePrefs, goToTab, progress, actions]
   );
 
+  if (!ready) {
+    return <div className="p-10 text-sm font-mono text-charcoal-400">Loading your progress…</div>;
+  }
   return <StudyContext.Provider value={value}>{children}</StudyContext.Provider>;
 }

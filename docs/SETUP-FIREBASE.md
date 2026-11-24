@@ -102,6 +102,20 @@ profile (document `users/<your id>`).
 Signing in with an account that has no invitation shows "This account has not been invited" and signs it
 straight back out.
 
+## 7. Import the starter content
+
+The database starts empty, so at first the app shows a banner saying there is no content. As the admin:
+
+1. Click the **Admin** tab.
+2. Click **Import starter data**. After a few seconds it says "Done. Saved 78 shared flashcards and 13 clients."
+
+That copies everything in the `seed/` folder (shared library and client profiles) into Firebase. You only do
+this once. Doing it again **replaces** that content with the starter versions, so it asks you to confirm.
+Until it has been done, people who sign in see "Nothing to practise yet".
+
+To check, look in **Build > Firestore Database > Data**: you should see `library`, `flashcards` and
+`clients`. What each collection holds is explained in `docs/DATA-MODEL.md`.
+
 ## Trying things safely: the emulators
 
 The emulators are a pretend Firebase that runs on your computer, so you can test sign-in, rules and

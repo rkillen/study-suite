@@ -1,19 +1,27 @@
 import { normalizeClientProfile, normalizeLibrary } from "./normalize.js";
 import { buildLibrary } from "./merge.js";
-import * as source from "./seedSource.js";
+import * as source from "./firestoreSource.js";
+
+const hasContent = (library) =>
+  library.preOutliningQuestions.length > 0 ||
+  library.storyPrompts.length > 0 ||
+  library.beachcombing.tier1.length > 0 ||
+  Object.values(library.flashcards).some((cards) => cards.length > 0);
 
 // Everything the app needs to start up for one client.
-// A client with no file of their own gets the "default" profile.
+// A client missing watch-outs or scenarios of their own gets the "default" profile's.
 export async function loadStudyData(clientId) {
-  const [rawLibrary, rawDefault, rawOwn] = await Promise.all([
+  const [rawLibrary, rawOwn] = await Promise.all([
     source.fetchSharedLibrary(),
-    source.fetchClientProfile("default"),
     clientId === "default" ? null : source.fetchClientProfile(clientId),
   ]);
 
+  const own = rawOwn ? normalizeClientProfile(rawOwn, clientId) : null;
+  const needsDefault = !own || own.watchOuts.length === 0 || own.scenarios.length === 0;
+  const rawDefault = needsDefault ? await source.fetchClientProfile("default") : null;
+
   const sharedLibrary = normalizeLibrary(rawLibrary);
   const base = normalizeClientProfile(rawDefault ?? {}, clientId);
-  const own = rawOwn ? normalizeClientProfile(rawOwn, clientId) : null;
 
   const clientProfile = own
     ? {
@@ -29,6 +37,7 @@ export async function loadStudyData(clientId) {
   return {
     library: buildLibrary(sharedLibrary, clientProfile),
     clientProfile,
+    contentEmpty: !hasContent(sharedLibrary),
     sourceLabel: own ? `${source.sourceName}: shared + ${clientId}` : `${source.sourceName}: shared library`,
   };
 }

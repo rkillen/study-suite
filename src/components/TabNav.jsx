@@ -1,13 +1,15 @@
+import { useAuth } from "../context/AuthContext.jsx";
 import { useStudy } from "../context/StudyContext.jsx";
-import { TABS } from "../tabs.js";
+import { visibleTabs } from "../tabs.js";
 
 export default function TabNav({ activeTab }) {
   const { goToTab } = useStudy();
+  const { isAdmin } = useAuth();
 
   return (
     <nav className="bg-alabaster-50 border-t border-alabaster-200">
       <div className="max-w-6xl mx-auto px-3 sm:px-6 flex items-center gap-1 overflow-x-auto py-1.5">
-        {TABS.map(({ id, label, icon: Icon }) => (
+        {visibleTabs(isAdmin).map(({ id, label, icon: Icon }) => (
           <button
             key={id}
             type="button"

@@ -1,22 +1,45 @@
 # Data (`src/data/`)
 
 This folder decides where information comes from and where it is saved. The rest of the app never
-reads files or the database directly; it only calls what is exported here. That is what makes it
-possible to switch to Firebase without redoing any screen.
+talks to the database directly; screens only use what is exported here (through `useStudy()`). What is
+stored, and where, is described in `docs/DATA-MODEL.md`.
+
+## Reading content
 
 | File | Job |
 |---|---|
 | `index.js` | `loadStudyData(clientId)`: gets the shared library and the client's profile, and combines them. |
-| `seedSource.js` | **Where the content comes from today:** the JSON files in `/seed`. Firebase replaces this file. |
+| `firestoreSource.js` | Reads the shared library and a client's profile from Firebase. |
+| `flashcardChunks.js` | Shared flashcards are stored a couple of hundred per document (to save database reads). This file splits them up and puts them back together. Nothing else needs to know. |
 | `normalize.js` | Tidies loaded content: fills missing ids, and shows a scenario's `category` as its `domain`. |
 | `merge.js` | Puts a client's own Beachcombing words ahead of the shared ones. |
-| `useProgress.js` | A person's jots, stories, mastered cards and decks, with the actions that change them. Saved in the browser today; Firebase later. |
-| `usePrefs.js` | Screen settings and positions (current tab, voice accent, which card). Always saved in the browser. |
+
+## Saving content (admins only)
+
+| File | Job |
+|---|---|
+| `firestoreWriters.js` | `saveSharedLibrary` and `saveClientProfile`: replace what is stored with new content. |
+| `seedSource.js` | Reads the starter files in `/seed`. Loaded only when an admin imports. |
+| `seedImport.js` | `importSeed()`: copies the starter files into Firebase. Used by the Admin tab's "Import starter data" button. |
+
+## A person's own work
+
+| File | Job |
+|---|---|
+| `useProgress.js` | Jots, stories, mastered cards and decks, with the actions that change them (`addStory`, `masterCard`, ...). Saved in Firebase, shown on screen immediately, and kept in step across devices. It also keeps the summary numbers on the person's profile up to date, because the admin's progress list reads those. |
+
+## Settings kept on this device
+
+| File | Job |
+|---|---|
+| `usePrefs.js` | Screen settings and positions (current tab, voice accent, which card). |
 | `useStoredState.js` | The small helper that remembers an object in the browser. |
 
-## Two kinds of saved data
+These only matter on one device, so they are not stored in Firebase.
 
-- **Progress** (jots, stories, mastered cards, decks) is the person's own work. It will move to Firebase
-  so it follows them between devices.
-- **Preferences** (current tab, accent, "where was I") only matter on this device, so they stay in
-  the browser.
+## Good to know
+
+- Changes to a person's work appear on screen at once and are sent in the background. If the connection
+  drops, they are kept until it returns. The browser warns before the page is closed while anything is
+  still unsent, because it would be lost.
+- If a save is refused or fails, the person sees "Could not save your last change".

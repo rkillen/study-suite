@@ -1,8 +1,12 @@
 # Starter content
 
-These JSON files are the content the app started with. Right now the app reads them directly. When
-Firebase is connected, an admin button will copy them into the database once, and the database becomes
-the place where content is edited. These files then stay as the starting point and a backup.
+These JSON files are the content the app started with. The app itself reads from Firebase, not from
+these files. An admin copies them into the database once, with the **Import starter data** button in the
+Admin tab, and from then on the database is where content lives. These files stay as the starting point
+and a backup.
+
+**Importing again replaces** the shared library and every client in this folder with the versions here,
+so anything edited in the app for those is lost. The button asks you to confirm.
 
 ## Files
 
@@ -27,6 +31,7 @@ the place where content is edited. These files then stay as the starting point a
 - A client does not need every section. Anything left out falls back to `default.json` (watch-outs and
   scenarios) or to the shared library (words).
 - The scenario field `category` is shown as the small label above a scenario.
-- `radiology.json` has an extra `scenarios-hidden` list of scenarios that are not used by the app.
+- `radiology.json` has an extra `scenarios-hidden` list of scenarios that are not used by the app. They are not copied into Firebase; they stay here.
+- `shared-library.json` also has `version`, `generatedAt` and an empty `specialtyPacks` list. The app never used them and they are not copied.
 - `sauna.json` says `"clientId": "pollead"` inside, but its ID is `sauna`, because the file name
   is what counts.

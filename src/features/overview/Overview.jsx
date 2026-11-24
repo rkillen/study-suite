@@ -33,7 +33,7 @@ export default function Overview() {
     library.storyPrompts.length;
 
   const stats = [
-    { label: "Beachcombing Jots", value: progress.jots.length, note: "Memories captured" },
+    { label: "Beachcombing Jots", value: progress.jotCount, note: "Memories captured" },
     { label: "Personal Story Log", value: progress.stories.length, note: "Saved stories & transcripts" },
     { label: "Cards Mastered", value: progress.masteredIds.length, note: "Rolling 20-card queue", accent: true },
     { label: "Active Library", value: (totalCards + totalPrompts).toLocaleString(), note: "Prompts & cards loaded" },

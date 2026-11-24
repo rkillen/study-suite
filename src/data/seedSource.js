@@ -1,12 +1,15 @@
-// Reads the starter data in the /seed folder. Used while the app is being built;
-// the Firebase version replaces this file.
-const sharedFiles = import.meta.glob("../../seed/shared-library.json", { eager: true, import: "default" });
+// Reads the starter files in the /seed folder. Only the admin "Import starter data" button uses
+// this (through seedImport.js); the app itself reads everything from Firebase.
+// The files are loaded on demand, so regular users never download them.
+const sharedFiles = import.meta.glob("../../seed/shared-library.json", { import: "default" });
 const clientFiles = import.meta.glob("../../seed/clients/*.json", { import: "default" });
 
-export const sourceName = "Seed files";
+// The file name is the client's id: "morocco.json" is the client "morocco".
+export const clientIds = Object.keys(clientFiles).map((path) => path.split("/").pop().replace(".json", ""));
 
 export async function fetchSharedLibrary() {
-  return Object.values(sharedFiles)[0] ?? {};
+  const load = Object.values(sharedFiles)[0];
+  return load ? load() : {};
 }
 
 export async function fetchClientProfile(clientId) {
