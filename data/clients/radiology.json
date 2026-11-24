@@ -30,11 +30,6 @@
   ],
   "scenarios": [
     {
-      "title": "Moderating a Tense Multi-Center Case Conference With Warm Authority",
-      "category": "Meeting Facilitation · International Panel",
-      "prompt": "You are chairing a global radiology tumor board where two senior specialists disagree on imaging protocol and time is running short. Step in with warmth, humor, and crisp structure—validating both views, summarizing the diagnostic trade-off, and guiding the room to a clear next step."
-    },
-    {
       "title": "Mayo Clinic Panel Interview: 'Why Mayo, and What Will You Bring to Our Department?'",
       "category": "US Academic Medicine · High-Stakes Interview",
       "prompt": "Answer a Mayo Clinic search committee question about your vision for international collaboration and clinical mentorship. Blend two years of US clinical familiarity, Hungarian diagnostic rigor, and your genuine personality so the panel sees both a top specialist and a colleague they want on their team."
@@ -63,6 +58,13 @@
       "title": "Pocket Story - Phoenix: 'Describe a moment of failure that you learned from.'",
       "category": "Professional Identity",
       "prompt": "Share a story of failure that caused you to grow."
+    }
+  ],
+  "scenarios-hidden": [
+    {
+      "title": "Moderating a Tense Multi-Center Case Conference With Warm Authority",
+      "category": "Meeting Facilitation · International Panel",
+      "prompt": "You are chairing a global radiology tumor board where two senior specialists disagree on imaging protocol and time is running short. Step in with warmth, humor, and crisp structure—validating both views, summarizing the diagnostic trade-off, and guiding the room to a clear next step."
     },
     {
       "title": "Breaking the Ice: Opening an International Call With Personality Instead of Cold Bullet Points",
