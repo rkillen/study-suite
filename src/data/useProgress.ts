@@ -48,20 +48,37 @@ export type ProgressErrorHandler = (error: unknown, kind: "load" | "save") => vo
 /** What is in users/<id>/progress/state. */
 type StateDoc = Partial<Pick<Progress, "masteredIds" | "activeDecks">>;
 
-export function useProgress(uid: string, onError: ProgressErrorHandler): { progress: Progress; ready: boolean; actions: ProgressActions } {
+export function useProgress(
+  uid: string,
+  onError: ProgressErrorHandler,
+  /** Called when the person's own profile says their access has been switched off. */
+  onRevoked: () => void
+): { progress: Progress; ready: boolean; actions: ProgressActions } {
   const [profile, setProfile] = useState<Partial<UserDoc> | null>(null);
   const [state, setState] = useState<StateDoc | null>(null);
   const [stories, setStories] = useState<Story[] | null>(null);
 
   const onErrorRef = useRef(onError);
   onErrorRef.current = onError;
+  const onRevokedRef = useRef(onRevoked);
+  onRevokedRef.current = onRevoked;
 
   useEffect(() => {
     const userRef = doc(db, "users", uid);
     const fail = (error: unknown) => onErrorRef.current?.(error, "load");
 
     const unsubscribers = [
-      onSnapshot(userRef, (snap) => setProfile((snap.data() ?? {}) as Partial<UserDoc>), fail),
+      // A person can always read their own profile, even after access is switched off. That makes it the
+      // reliable way to notice: Firestore does not stop an open listener just because the rules now say no.
+      onSnapshot(
+        userRef,
+        (snap) => {
+          const data = (snap.data() ?? {}) as Partial<UserDoc>;
+          setProfile(data);
+          if (data.role === "revoked") onRevokedRef.current();
+        },
+        fail
+      ),
       onSnapshot(doc(userRef, "progress", "state"), (snap) => setState((snap.data() ?? {}) as StateDoc), fail),
       onSnapshot(
         query(collection(userRef, "stories"), orderBy("createdAt", "desc")),

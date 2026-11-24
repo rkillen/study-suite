@@ -102,6 +102,8 @@ profile (document `users/<your id>`).
 Signing in with an account that has no invitation shows "This account has not been invited" and signs it
 straight back out.
 
+Other admins do not need the console: once you are signed in, open **Admin > People > Invite an admin**.
+
 ## 7. Import the starter content
 
 The database starts empty, so at first the app shows a banner saying there is no content. As the admin:

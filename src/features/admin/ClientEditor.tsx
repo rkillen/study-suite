@@ -2,8 +2,9 @@ import { Fragment, useEffect, useState, type FormEvent } from "react";
 import { Pencil } from "lucide-react";
 import { useStudy } from "../../context/StudyContext.tsx";
 import { fetchClientProfile } from "../../data/firestoreSource.ts";
-import { saveClientBeachcombing, saveClientName, saveClientSection } from "../../data/firestoreWriters.ts";
+import { deleteClient, saveClientBeachcombing, saveClientName, saveClientSection } from "../../data/firestoreWriters.ts";
 import { normalizeClientProfile } from "../../data/normalize.ts";
+import { errorMessage } from "../../lib/errors.ts";
 import { newId } from "../../lib/ids.ts";
 import type { BeachTier, ClientProfile, ClientSummary, CustomCard, Scenario, WatchOut } from "../../types.ts";
 import type { Field } from "./ListEditor.tsx";
@@ -105,6 +106,59 @@ const LISTS: ListDef<ClientProfile>[] = [
   tier("tier3", "Tier 3"),
 ];
 
+// At the very bottom of a client: delete it. Refused while anyone is still in the client.
+function DeleteClient({ client, onDeleted }: { client: ClientSummary; onDeleted: (id: string) => void }) {
+  const [confirming, setConfirming] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [problem, setProblem] = useState("");
+
+  const remove = async () => {
+    setBusy(true);
+    setProblem("");
+    try {
+      await deleteClient(client.id);
+      onDeleted(client.id);
+    } catch (e) {
+      // Refusing is normal here ("someone is still in this client"), and the message says why.
+      setProblem(errorMessage(e));
+      setConfirming(false);
+      setBusy(false);
+    }
+  };
+
+  return (
+    <div className="p-5 rounded-2xl border border-crimson-700/20 bg-crimson-50/50 space-y-3">
+      <div>
+        <h3 className="font-serif text-lg font-semibold text-charcoal-900">Delete this client</h3>
+        <p className="text-xs text-charcoal-600 mt-0.5 leading-relaxed">
+          Removes the client and all its watch-outs, scenarios, personal cards and own words. It cannot be undone, so download a backup first if
+          you might want them again. It is only allowed once no one is in the client: move or cancel people first.
+        </p>
+      </div>
+      {confirming ? (
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-xs text-crimson-700 font-medium mr-auto">Delete {client.profileName} for good?</span>
+          <button type="button" disabled={busy} onClick={remove} className="px-4 py-2 rounded-xl bg-crimson-700 hover:bg-crimson-800 text-white text-xs font-medium disabled:opacity-60">
+            {busy ? "Deleting…" : "Yes, delete it"}
+          </button>
+          <button type="button" onClick={() => setConfirming(false)} className="px-4 py-2 rounded-xl bg-white hover:bg-alabaster-50 border border-alabaster-200 text-xs font-medium text-charcoal-800">
+            No
+          </button>
+        </div>
+      ) : (
+        <button type="button" onClick={() => setConfirming(true)} className="px-4 py-2 rounded-xl bg-white hover:bg-alabaster-50 border border-crimson-700/30 text-xs font-medium text-crimson-700">
+          Delete client…
+        </button>
+      )}
+      {problem && (
+        <p role="status" className="text-xs text-crimson-700">
+          {problem}
+        </p>
+      )}
+    </div>
+  );
+}
+
 function NameForm({ client, profile, onSaved }: { client: ClientSummary; profile: ClientProfile; onSaved: (name: string) => void }) {
   const [editing, setEditing] = useState(false);
   const [name, setName] = useState(profile.profileName);
@@ -174,7 +228,7 @@ function NameForm({ client, profile, onSaved }: { client: ClientSummary; profile
 }
 
 // Everything about one client. "client" is { id, profileName }.
-export default function ClientEditor({ client, onRenamed }: { client: ClientSummary; onRenamed: (id: string, name: string) => void }) {
+export default function ClientEditor({ client, clients, onRenamed, onDeleted }: { client: ClientSummary; clients: ClientSummary[]; onRenamed: (id: string, name: string) => void; onDeleted: (id: string) => void }) {
   const { reloadContent } = useStudy();
   const [profile, setProfile] = useState<ClientProfile | null>(null);
   const [error, setError] = useState("");
@@ -209,7 +263,7 @@ export default function ClientEditor({ client, onRenamed }: { client: ClientSumm
         }}
       />
 
-      <PeoplePanel clientId={client.id} />
+      <PeoplePanel clientId={client.id} clients={clients} />
 
       {usesDefaults && (
         <p className="text-xs text-charcoal-600 leading-relaxed p-3.5 rounded-xl bg-gold-100/60 border border-gold-300/60">
@@ -246,6 +300,8 @@ export default function ClientEditor({ client, onRenamed }: { client: ClientSumm
           })}
         </Fragment>
       </div>
+
+      {client.id !== "default" && <DeleteClient client={client} onDeleted={onDeleted} />}
     </div>
   );
 }

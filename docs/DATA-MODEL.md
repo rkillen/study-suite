@@ -48,12 +48,17 @@ not change someone who has already signed in. Change their profile instead.
 |---|---|
 | `email`, `displayName` | from their Google account |
 | `role` | `user`, `admin`, or `revoked` (access switched off) |
+| `roleBeforeRevoke` | only present while revoked: the role to give back on restore |
 | `clientId` | which client they see |
 | `createdAt`, `lastActiveAt` | first sign-in, and the last time they saved something |
 | `storyCount`, `jotCount`, `masteredCount` | summary numbers, kept up to date by the app. The admin's progress list reads these so it does not need to open everyone's stories. |
 
 Only an admin can change `role` or `clientId`. Profiles are never deleted: access ends by setting
-`role` to `revoked`.
+`role` to `revoked`, and the role they had is kept in `roleBeforeRevoke` so that **Restore access** gives the same
+role back (an admin who is switched off and on again is still an admin). Stories and progress are kept throughout.
+
+Once someone has signed in, their invitation stays on file. When an admin moves a person to another client, both
+the profile and that leftover invitation are updated together; switching access off removes the invitation.
 
 ### Their work
 

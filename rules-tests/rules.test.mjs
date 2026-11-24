@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { after, before, beforeEach, describe, it } from "node:test";
 import { assertFails, assertSucceeds, initializeTestEnvironment } from "@firebase/rules-unit-testing";
-import { collection, deleteDoc, doc, getDoc, getDocs, serverTimestamp, setDoc, setLogLevel, updateDoc } from "firebase/firestore";
+import { collection, deleteDoc, deleteField, doc, getDoc, getDocs, limit, orderBy, query, serverTimestamp, setDoc, setLogLevel, updateDoc } from "firebase/firestore";
 
 // Refused writes are expected in these tests; keep the output readable.
 setLogLevel("silent");
@@ -99,6 +99,11 @@ describe("invites", () => {
     await assertFails(setDoc(doc(alice(), "invites/friend@x.com"), { role: "user", clientId: "morocco" }));
     await assertFails(setDoc(doc(alice(), "invites/alice@x.com"), { role: "admin", clientId: "morocco" }));
     await assertFails(deleteDoc(doc(alice(), "invites/alice@x.com")));
+  });
+
+  it("an admin can move an invitation to another client; a person cannot", async () => {
+    await assertSucceeds(updateDoc(doc(admin(), "invites/alice@x.com"), { clientId: "sauna" }));
+    await assertFails(updateDoc(doc(alice(), "invites/alice@x.com"), { clientId: "sauna" }));
   });
 
   it("an admin can list, create and delete invites", async () => {
@@ -207,6 +212,25 @@ describe("profiles", () => {
     await assertSucceeds(updateDoc(doc(admin(), "users/bob"), { clientId: "morocco" }));
   });
 
+  it("you cannot write the note that remembers your role before access was switched off", async () => {
+    await assertFails(updateDoc(doc(alice(), "users/alice"), { roleBeforeRevoke: "admin" }));
+  });
+
+  it("an admin can switch access off and back on, and the note is theirs to write", async () => {
+    await assertSucceeds(updateDoc(doc(admin(), "users/alice"), { role: "revoked", roleBeforeRevoke: "user" }));
+    await assertSucceeds(updateDoc(doc(admin(), "users/alice"), { role: "user", roleBeforeRevoke: deleteField() }));
+  });
+
+  it("after access is switched off the person can still see their own profile, but nothing else", async () => {
+    await env.withSecurityRulesDisabled(async (ctx) => {
+      await updateDoc(doc(ctx.firestore(), "users/alice"), { role: "revoked", roleBeforeRevoke: "user" });
+    });
+    await assertSucceeds(getDoc(doc(alice(), "users/alice")));
+    await assertFails(getDoc(doc(alice(), "users/alice/stories/s1")));
+    await assertFails(getDocs(query(collection(alice(), "users/alice/stories"), orderBy("createdAt", "desc"), limit(25))));
+    await assertFails(getDoc(doc(alice(), "library/beachcombing")));
+  });
+
   it("an admin cannot delete profiles either", async () => {
     await assertFails(deleteDoc(doc(admin(), "users/alice")));
   });
@@ -237,6 +261,15 @@ describe("a person's own work (stories, jots, progress)", () => {
     await assertFails(setDoc(doc(admin(), "users/alice/stories/s9"), { title: "Hack", body: "x" }));
     await assertFails(updateDoc(doc(admin(), "users/alice/stories/s1"), { title: "Edited" }));
     await assertFails(deleteDoc(doc(admin(), "users/alice/stories/s1")));
+  });
+
+  it("an admin can read a person's stories and jots newest first, a page at a time", async () => {
+    await assertSucceeds(getDocs(query(collection(admin(), "users/alice/stories"), orderBy("createdAt", "desc"), limit(26))));
+    await assertSucceeds(getDocs(query(collection(admin(), "users/alice/jots"), orderBy("date", "desc"), limit(26))));
+  });
+
+  it("another person cannot read those stories with a query either", async () => {
+    await assertFails(getDocs(query(collection(bob(), "users/alice/stories"), orderBy("createdAt", "desc"), limit(26))));
   });
 
   it("a revoked person loses access to their own work", async () => {
@@ -303,6 +336,13 @@ describe("client profiles", () => {
     await assertSucceeds(getDocs(collection(admin(), "clients/sauna/watchOuts")));
     await assertSucceeds(setDoc(doc(admin(), "clients/newco"), { profileName: "New Co" }));
     await assertSucceeds(setDoc(doc(admin(), "clients/newco/scenarios/s1"), { title: "Scenario" }));
+  });
+
+  it("an admin can delete a client and its items; a person cannot", async () => {
+    await assertFails(deleteDoc(doc(alice(), "clients/morocco/watchOuts/w1")));
+    await assertFails(deleteDoc(doc(alice(), "clients/morocco")));
+    await assertSucceeds(deleteDoc(doc(admin(), "clients/morocco/watchOuts/w1")));
+    await assertSucceeds(deleteDoc(doc(admin(), "clients/morocco")));
   });
 
   it("a revoked person cannot read any client", async () => {

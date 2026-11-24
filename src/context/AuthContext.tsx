@@ -22,6 +22,8 @@ type AuthState =
 interface AuthActions {
   /** A message for the sign-in screen when signing in did not work. */
   signInError: string;
+  /** Looks again at whether this person may still use the app, for example after a permission error. */
+  recheckAccess: () => Promise<void>;
   signIn: () => Promise<void>;
   signOut: () => Promise<void>;
 }
@@ -122,15 +124,36 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signOut = useCallback(() => firebaseSignOut(auth), []);
 
+  // If an admin switches someone off while they are using the app, their requests start to fail. This is
+  // called then. It leaves the screen alone unless access really has ended, so it is safe to call often.
+  const rechecking = useRef(false);
+  const recheckAccess = useCallback(async () => {
+    const user = auth.currentUser;
+    if (!user || rechecking.current) return;
+    rechecking.current = true;
+    try {
+      const result = await resolveAccess(user);
+      if (!result.ok) {
+        setState({ status: "denied", reason: result.reason, email: user.email ?? "" });
+        await firebaseSignOut(auth);
+      }
+    } catch (error) {
+      console.error("Could not re-check access:", error);
+    } finally {
+      rechecking.current = false;
+    }
+  }, []);
+
   const value = useMemo<AuthValue>(
     () => ({
       ...state,
       isAdmin: state.status === "ready" && state.profile.role === "admin",
       signInError,
+      recheckAccess,
       signIn,
       signOut,
     }),
-    [state, signInError, signIn, signOut]
+    [state, signInError, recheckAccess, signIn, signOut]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

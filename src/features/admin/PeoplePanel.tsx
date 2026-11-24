@@ -2,21 +2,18 @@ import { useCallback, useEffect, useState, type FormEvent } from "react";
 import { UserPlus } from "lucide-react";
 import { useSignedIn } from "../../context/AuthContext.tsx";
 import { normalizeEmail } from "../../data/emails.ts";
-import { cancelInvite, checkCanInvite, inviteToClient, listClientPeople, type Person, type PersonStatus } from "../../data/people.ts";
+import { checkCanInvite, inviteToClient, listClientPeople, type Person } from "../../data/people.ts";
 import { errorMessage } from "../../lib/errors.ts";
+import type { ClientSummary } from "../../types.ts";
 import InviteMessage from "./InviteMessage.tsx";
-
-const STATUS: Record<PersonStatus, { label: string; style: string }> = {
-  invited: { label: "Invited, has not signed in yet", style: "bg-gold-100 text-gold-600 border-gold-300/60" },
-  active: { label: "Signed in", style: "bg-alabaster-100 text-charcoal-600 border-alabaster-200" },
-  revoked: { label: "Access switched off", style: "bg-crimson-50 text-crimson-700 border-crimson-700/20" },
-};
+import PersonRow from "./PersonRow.tsx";
 
 const inputClass =
   "flex-1 min-w-[220px] rounded-xl bg-white border border-alabaster-200 px-3.5 py-2 text-sm text-charcoal-900 placeholder:text-charcoal-400 focus:outline-none focus:border-crimson-700";
 
-// Who is attached to one client, and a form to invite someone. clientId is the client's short id.
-export default function PeoplePanel({ clientId }: { clientId: string }) {
+// Who is attached to one client, and a form to invite someone. clientId is the client's short id;
+// clients is every client, so a person can be moved to another.
+export default function PeoplePanel({ clientId, clients }: { clientId: string; clients: ClientSummary[] }) {
   const { profile } = useSignedIn();
   const [people, setPeople] = useState<Person[] | null>(null);
   const [error, setError] = useState("");
@@ -25,7 +22,6 @@ export default function PeoplePanel({ clientId }: { clientId: string }) {
   const [problem, setProblem] = useState("");
   const [warning, setWarning] = useState(false);
   const [invited, setInvited] = useState("");
-  const [cancelling, setCancelling] = useState("");
 
   const load = useCallback(async () => {
     try {
@@ -71,25 +67,13 @@ export default function PeoplePanel({ clientId }: { clientId: string }) {
     }
   };
 
-  const cancel = async (address: string) => {
-    setCancelling("");
-    setInvited("");
-    try {
-      await cancelInvite(address);
-      await load();
-    } catch (e) {
-      console.error(e);
-      setProblem(`Could not cancel the invitation: ${errorMessage(e)}`);
-    }
-  };
-
   return (
     <div className="studio-card rounded-2xl p-5 sm:p-6 space-y-4">
       <div>
         <h3 className="font-serif text-lg font-semibold text-charcoal-900">People</h3>
         <p className="text-xs text-charcoal-600 mt-0.5 leading-relaxed">
           Who can sign in and see this client. Normally one person per client. Invited people sign in with the Google account
-          of the email address you enter.
+          of the email address you enter. Switching someone's access off keeps their stories; you can restore it later.
         </p>
       </div>
 
@@ -100,34 +84,7 @@ export default function PeoplePanel({ clientId }: { clientId: string }) {
       {people && people.length > 0 && (
         <ul className="space-y-2" aria-label="People">
           {people.map((person) => (
-            <li key={person.email} className="flex flex-wrap items-center justify-between gap-3 p-3 rounded-xl bg-white border border-alabaster-200">
-              <div className="min-w-0">
-                <div className="text-sm font-medium text-charcoal-900 truncate">{person.email}</div>
-                {person.name && <div className="text-xs text-charcoal-600">{person.name}</div>}
-                {person.status === "active" && person.lastActiveAt && (
-                  <div className="text-[11px] text-charcoal-400">Last active {person.lastActiveAt.toLocaleDateString()}</div>
-                )}
-              </div>
-              <div className="flex items-center gap-2.5">
-                {person.role === "admin" && <span className="text-[11px] font-mono px-2 py-0.5 rounded border bg-crimson-50 text-crimson-700 border-crimson-700/20">admin</span>}
-                <span className={`text-[11px] font-mono px-2 py-0.5 rounded border ${STATUS[person.status].style}`}>{STATUS[person.status].label}</span>
-                {person.status === "invited" &&
-                  (cancelling === person.email ? (
-                    <>
-                      <button type="button" onClick={() => cancel(person.email)} className="px-2.5 py-1.5 rounded-lg bg-crimson-700 hover:bg-crimson-800 text-white text-[11px] font-medium">
-                        Yes, cancel it
-                      </button>
-                      <button type="button" onClick={() => setCancelling("")} className="px-2.5 py-1.5 rounded-lg bg-alabaster-100 hover:bg-alabaster-200/70 text-charcoal-800 text-[11px] font-medium">
-                        No
-                      </button>
-                    </>
-                  ) : (
-                    <button type="button" onClick={() => setCancelling(person.email)} className="px-2.5 py-1.5 rounded-lg bg-alabaster-50 hover:bg-alabaster-100 border border-alabaster-200 text-charcoal-800 text-[11px] font-medium">
-                      Cancel invitation
-                    </button>
-                  ))}
-              </div>
-            </li>
+            <PersonRow key={person.email} person={person} clients={clients} onChanged={load} />
           ))}
         </ul>
       )}

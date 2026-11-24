@@ -1,5 +1,6 @@
 import { useState, type ComponentType } from "react";
 import { useStudy } from "../../context/StudyContext.tsx";
+import AllPeople from "./AllPeople.tsx";
 import ClientsAdmin from "./ClientsAdmin.tsx";
 import ImportBackup from "./ImportBackup.tsx";
 import SharedContent from "./SharedContent.tsx";
@@ -8,6 +9,7 @@ import SharedContent from "./SharedContent.tsx";
 const SECTIONS: { id: string; label: string; Component: ComponentType }[] = [
   { id: "content", label: "Shared content", Component: SharedContent },
   { id: "clients", label: "Clients", Component: ClientsAdmin },
+  { id: "people", label: "People", Component: AllPeople },
   { id: "data", label: "Import & backup", Component: ImportBackup },
 ];
 

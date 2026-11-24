@@ -22,11 +22,11 @@ This folder has its own `package.json` so the testing tools never become part of
 - Invitations: you can read only your own, only admins can list, create or delete them.
 - First sign-in: your profile can be created only if it matches your invitation (role, client, email),
   has no extra fields, and a real timestamp.
-- Profiles: nobody can change their own role or client, or delete a profile. Admins can change roles.
-- Stories, jots and progress: the owner can read and write, admins can only read, other people and
-  revoked people cannot touch them.
+- Profiles: nobody can change their own role or client (or the note about their role before access was switched off), or delete a profile. Admins can change roles and switch access off and on. Someone switched off can still see their own profile and nothing else.
+- Stories, jots and progress: the owner can read and write, admins can only read (including newest-first, a page at a
+  time), other people and revoked people cannot touch them.
 - Shared content: everyone invited can read, only admins can write.
-- Client profiles: people see their own client and the default one; admins see and edit all.
+- Client profiles: people see their own client and the default one; admins see, edit and delete all.
 - Anything not mentioned is closed.
 
 ## Adding a test

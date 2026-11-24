@@ -136,6 +136,8 @@ export interface UserDoc {
   email: string;
   displayName: string;
   role: Role;
+  /** Set when access is switched off, so restoring it can give the same role back. Only admins write this. */
+  roleBeforeRevoke?: Role;
   clientId: string;
   /** Firebase timestamps. They are only ever read as dates (toDate) by the admin screens. */
   createdAt?: unknown;

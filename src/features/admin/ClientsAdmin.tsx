@@ -40,6 +40,13 @@ export default function ClientsAdmin() {
     setNotice({ text: `Created ${client.profileName}.`, ...result });
   };
 
+  const handleDeleted = (id: string) => {
+    const remaining = clients.filter((client) => client.id !== id);
+    setClients(remaining);
+    setSelectedId(remaining[0]?.id ?? "");
+    setNotice({ text: `Deleted ${clients.find((client) => client.id === id)?.profileName ?? id}.` });
+  };
+
   const handleRenamed = (id: string, profileName: string) => {
     setClients(clients.map((client) => (client.id === id ? { ...client, profileName } : client)).sort((a, b) => a.profileName.localeCompare(b.profileName)));
   };
@@ -93,7 +100,7 @@ export default function ClientsAdmin() {
       {adding ? (
         <AddClientForm clients={clients} onCreated={handleCreated} onCancel={() => setAdding(false)} />
       ) : selected ? (
-        <ClientEditor key={selected.id} client={selected} onRenamed={handleRenamed} />
+        <ClientEditor key={selected.id} client={selected} clients={clients} onRenamed={handleRenamed} onDeleted={handleDeleted} />
       ) : (
         <p className="p-6 rounded-xl bg-alabaster-50 border border-alabaster-200 text-center text-xs text-charcoal-400">
           There are no clients yet. Use "Add client" to make the first one, or import the starter data under Import &amp; backup.

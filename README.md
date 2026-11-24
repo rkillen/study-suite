@@ -8,8 +8,8 @@ Each coaching client sees their own focus points, scenarios and personal cards.
 > React app that uses Firebase (Google sign-in and a database) instead of files.
 > Done so far: the app itself, Google sign-in with an invitation list, the security rules, and storing
 > content and each person's progress in Firebase, and the admin screens for editing content, importing
-> AppSheet CSVs, backing up and restoring, adding clients and inviting people. Still to come: revoking access,
-> inviting many people at once, and the screen where admins read clients' stories and progress. See "Roadmap" below.
+> AppSheet CSVs, backing up and restoring, adding clients, and managing people (invite, move, switch access off and
+> on, and read their stories and progress). Still to come: the full guides and the live deployment. See "Roadmap" below.
 
 ## Run it on your computer
 
@@ -63,5 +63,5 @@ npm run deploy         # builds the site and publishes everything to Firebase
 3. ~~Firebase and Google sign-in (invite-only), with tested security rules~~
 4. ~~Content and progress stored in Firebase instead of files and the browser~~
 5. ~~Admin area: edit shared content and clients, import CSVs, backup and restore, add clients, invite people~~
-6. People and progress: invite clients, read their stories and progress
+6. ~~People and progress: invite, move, switch access off and on, read stories and progress~~
 7. Full guides for setup, admins and developers; deployment

@@ -21,7 +21,10 @@ stored, and where, is described in `docs/DATA-MODEL.md`.
 | `firestoreWriters.ts` | Saves content: one list at a time (`saveBeachcombing`, `saveFlashcardCategory`, `saveClientSection`...), a whole client (`saveClientProfile`, `createClient`) or everything (`saveSharedLibrary`). Each one replaces what is stored. |
 | `appsheetCsv.ts` | Reads the two AppSheet CSV files and works out what the shared content would become. Reads text only: it never talks to Firebase. The category rules are at the top. |
 | `csvImport.ts` | Saves the result of `appsheetCsv.ts`, replacing only the lists the CSV had something for. |
-| `people.ts` | Invitations and who is attached to a client: list them, check an email can be invited, invite, cancel. |
+| `people.ts` | Everyone with an account or invitation, and what can be done about them: list, invite (one, many, or an admin), cancel an invitation, switch access off and on, move to another client. The safety checks live here (you cannot switch yourself or the last admin off). |
+| `bulkInvite.ts` | Turns a pasted list of emails and clients into invitations to review. Reads text only. |
+| `emails.ts` | Tidying and checking email addresses. |
+| `peopleWork.ts` | Reads a person's stories and jots for an admin, 25 at a time. Read-only. |
 | `clientIds.ts` | Making a client's short id from a name, checking an id is allowed, and copying a client's content with fresh ids. |
 | `replaceContent.ts` | Saves a whole set of content (the shared library plus a list of clients). Used by both the starter import and the backup restore. |
 | `seedSource.ts` | Reads the starter files in `/seed`. Loaded only when an admin imports. |

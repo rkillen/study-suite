@@ -82,22 +82,27 @@ export function StudyProvider({ children }: { children: ReactNode }) {
 
 function StudyReady({ clientId, data, reloadContent, children }: { clientId: string; data: StudyData; reloadContent: () => void; children: ReactNode }) {
   const { library, clientProfile, sourceLabel, contentEmpty } = data;
-  const { user } = useSignedIn();
+  const { user, recheckAccess } = useSignedIn();
   const { showToast } = useToast();
   const [prefs, updatePrefs] = usePrefs(clientId);
 
   const handleError = useCallback<ProgressErrorHandler>(
     (error, kind) => {
       console.error(`Could not ${kind}:`, error);
+      // "Permission denied" usually means an admin has just switched this person off.
+      if ((error as { code?: string }).code === "permission-denied") {
+        void recheckAccess();
+        return;
+      }
       showToast(
         kind === "save"
           ? "Could not save your last change. Check your connection and try again."
           : "Could not load your progress. Please reload the page."
       );
     },
-    [showToast]
+    [showToast, recheckAccess]
   );
-  const { progress, ready, actions } = useProgress(user.uid, handleError);
+  const { progress, ready, actions } = useProgress(user.uid, handleError, recheckAccess);
 
   // Clients who have personal cards always start on that deck (runs once, on open).
   const hasCustomCards = clientProfile.customCards.length > 0;

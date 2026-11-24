@@ -3,6 +3,7 @@ import { db } from "../firebase/app.ts";
 import type { BeachWords, ClientProfile, CustomCard, Flashcard, Library, Scenario, WatchOut } from "../types.ts";
 import type { ClientContent } from "./clientIds.ts";
 import { splitIntoChunks } from "./flashcardChunks.ts";
+import { listClientPeople } from "./people.ts";
 
 // Saves content to Firebase. Each function REPLACES what is stored (anything that is no longer
 // in the new data is removed). Only admins are allowed to do this; the security rules enforce it.
@@ -142,4 +143,26 @@ export async function createClient({ clientId, profileName, content }: { clientI
     scenarios: content?.scenarios ?? [],
     customCards: content?.customCards ?? [],
   });
+}
+
+// Deletes a client and everything in it (watch-outs, scenarios, personal cards). Refuses while anyone
+// still has an account or invitation in that client, so nobody is left pointing at nothing.
+export async function deleteClient(clientId: string): Promise<void> {
+  if (clientId === "default") {
+    throw new Error('The "default" client fills in for every client that has no content of its own, so it cannot be deleted.');
+  }
+  const people = await listClientPeople(clientId);
+  if (people.length > 0) {
+    throw new Error(
+      `${people.map((p) => p.email).join(", ")} ${people.length === 1 ? "is" : "are"} still in this client. Move ${people.length === 1 ? "them" : "everyone"} to another client first.`
+    );
+  }
+
+  const operations: Operation[] = [];
+  for (const section of ["watchOuts", "scenarios", "cards"] as ClientSection[]) {
+    const existing = await getDocs(collection(db, "clients", clientId, section));
+    existing.docs.forEach((d) => operations.push((batch: WriteBatch) => batch.delete(d.ref)));
+  }
+  operations.push((batch: WriteBatch) => batch.delete(doc(db, "clients", clientId)));
+  await commitAll(operations);
 }

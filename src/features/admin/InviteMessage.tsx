@@ -3,9 +3,10 @@ import { Check, Copy } from "lucide-react";
 
 // What to send to someone you just invited, ready to copy. The invitation itself is already saved;
 // the person only has to open the site and sign in with the invited Google account.
-export default function InviteMessage({ email }: { email: string }) {
+// With no email it gives the general wording, for when many people were invited at once.
+export default function InviteMessage({ email }: { email?: string }) {
   const [copied, setCopied] = useState(false);
-  const message = `Hello! You are invited to Study Suite. Open ${window.location.origin} and click "Sign in with Google", using the Google account ${email}.`;
+  const message = `Hello! You are invited to Study Suite. Open ${window.location.origin} and click "Sign in with Google", using the Google account ${email ?? "that I invited"}.`;
 
   const copy = async () => {
     try {
@@ -20,7 +21,7 @@ export default function InviteMessage({ email }: { email: string }) {
   return (
     <div className="p-3.5 rounded-xl bg-gold-100/60 border border-gold-300/60 space-y-2.5">
       <p className="text-xs font-medium text-charcoal-800">
-        {email} is invited. Send them this message:
+        {email ? `${email} is invited. Send them this message:` : "Send each person this message:"}
       </p>
       <p data-invite-message className="text-xs text-charcoal-800 leading-relaxed p-3 rounded-lg bg-white border border-alabaster-200">
         {message}
