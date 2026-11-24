@@ -8,7 +8,7 @@
 | `storycraft/` | Storycraft: write stories and keep the story log |
 | `speaking/` | Speaking Arena: scenarios and live transcripts |
 | `flashcards/` | Flashcards: the rolling 20-card deck |
-| `admin/` | The Admin tab (admins only): content management. Today: importing the starter data |
+| `admin/` | The Admin tab (admins only): editing content, importing and backing it up. See `admin/README.md` |
 | `auth/` | Not a tab: the sign-in, "not invited" and setup screens shown before the app opens |
 
 Inside a folder, the main file is named after the tab, for example `Beachcombing.jsx`.

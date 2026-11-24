@@ -18,9 +18,11 @@ stored, and where, is described in `docs/DATA-MODEL.md`.
 
 | File | Job |
 |---|---|
-| `firestoreWriters.js` | `saveSharedLibrary` and `saveClientProfile`: replace what is stored with new content. |
+| `firestoreWriters.js` | Saves content: one list at a time (`saveBeachcombing`, `saveFlashcardCategory`...) or everything (`saveSharedLibrary`, `saveClientProfile`). Each one replaces what is stored. |
+| `replaceContent.js` | Saves a whole set of content (the shared library plus a list of clients). Used by both the starter import and the backup restore. |
 | `seedSource.js` | Reads the starter files in `/seed`. Loaded only when an admin imports. |
 | `seedImport.js` | `importSeed()`: copies the starter files into Firebase. Used by the Admin tab's "Import starter data" button. |
+| `backup.js` | `createBackup()` collects all content into one file's worth of data; `readBackup()` checks a backup file and gets it ready to restore. |
 
 ## A person's own work
 

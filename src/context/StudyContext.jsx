@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { loadStudyData } from "../data/index.js";
 import { useAuth } from "./AuthContext.jsx";
 import { useToast } from "./ToastContext.jsx";
@@ -37,7 +37,14 @@ export function StudyProvider({ children }) {
     };
   }, [clientId, version]);
 
-  const reloadContent = useCallback(() => setVersion((v) => v + 1), []);
+  // Called after content is changed (for example by an admin). Waits a moment first, so a burst of
+  // edits causes one reload instead of one per click.
+  const reloadTimer = useRef(null);
+  const reloadContent = useCallback(() => {
+    clearTimeout(reloadTimer.current);
+    reloadTimer.current = setTimeout(() => setVersion((v) => v + 1), 1000);
+  }, []);
+  useEffect(() => () => clearTimeout(reloadTimer.current), []);
 
   if (error) {
     return <div className="p-10 text-sm text-crimson-700">Could not load Study Suite: {String(error.message || error)}</div>;

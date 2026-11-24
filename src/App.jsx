@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import Header from "./components/Header.jsx";
 import { useAuth } from "./context/AuthContext.jsx";
 import { CONSENT_LINE } from "./features/auth/consent.js";
@@ -44,7 +44,9 @@ export default function App() {
             {/* Every tab stays loaded and is only hidden, so drafts and timers survive tab switches. */}
             {tabs.map(({ id, Component }) => (
               <div key={id} className={id === activeTab ? "" : "hidden"}>
-                <Component />
+                <Suspense fallback={<p className="text-sm font-mono text-charcoal-400">Loading…</p>}>
+                  <Component />
+                </Suspense>
               </div>
             ))}
           </>

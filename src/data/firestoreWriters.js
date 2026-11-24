@@ -1,4 +1,4 @@
-import { collection, doc, getDocs, serverTimestamp, writeBatch } from "firebase/firestore";
+import { collection, doc, getDocs, query, serverTimestamp, setDoc, where, writeBatch } from "firebase/firestore";
 import { db } from "../firebase/app.js";
 import { splitIntoChunks } from "./flashcardChunks.js";
 
@@ -27,6 +27,29 @@ function withUniqueIds(items, fallbackPrefix) {
     return { ...item, id };
   });
 }
+
+// ---- One list at a time (used by the Admin screens)
+
+// beachcombing: { tier1: [...], tier2: [...], tier3: [...] }
+export const saveBeachcombing = (beachcombing) => setDoc(doc(db, "library", "beachcombing"), beachcombing);
+
+export const savePreOutliningQuestions = (questions) => setDoc(doc(db, "library", "preOutlining"), { questions });
+
+export const saveStoryPrompts = (prompts) => setDoc(doc(db, "library", "storyPrompts"), { prompts });
+
+// Replaces every card of one flashcard category (for example "oxford").
+export async function saveFlashcardCategory(category, cards) {
+  const chunks = splitIntoChunks({ [category]: cards });
+  const keep = new Set(chunks.map((chunk) => chunk.id));
+  const existing = await getDocs(query(collection(db, "flashcards"), where("category", "==", category)));
+
+  await commitAll([
+    ...chunks.map((chunk) => (batch) => batch.set(doc(db, "flashcards", chunk.id), chunk.data)),
+    ...existing.docs.filter((d) => !keep.has(d.id)).map((d) => (batch) => batch.delete(d.ref)),
+  ]);
+}
+
+// ---- Everything at once
 
 // library: the normalised shape from normalize.js (beachcombing tiers, questions, prompts, flashcards)
 export async function saveSharedLibrary(library) {

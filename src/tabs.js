@@ -1,11 +1,14 @@
+import { lazy } from "react";
 import { Compass, Feather, Layers, Mic, ShieldCheck, Timer, Waves } from "lucide-react";
-import AdminHome from "./features/admin/AdminHome.jsx";
 import Beachcombing from "./features/beachcombing/Beachcombing.jsx";
 import Flashcards from "./features/flashcards/Flashcards.jsx";
 import Overview from "./features/overview/Overview.jsx";
 import PreOutlining from "./features/preoutlining/PreOutlining.jsx";
 import SpeakingArena from "./features/speaking/SpeakingArena.jsx";
 import Storycraft from "./features/storycraft/Storycraft.jsx";
+
+// Loaded only when an admin opens the app, so clients never download it.
+const AdminHome = lazy(() => import("./features/admin/AdminHome.jsx"));
 
 // The list of tabs, in the order they appear. To add a tab, add a line here.
 // A tab marked adminOnly is shown to admins and nobody else.

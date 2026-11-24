@@ -35,6 +35,12 @@ export async function fetchSharedLibrary() {
   };
 }
 
+// The ids of every client that exists (admins only).
+export async function listClientIds() {
+  const snapshot = await getDocs(collection(db, "clients"));
+  return snapshot.docs.map((d) => d.id).sort();
+}
+
 // Returns null when there is no such client.
 export async function fetchClientProfile(clientId) {
   const clientDoc = await getDoc(doc(db, "clients", clientId));

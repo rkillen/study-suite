@@ -1,4 +1,4 @@
-import { saveClientProfile, saveSharedLibrary } from "./firestoreWriters.js";
+import { replaceContent } from "./replaceContent.js";
 import { normalizeClientProfile, normalizeLibrary } from "./normalize.js";
 import * as seed from "./seedSource.js";
 
@@ -7,17 +7,10 @@ import * as seed from "./seedSource.js";
 // Not copied: the "version", "generatedAt" and "specialtyPacks" entries of shared-library.json
 // (the app never used them) and radiology's "scenarios-hidden" list. They stay in the files.
 export async function importSeed(onProgress = () => {}) {
-  onProgress("Saving the shared library…");
   const library = normalizeLibrary(await seed.fetchSharedLibrary());
-  await saveSharedLibrary(library);
-
-  const total = seed.clientIds.length;
-  for (const [index, clientId] of seed.clientIds.entries()) {
-    onProgress(`Saving client ${index + 1} of ${total}: ${clientId}…`);
-    const raw = await seed.fetchClientProfile(clientId);
-    await saveClientProfile(normalizeClientProfile(raw, clientId));
+  const clients = [];
+  for (const clientId of seed.clientIds) {
+    clients.push(normalizeClientProfile(await seed.fetchClientProfile(clientId), clientId));
   }
-
-  const cards = Object.values(library.flashcards).reduce((sum, list) => sum + list.length, 0);
-  return { cards, clients: total };
+  return replaceContent({ library, clients }, onProgress);
 }

@@ -8,6 +8,7 @@ Small functions that don't draw anything on screen.
 - `download.js`: saves text as a file download (story exports).
 - `random.js`: picks a different random item, and shuffles a list.
 - `text.js`: counts words.
+- `ids.js`: makes a unique id for something new (such as a flashcard).
 
 Dictation uses the browser's built-in speech recognition. It works in Chrome and Edge, and not in every
 browser; where it is missing, people can type instead.
