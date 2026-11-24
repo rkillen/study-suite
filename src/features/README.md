@@ -11,14 +11,14 @@
 | `admin/` | The Admin tab (admins only): editing content, importing and backing it up. See `admin/README.md` |
 | `auth/` | Not a tab: the sign-in, "not invited" and setup screens shown before the app opens |
 
-Inside a folder, the main file is named after the tab, for example `Beachcombing.jsx`.
+Inside a folder, the main file is named after the tab, for example `Beachcombing.tsx`.
 
 ## Add a new tab
 
-1. Make a folder, for example `src/features/journal/`, with a file `Journal.jsx`:
+1. Make a folder, for example `src/features/journal/`, with a file `Journal.tsx`:
 
-   ```jsx
-   import { useStudy } from "../../context/StudyContext.jsx";
+   ```tsx
+   import { useStudy } from "../../context/StudyContext.tsx";
 
    export default function Journal() {
      const { clientId } = useStudy();
@@ -30,15 +30,15 @@ Inside a folder, the main file is named after the tab, for example `Beachcombing
    }
    ```
 
-2. Open `src/tabs.js`, import it, and add one line to the list:
+2. Open `src/tabs.ts`, import it, and add one line to the list:
 
-   ```js
+   ```ts
    { id: "journal", label: "Journal", icon: BookOpen, Component: Journal },
    ```
 
    (Icons come from <https://lucide.dev/icons>. Import the one you pick at the top of the file.)
 
-3. Run `npm run dev` and the tab appears.
+3. Run `npm run dev` and the tab appears. Run `npm run typecheck` to check your new file for mistakes.
 
 ## What `useStudy()` gives you
 

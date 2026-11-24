@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "dev:emulator": "vite --mode emulator",
-    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "emulators": "npx --yes firebase-tools emulators:start --project demo-study-suite",
     "test:rules": "npx --yes firebase-tools emulators:exec --only firestore --project demo-study-suite \"npm --prefix rules-tests test\"",
@@ -21,8 +22,11 @@
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.3.0",
     "tailwindcss": "^4.3.5",
+    "typescript": "^7.0.2",
     "vite": "^8.3.8"
   }
 }

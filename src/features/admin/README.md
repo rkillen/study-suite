@@ -5,21 +5,21 @@ straight away.
 
 | File | What it is |
 |---|---|
-| `AdminHome.jsx` | The tab itself: a title and a row of sections. **To add a section, add a line to the `SECTIONS` list at the top.** |
-| `SharedContent.jsx` | Edit the content every client shares: Beachcombing words (3 tiers), Pre-Outlining questions, Story prompts and the four flashcard decks. |
-| `ClientsAdmin.jsx` | Pick a client from a list, or add a new one. |
-| `ClientEditor.jsx` | Everything about one client: rename, and edit their watch-outs, scenarios, personal cards and own Beachcombing words. |
-| `AddClientForm.jsx` | Makes a new client, empty or as a copy of an existing one, and can invite their person at the same time. |
-| `PeoplePanel.jsx` | On each client: who has an account or an invitation, and a form to invite someone. |
-| `InviteMessage.jsx` | The message to send someone you invited, with a Copy button. |
-| `ImportBackup.jsx` | Import the starter data from `seed/`, import AppSheet CSVs, download a backup, restore from a backup file. |
-| `CsvImport.jsx` | The AppSheet CSV card: choose the files, see a before/after preview, confirm. |
-| `ListEditor.jsx` | The reusable list: search, pages, add, edit, delete (with "are you sure"), add several at once, reorder. Every list in the Admin area is one of these. |
-| `AdminCard.jsx` | The titled card and the two button styles used on the Admin screens. |
+| `AdminHome.tsx` | The tab itself: a title and a row of sections. **To add a section, add a line to the `SECTIONS` list at the top.** |
+| `SharedContent.tsx` | Edit the content every client shares: Beachcombing words (3 tiers), Pre-Outlining questions, Story prompts and the four flashcard decks. |
+| `ClientsAdmin.tsx` | Pick a client from a list, or add a new one. |
+| `ClientEditor.tsx` | Everything about one client: rename, and edit their watch-outs, scenarios, personal cards and own Beachcombing words. |
+| `AddClientForm.tsx` | Makes a new client, empty or as a copy of an existing one, and can invite their person at the same time. |
+| `PeoplePanel.tsx` | On each client: who has an account or an invitation, and a form to invite someone. |
+| `InviteMessage.tsx` | The message to send someone you invited, with a Copy button. |
+| `ImportBackup.tsx` | Import the starter data from `seed/`, import AppSheet CSVs, download a backup, restore from a backup file. |
+| `CsvImport.tsx` | The AppSheet CSV card: choose the files, see a before/after preview, confirm. |
+| `ListEditor.tsx` | The reusable list: search, pages, add, edit, delete (with "are you sure"), add several at once, reorder. Every list in the Admin area is one of these. |
+| `AdminCard.tsx` | The titled card and the two button styles used on the Admin screens. |
 
 ## The AppSheet CSV import
 
-- **Which category becomes what** is one short list at the top of `src/data/appsheetCsv.js` (`CATEGORY_RULES`).
+- **Which category becomes what** is one short list at the top of `src/data/appsheetCsv.ts` (`CATEGORY_RULES`).
   If AppSheet categories change, change that list; nothing else needs touching. The screen shows the same
   list under "Which AppSheet categories go where?".
 - It only replaces the lists the file has something for. A file with only questions replaces only the questions.
@@ -55,7 +55,7 @@ straight away.
 
 ## Adding another editable list
 
-Each list in `SharedContent.jsx` and `ClientEditor.jsx` is a small block of settings, not a new screen. Look at `tier(...)` or
+Each list in `SharedContent.tsx` and `ClientEditor.tsx` is a small block of settings, not a new screen. Look at `tier(...)` or
 `deck(...)` near the top: they say what the form boxes are called (`fields`), how to show a row
 (`renderSummary`), how to read the list from the library (`read`), and how to save it (`persist`).
 Copy one, change the names, and add it to the `LISTS` array.

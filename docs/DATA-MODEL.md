@@ -5,6 +5,7 @@ of *documents* (like small records). You can browse all of it in the Firebase co
 **Build > Firestore Database > Data**.
 
 Who may read or write each part is decided by `firestore.rules`. The short version is at the bottom.
+The same shapes are written as TypeScript in `src/types.ts`, which the code is checked against.
 
 ## Overview
 
@@ -73,7 +74,7 @@ Only an admin can change `role` or `clientId`. Profiles are never deleted: acces
 **Why many cards in one document?** Every database read counts against the free daily allowance, and every
 person loads all the cards each time they open the app. Storing around 200 cards per document means that
 loading every card costs a handful of reads instead of hundreds. The only code that knows about this is
-`src/data/flashcardChunks.js`; the rest of the app just sees lists of cards.
+`src/data/flashcardChunks.ts`; the rest of the app just sees lists of cards.
 
 ## Clients
 

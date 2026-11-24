@@ -30,7 +30,8 @@ name from `seed/clients/`).
 Other commands:
 
 ```
-npm run build          # makes the finished site in the "dist" folder
+npm run typecheck      # checks the code for mistakes without running it
+npm run build          # checks the code, then makes the finished site in the "dist" folder
 npm run preview        # shows that finished site locally
 npm run emulators      # a pretend Firebase on your computer, for safe testing (needs Java)
 npm run dev:emulator   # the app, connected to the pretend Firebase
@@ -45,8 +46,9 @@ npm run deploy         # builds the site and publishes everything to Firebase
 |---|---|
 | `src/` | The app. Start with `src/README.md`. |
 | `seed/` | The starter content (flashcards, prompts, client profiles), copied into Firebase once. See `seed/README.md`. |
+| `tsconfig.json` | Settings for the TypeScript checker. You rarely need to touch it. |
 | `src/index.css` | Colours and fonts. Change a colour here and it changes everywhere. |
-| `src/tabs.js` | The list of tabs. Add or reorder tabs here. |
+| `src/tabs.ts` | The list of tabs. Add or reorder tabs here. |
 | `docs/` | Guides. Start with `docs/SETUP-FIREBASE.md`; `docs/DATA-MODEL.md` explains what is stored where. |
 | `firestore.rules` | **Who may read and write what.** The most important file for privacy. Test it with `npm run test:rules`. |
 | `rules-tests/` | Automatic checks for `firestore.rules`. |
