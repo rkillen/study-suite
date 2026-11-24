@@ -34,6 +34,15 @@ In the Firebase console, open **Build > Authentication > Sign-in method**:
 - **Google** must be **Enabled**.
 - **Email/Password** must be **Disabled**. (Everyone signs in with Google, and nothing else.)
 
+Then open **Authentication > Settings > User actions** and make sure **Enable create (sign-up)** is
+**ticked**, and save. This looks like it should be off for a private site, but it must be on: Firebase
+creates an account record the first time someone signs in with Google, and with this switched off every
+first sign-in fails with `auth/admin-restricted-operation`.
+
+Being invited is checked separately, in our own database and rules (steps 4 and 5). A stranger who tries
+to sign in ends up with an empty account record under **Authentication > Users**, but no access to any
+data, and the app signs them straight out. You can delete such records there whenever you like.
+
 Under **Authentication > Settings > Authorized domains**, make sure these are listed. They are by default:
 
 - `localhost` (for working on your computer)
@@ -130,6 +139,8 @@ See `rules-tests/README.md`.
 | "This account has not been invited" | That email has no document in `invites` (step 5), or it was typed with capital letters. |
 | "Could not check your access" | No internet, or the rules were not published (step 4). |
 | "This web address is not approved for sign-in" | Add the address under Authorized domains (step 2). |
+| "New sign-ins are switched off in Firebase" (`auth/admin-restricted-operation`) | Tick **Enable create (sign-up)** under Authentication > Settings > User actions (step 2). |
+| "Google sign-in is not switched on" (`auth/operation-not-allowed`) | Enable the **Google** provider under Authentication > Sign-in method (step 2). |
 | The sign-in window does not appear | The browser blocked the pop-up. Allow pop-ups for the site. |
 | `Port 8080 is not open` or similar when starting emulators | Another program uses that port. The ports are set in `firebase.json`. |
 | `npm audit` warns about `@grpc/grpc-js` | Harmless here: that part of Firebase is for servers and is not included in the website. Do **not** run `npm audit fix --force`; it would install a 2022 version of Firebase. |

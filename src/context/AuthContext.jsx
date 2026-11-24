@@ -24,6 +24,10 @@ function describeSignInError(error) {
       return "No connection. Check your internet and try again.";
     case "auth/unauthorized-domain":
       return "This web address is not approved for sign-in yet. The site owner needs to add it in the Firebase console.";
+    case "auth/admin-restricted-operation":
+      return "New sign-ins are switched off in Firebase. The site owner needs to turn on \"Enable create (sign-up)\" under Authentication > Settings > User actions (see docs/SETUP-FIREBASE.md).";
+    case "auth/operation-not-allowed":
+      return "Google sign-in is not switched on in Firebase. The site owner needs to enable the Google provider (see docs/SETUP-FIREBASE.md).";
     default:
       return `Sign-in did not work (${error.code || "unknown error"}). Please try again.`;
   }
