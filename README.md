@@ -15,6 +15,7 @@ used to be a single `index.html` with data in JSON files; that version is still 
 
 | I want to... | Read |
 |---|---|
+| Take over the project without a coding background, and change it with an AI assistant | `docs/HANDOVER-GUIDE.md` |
 | Run the site: invite clients, edit content, check on people, make backups | `docs/ADMIN-GUIDE.md` |
 | Set Firebase up from scratch, or put the site online | `docs/SETUP-FIREBASE.md` |
 | Change the code, the security rules, or deploy and roll back | `docs/DEVELOPER-GUIDE.md` |
@@ -58,6 +59,7 @@ npm run deploy         # builds the site and publishes everything to Firebase
 | `tsconfig.json` | Settings for the TypeScript checker. You rarely need to touch it. |
 | `src/index.css` | Colours and fonts. Change a colour here and it changes everywhere. |
 | `src/tabs.ts` | The list of tabs. Add or reorder tabs here. |
+| `AGENTS.md` | The briefing and rules AI coding assistants read at the start of every conversation. |
 | `docs/` | The guides (see the table above). |
 | `firestore.rules` | **Who may read and write what.** The most important file for privacy. Test it with `npm run test:rules`. |
 | `rules-tests/` | Automatic checks for `firestore.rules`. |
