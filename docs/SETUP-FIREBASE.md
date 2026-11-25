@@ -109,7 +109,7 @@ Other admins do not need the console: once you are signed in, open **Admin > Peo
 The database starts empty, so at first the app shows a banner saying there is no content. As the admin:
 
 1. Click the **Admin** tab.
-2. Click **Import starter data**. After a few seconds it says "Done. Saved 78 shared flashcards and 13 clients."
+2. Click **Import starter data**. After a few seconds it says "Done. Saved 78 shared flashcards and 18 clients."
 
 That copies everything in the `seed/` folder (shared library and client profiles) into Firebase. You only do
 this once. Doing it again **replaces** that content with the starter versions, so it asks you to confirm.
