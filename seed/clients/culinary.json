@@ -1,0 +1,128 @@
+{
+  "clientId": "culinary",
+  "profileName": "Culinary — High-Clarity Tech Sales Presentations, Pre-Outlining & Resonance (Native · NJ)",
+  "watchOuts": [
+    {
+      "tag": "Pre-Outlining · Before You Open Your Mouth",
+      "title": "State the Core Takeaway and Why It Matters Before Framing Context",
+      "detail": "Daily tech-sales presenters often burn the first 45 seconds setting up background or walking through slide mechanics before stating the point. Pre-outline three beats first: (1) the one shift or outcome that matters, (2) why it matters to their team right now, and (3) what you are going to show."
+    },
+    {
+      "tag": "Resonance Over 'Okay' · Checking for Buyer Traction",
+      "title": "Trade Polish for Sharp Contrast That Proves Your Message Landed",
+      "detail": "Sounding smooth or articulate is not the same as resonating. Buyers remember clear before-and-after contrasts—what breaks today versus what changes for them—followed by a direct check for understanding rather than a generic 'Does that make sense?'"
+    },
+    {
+      "tag": "Clarity Under Repetition · Daily Presentation Fatigue",
+      "title": "Reset Energy and Trim Filler When Pitching the Same Story Every Day",
+      "detail": "When you present every day in New Jersey tech sales, repetition can flatten emphasis or introduce autopilot phrasing. Keep sentences short, land key verbs cleanly, and pause deliberately at transitions so each pitch feels intentional rather than rehearsed."
+    },
+    {
+      "tag": "Beachcombing · Everyday Triggers for Fresh Framing",
+      "title": "Pull Concrete Images From NJ Life, Tech Workflows, and Soccer Instead of Abstract Jargon",
+      "detail": "Use Beachcombing items as mental anchors when explaining complex product value. A familiar image from a weekend soccer match or a crowded NJ highway cuts through abstract SaaS talk faster than adding more buzzwords."
+    },
+    {
+      "tag": "Audience Alignment · Matching Signal to the Room",
+      "title": "Cut Side Threads That Don't Move the Buyer's Decision Forward",
+      "detail": "Every extra caveat or tangent dilutes clarity. Before answering a question or moving to the next point, pre-outline the exact answer in one line so buyers hear signal instead of noise."
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "The 45-Second Pre-Outline: Opening a Daily Tech Sales Presentation",
+      "category": "Pre-Outlining · Sales Clarity",
+      "prompt": "Open a daily tech-sales presentation with a crisp 3-part pre-outline before diving into details. State the core point up front, why it matters to the prospect's current priorities, and the exact roadmap of what you will cover next."
+    },
+    {
+      "title": "Resonance Check: Sharpening a Pitch That Feels 'Fine' Into One That Lands",
+      "category": "Resonance & Impact · Buyer Alignment",
+      "prompt": "Deliver a concise 60-second pitch on how your tech solution solves a recurring buyer problem—focusing on sharp before-and-after clarity and ending with a specific resonance check that invites the buyer's real reaction."
+    },
+    {
+      "title": "Live Objection Pivot: Pre-Outlining a Clear Answer Without Rambling",
+      "category": "Clarity Under Pressure · Executive Q&A",
+      "prompt": "A prospect raises a skeptical question mid-presentation about implementation risk or value. Give a 2-sentence pre-outline of how you're going to answer, deliver the direct point first, and close cleanly without over-explaining."
+    },
+    {
+      "title": "Beachcombing Translation: Turning a Concrete Trigger Into a Sales Point",
+      "category": "Beachcombing · Everyday Metaphor",
+      "prompt": "Pick a Beachcombing item from soccer or daily life and use it to explain a high-level tech sales concept—such as timing, alignment, friction, or momentum—in plain, vivid language."
+    },
+    {
+      "title": "Pocket Story - Outside Work: Lifelong League Soccer and Reading the Field",
+      "category": "Personal Grounding · Natural Delivery",
+      "prompt": "Tell a short story about playing in adult or competitive soccer leagues across the years—what keeps you playing, how reading space changes as you get older, and how that mindset shows up when you step into a room to present."
+    }
+  ],
+  "beachcombing": {
+    "tier1": [
+      "Touchline",
+      "Parkway exit",
+      "Cleat bag",
+      "Screen share"
+    ],
+    "tier2": [
+      "Through ball",
+      "Pressing trigger",
+      "Turnpike toll",
+      "Deck slide"
+    ],
+    "tier3": [
+      "Alignment",
+      "Momentum",
+      "Signal",
+      "Clarity"
+    ]
+  },
+  "customCards": [
+    {
+      "id": "culinary-01",
+      "category": "custom",
+      "term": "Pre-Outlining Opener: Replace 'Before I share my screen, let me give you a little background on how we got here...' with a 3-beat roadmap.",
+      "definition": "\"Here's the bottom line in three parts: the bottleneck your team is hitting right now, how we remove it without slowing rollout, and what that looks like in practice.\"",
+      "example": "Giving the structure first lets the buyer track every point effortlessly from the opening seconds.",
+      "note": "Pre-Outlining: Structure up front turns a routine sales intro into a focused briefing."
+    },
+    {
+      "id": "culinary-02",
+      "category": "custom",
+      "term": "Resonance Upgrade: Replace 'Does that make sense?' or 'So yeah, that's basically how it works' with a direct resonance check.",
+      "definition": "\"Where does that match what you're seeing on your team today, and where does it feel off?\"",
+      "example": "Asking a specific, low-friction question surfaces real resonance instead of polite agreement.",
+      "note": "Resonance & Clarity: Test whether the message connected rather than settling for 'okay'."
+    },
+    {
+      "id": "culinary-03",
+      "category": "custom",
+      "term": "Beachcombing Drill ('Through Ball' / 'Touchline'): Connect a soccer trigger to a daily sales presentation point.",
+      "definition": "\"A great pass isn't about kicking it hard—it's hitting the lane your teammate is already running into. In a pitch, the goal is matching the buyer's existing priority, not forcing a new one.\"",
+      "example": "Use everyday soccer mechanics as fast mental models instead of reaching for dense corporate jargon.",
+      "note": "Beachcombing: Familiar triggers keep explanations concrete and memorable."
+    },
+    {
+      "id": "culinary-04",
+      "category": "custom",
+      "term": "Clarity Trim: Cut throat-clearing phrases and land the main claim in one clean sentence.",
+      "definition": "\"Instead of 'I just kind of wanted to highlight that sometimes teams lose time here,' say: 'Teams lose hours every week hand-stitching this data together.'\"",
+      "example": "Dropping hedges ('just', 'kind of', 'sometimes') makes strong points sound unmistakable.",
+      "note": "Presentation Clarity: Crisp, direct statements carry authority without sounding aggressive."
+    },
+    {
+      "id": "culinary-05",
+      "category": "custom",
+      "term": "Pre-Outlining a Complex Answer: Frame your answer before giving the details.",
+      "definition": "\"Short answer: yes, with two conditions—timeline and owner access. Let's take the timeline first.\"",
+      "example": "Naming the structure of your answer first prevents long, winding replies on calls.",
+      "note": "Pre-Outlining: Buyers stay locked in when they know how many parts an answer has."
+    },
+    {
+      "id": "culinary-06",
+      "category": "custom",
+      "term": "Beachcombing Drill ('Parkway Exit' / 'Momentum'): Use a New Jersey everyday image to explain friction vs. flow.",
+      "definition": "\"You can have a fast car and still lose twenty minutes sitting at the wrong exit ramp. Good sales clarity removes the wrong turns before the buyer gets frustrated.\"",
+      "example": "Grounded, local-feeling imagery makes abstract workflow friction immediately felt.",
+      "note": "Beachcombing & Resonance: Concrete friction points help buyers see the cost of staying put."
+    }
+  ]
+}

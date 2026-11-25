@@ -1,0 +1,128 @@
+{
+  "clientId": "crwdbldr",
+  "profileName": "Crwdbldr — Waybound Founder Pitching, Active SaaS Lexicon & Declarative Intonation (C1)",
+  "watchOuts": [
+    {
+      "tag": "Norwegian Prosody · Eliminating Terminal Uptalk",
+      "title": "Land Statements Downward Instead of Riding Norwegian Pitch-Accent Rises",
+      "detail": "Norwegian tonal pitch patterns naturally pull sentence endings upward, which English ears read as hesitation or seeking approval—especially during investor or customer pitches. Anchor the final stressed syllable of every claim with a decisive downward drop ('We close the gap between junior and principal engineers.')."
+    },
+    {
+      "tag": "Active SaaS & Founder Lexicon · Killing 'Workarounds'",
+      "title": "Replace Multi-Word Explanations With Single High-Precision Business & Tech Verbs",
+      "detail": "When you reach for a word mid-meeting and have to explain around it, momentum stalls. Lock in crisp founder collocations so they fire automatically: 'shorten the feedback loop', 'surface context', 'guardrails', 'ship faster', 'product-market fit', and 'force multiplier'."
+    },
+    {
+      "tag": "Connected Speech & Filler Control · Crisp Pace",
+      "title": "Trade Thinking Fillers ('uh', 'like', 'you know') for Clean Half-Second Pauses",
+      "detail": "Running on sleep-deprived new-dad energy while pitching in a new domain tempts fillers while searching for vocabulary. Let links blend smoothly ('bridge-the-gap', 'ship-it') and replace hesitation sounds with a silent breath—making you sound deliberate and unhurried."
+    },
+    {
+      "tag": "Pitch Narrative · Problem Before Architecture",
+      "title": "Lead With the Developer Bottleneck Before Explaining How Waybound Works",
+      "detail": "Software founders instinctively jump straight into technical mechanics. Hook buyers and partners first with the costly pain—AI tools generate code fast, but junior devs lack senior judgment to review and integrate it—then position your product as the bridge."
+    },
+    {
+      "tag": "On-the-Spot Analogies · Instant Conceptual Bridges",
+      "title": "Use Concrete Everyday Metaphors to Explain Abstract AI Workflows",
+      "detail": "When a non-technical stakeholder or busy CTO glazes over, pivot immediately to a physical analogy—like having a veteran architect sitting beside every junior builder, or knowing which trail leads to the cabin before nightfall."
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "The 60-Second Waybound Pitch: Bridging Junior and Senior AI-Assisted Devs",
+      "category": "Founder Pitch · Product Positioning",
+      "prompt": "Pitch Waybound's core AI developer tool to a prospective engineering lead or early customer in 60 seconds. Define the exact gap between AI-assisted junior coders and top-tier engineers, state your value proposition in crisp SaaS English, and land every sentence with a firm downward intonation."
+    },
+    {
+      "title": "On-the-Spot Analogy Drill: Explaining Your AI Developer Tool Without Jargon",
+      "category": "Analogies & Framing · Executive Clarity",
+      "prompt": "Imagine a non-technical investor or operations head asks, 'Wait—why isn't standard ChatGPT or Copilot already enough for your customers?' Build an instant, vivid analogy from basketball, cabin cycling, or fantasy world-building to make the difference unmistakable."
+    },
+    {
+      "title": "Pocket Story - Catalyst: Why We Quit Safe Jobs Without One Fixed Idea to Build Waybound",
+      "category": "Professional Identity · Founder Origin",
+      "prompt": "Tell the story behind naming your company 'Waybound' (inspired by Will Wright's fantasy title and being destined for the journey)—explaining why betting on co-founder synergy and autonomy mattered more than waiting for a 'perfect' blueprint."
+    },
+    {
+      "title": "Pocket Story - External Passion: Riding to Remote Norwegian Cabins & Full-Court Basketball",
+      "category": "Storytelling & Idioms · Natural Flow",
+      "prompt": "Share a lively story about cycling out to a mountain cabin or running a pickup basketball game—practicing vivid action verbs, natural idioms, and connected speech without falling back on safe textbook phrasing."
+    },
+    {
+      "title": "Pocket Story - Defining Moment: Co-Founding a Startup With a 2.5-Year-Old and a Newborn",
+      "category": "Personal Narrative · Gratitude & Grit",
+      "prompt": "Tell a grounded, authentic story about launching Waybound while raising two young kids (and giving credit to your wife as the true hero holding the home front together)—and how family chaos clarifies what actually deserves your focus at work."
+    }
+  ],
+  "beachcombing": {
+    "tier1": [
+      "Gravel climb",
+      "Three-pointer",
+      "Baby monitor",
+      "Compass"
+    ],
+    "tier2": [
+      "Cabin stove",
+      "Whiteboard",
+      "Trailhead",
+      "Sandbox"
+    ],
+    "tier3": [
+      "Synergy",
+      "Trajectory",
+      "Guardrails",
+      "Autonomy"
+    ]
+  },
+  "customCards": [
+    {
+      "id": "crwdbldr-01",
+      "category": "custom",
+      "term": "Kill the Workaround (SaaS Pitch): Upgrade \"Our tool helps newer programmers use AI better so they don't make mistakes that senior devs have to fix later.\"",
+      "definition": "\"We close the execution gap between junior and senior engineers—embedding senior-level guardrails directly into AI-assisted workflows so teams ship production-ready code faster.\"",
+      "example": "Notice the high-leverage collocations: 'close the execution gap', 'embed guardrails', and 'ship production-ready code'.",
+      "note": "Active Vocabulary: Sharp SaaS verbs eliminate rambling explanations in daily English calls."
+    },
+    {
+      "id": "crwdbldr-02",
+      "category": "custom",
+      "term": "Norwegian Intonation Drill: Read aloud with a decisive downward pitch drop on the final word: \"We didn't start with a single rigid idea—we bet on co-founder synergy.\"",
+      "definition": "Keep pitch steady across the clause and step down cleanly on 'i-DE-a' and 'SYN-er-gy'—resist letting the last syllable float upward.",
+      "example": "Downward terminal pitch signals founder conviction without needing to fake an American accent.",
+      "note": "Prosody & Authority: Eliminating end-of-sentence rises instantly makes pitches sound more decisive."
+    },
+    {
+      "id": "crwdbldr-03",
+      "category": "custom",
+      "term": "Kill the Workaround (Co-Founder Origin): Upgrade \"We left our jobs because we knew we worked really well together and wanted to build our own thing.\"",
+      "definition": "\"We walked away from comfortable roles because we had proven co-founder chemistry and wanted full ownership of the journey—that's why we named the company Waybound.\"",
+      "example": "Swap generic 'worked really well together' for 'proven co-founder chemistry' and 'full ownership'.",
+      "note": "Founder Storytelling: Idiomatic business phrasing turns a personal leap into a compelling origin story."
+    },
+    {
+      "id": "crwdbldr-04",
+      "category": "custom",
+      "term": "On-the-Spot Analogy Prompt: Complete this 2-sentence analogy for a customer: \"Giving a junior dev raw AI without Waybound is like...\"",
+      "definition": "\"...handing a rookie point guard the ball in the fourth quarter without a playbook—plenty of speed, zero court vision. Waybound supplies the court vision in real time.\"",
+      "example": "One tight sports or outdoor image makes technical differentiation stick immediately.",
+      "note": "Analogy Agility: Concrete metaphors replace five minutes of technical justification."
+    },
+    {
+      "id": "crwdbldr-05",
+      "category": "custom",
+      "term": "Kill the Workaround (Product Iteration): Upgrade \"We made a few different small products to test what customers actually want to pay for.\"",
+      "definition": "\"We've shipped several lightweight prototypes to validate demand and zero in on real willingness to pay.\"",
+      "example": "Use 'shipped lightweight prototypes', 'validate demand', and 'willingness to pay' in investor or partner calls.",
+      "note": "SaaS Lexicon: Native startup vocabulary lets you speak at peer speed with English-speaking founders."
+    },
+    {
+      "id": "crwdbldr-06",
+      "category": "custom",
+      "term": "Connected Speech & Pause Control: Read smoothly without fillers: \"AI generates code in seconds, | but judgment still takes years.\"",
+      "definition": "Link 'generates-code-in-seconds' smoothly, hold a clean silent beat at the comma (no 'uh' or 'like'), and land 'years' with firm downward pitch.",
+      "example": "A silent pause after a contrast makes the second half hit twice as hard.",
+      "note": "Delivery Polish: Pausing silently beats filling dead air while your brain grabs the next word."
+    }
+  ]
+}
