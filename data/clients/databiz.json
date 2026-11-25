@@ -1,0 +1,128 @@
+{
+  "clientId": "databiz",
+  "profileName": "Databiz — Second-Act Vision, Executive Presentations & Storycraft (B2 → C1)",
+  "watchOuts": [
+    {
+      "tag": "Executive Storycraft · Translating Big Ideas Into Concrete Moments",
+      "title": "Anchor High-Level Philosophy in One Specific Scene Before Zooming Out",
+      "detail": "Strategic thinkers naturally jump straight to big-picture principles ('freedom', 'legacy', 'value'). In presentations and conversations, hook your audience first with a single concrete moment—a specific boardroom decision, a flight between Santo Domingo and Toronto, or a quiet morning after closing your exit—before stating the broader lesson."
+    },
+    {
+      "tag": "Mandarin L1 Grammar · Past Tense & Articles Under Pressure",
+      "title": "Locking In Past-Time Markers & Countable Noun Articles ('a / the')",
+      "detail": "Because Mandarin expresses time with context rather than verb endings and has no articles, fast executive storytelling often drops '-ed' endings ('When we close the deal' → 'When we closed the deal') or omits 'a / the' before singular nouns ('We built data platform' → 'We built a data platform')."
+    },
+    {
+      "tag": "Mandarin L1 Pronunciation · Consonant Clusters, /r/ vs /l/, and /v/ vs /w/",
+      "title": "Releasing Final Consonant Clusters Without Dropping Endings",
+      "detail": "Keep final consonants audible in high-frequency business words ('growth', 'result', 'world', 'exit', 'market'), distinguish curled/bunched /r/ from tongue-tip /l/ ('role' vs. 'low', 'risk' vs. 'list'), and touch upper teeth to lower lip on /v/ ('value', 'venture', 'invest') instead of rounding like /w/."
+    },
+    {
+      "tag": "B2 → C1 Business Lexicon · Upgrading Repetition",
+      "title": "Replacing Generic Words ('good', 'big', 'do', 'make value') With Executive Verbs",
+      "detail": "Your ideas are already C1-level; upgrade recurring B2 verbs so your vocabulary matches your strategic depth. Swap 'make a big business' for 'scale a multi-million-dollar enterprise', 'after selling' for 'post-exit', and 'useful second life' for 'a purposeful second act'."
+    },
+    {
+      "tag": "Presentation Pacing · Word-Stress Rhythm Over Syllable-by-Syllable Delivery",
+      "title": "Punching Key Meaning Words and Pausing Between Thought Groups",
+      "detail": "Mandarin gives every syllable equal weight, which can make English presentations sound dense when delivering complex cross-border strategy. Slow down slightly, stress the single most important word in each clause, and pause a full beat after key takeaways."
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "Keynote Storycraft: 'What Makes the Second Half of Life Truly Valuable After Financial Success?'",
+      "category": "Presentations & Storycraft · Second-Act Purpose",
+      "prompt": "Deliver a 2-minute opening talk to a peer group of middle-aged founders and executives. Share what exiting a multi-million-dollar company taught you about identity, money, and purpose—moving from one vivid personal scene into your core philosophy for building a meaningful second act."
+    },
+    {
+      "title": "Cross-Border Pitch: Connecting Opportunities Across the Dominican Republic, USA, and Canada",
+      "category": "International Business · Executive Presentation",
+      "prompt": "Present your cross-border business thesis to potential North American or Caribbean partners. Clearly explain why your experience scaling in China gives you a unique edge in spotting opportunities across the US, Canada, and the Dominican Republic—using crisp past-to-present tense transitions."
+    },
+    {
+      "title": "Pocket Story - Catalyst: Building and Closing a Multi-Million-Dollar Exit",
+      "category": "Professional Identity · Founder Narrative",
+      "prompt": "Tell the story of the turning point that defined your original business—not as a dry timeline, but as a high-stakes decision where you saw something others missed, took a calculated risk, and saw it through to a successful close."
+    },
+    {
+      "title": "Pocket Story - External Passion: What Soccer Teaches About Vision, Timing, and Reinvention",
+      "category": "Storytelling & Metaphor · Natural Fluency",
+      "prompt": "Use soccer as a living metaphor for business and middle-aged reinvention—comparing a young striker's nonstop sprint to a veteran midfielder who reads the whole pitch, conserves energy, and delivers the decisive pass."
+    },
+    {
+      "title": "Executive Roundtable: Giving Candid Advice to a Younger Founder Burning Out",
+      "category": "Mentorship & Persuasion · Conversational Polish",
+      "prompt": "A 32-year-old founder asks whether grinding 80 hours a week is the only path to a big exit. Respond with warmth, authority, and concrete storytelling—balancing hard-won business realism with your perspective on long-term value."
+    }
+  ],
+  "beachcombing": {
+    "tier1": [
+      "Corner kick",
+      "Wire transfer",
+      "Boarding pass",
+      "Cigar box"
+    ],
+    "tier2": [
+      "Midfield",
+      "Closing table",
+      "Harbor",
+      "Scoreboard"
+    ],
+    "tier3": [
+      "Legacy",
+      "Reinvention",
+      "Leverage",
+      "Purpose"
+    ]
+  },
+  "customCards": [
+    {
+      "id": "databiz-01",
+      "category": "custom",
+      "term": "B2 → C1 Executive Upgrade (Second-Act Purpose): Upgrade \"After I sold my company, I started thinking about how middle-aged men can make their remaining life more useful.\"",
+      "definition": "\"After closing my exit, I began asking a deeper question: how do men in midlife design a second act defined by real contribution rather than just accumulation?\"",
+      "example": "Phrases like 'closing my exit', 'design a second act', and 'contribution rather than accumulation' give philosophical ideas C1 executive weight.",
+      "note": "Storycraft & Lexicon: Elevate reflective themes with crisp, memorable contrast."
+    },
+    {
+      "id": "databiz-02",
+      "category": "custom",
+      "term": "Grammar Polish (Past Tense & Articles): Correct the missing markers: \"In 2019, we launch new data product and sign major client in North America.\"",
+      "definition": "\"In 2019, we launched a new data product and signed a major client in North America.\"",
+      "example": "Anchor completed past milestones with '-ed' ('launched', 'signed') and place 'a' before singular countable nouns ('a new product', 'a major client').",
+      "note": "Grammar Accuracy: Clean past-tense endings keep founder track-record stories sharp and credible."
+    },
+    {
+      "id": "databiz-03",
+      "category": "custom",
+      "term": "Pronunciation Drill (/v/ vs /w/ & Final Clusters): Read aloud clearly: \"We evaluate every venture across five world markets before investing.\"",
+      "definition": "Touch upper teeth gently to lower lip on 'evaluate / every / venture / five / investing' (/v/), and release the final '-ld' and '-ts' in 'world markets'.",
+      "example": "Keep 'value' and 'venture' distinct from 'w'-initial words like 'world' and 'we'.",
+      "note": "Mandarin L1 Clarity: Strong /v/ contact and crisp word endings boost instant clarity in international meetings."
+    },
+    {
+      "id": "databiz-04",
+      "category": "custom",
+      "term": "Presentation Hook (Zoom In Before Zooming Out): Upgrade this abstract slide opener: \"Today I want to talk about cross-border opportunity between China, the US, Canada, and the Dominican Republic.\"",
+      "definition": "\"Six months ago, sitting across from a supplier in Santo Domingo, I noticed the exact same supply-chain bottleneck I solved in China ten years earlier.\"",
+      "example": "Start with a time, a place, and an observation—then zoom out to your regional thesis.",
+      "note": "Executive Storycraft: Concrete opening scenes lock audience attention in the first 15 seconds."
+    },
+    {
+      "id": "databiz-05",
+      "category": "custom",
+      "term": "Soccer Analogy for Midlife Leadership: Frame the shift from youthful hustle to veteran strategy in two punchy sentences.",
+      "definition": "\"In your twenties, you play like a winger—chasing every ball at full sprint. In your forties and fifties, you play central midfield—reading the space early and making the pass that changes the game.\"",
+      "example": "Sports analogies translate complex leadership shifts effortlessly across US, Canadian, and Latin American business cultures.",
+      "note": "Metaphor & Persuasion: Vivid metaphors make your big-picture thinking immediately relatable."
+    },
+    {
+      "id": "databiz-06",
+      "category": "custom",
+      "term": "Pronunciation Drill (/r/ vs /l/ & Word Stress): Read with strong stress on bold words: \"Our **long-term** **role** is to **build** **lasting** **value** across the **region**.\"",
+      "definition": "Touch tongue tip behind top teeth for 'long / role / build / lasting / value'; pull tongue back without touching for 'role' (/r/) and 'region' (/r/).",
+      "example": "Punch the stressed content words and let small words ('is', 'to', 'the') stay light and fast.",
+      "note": "Presentation Rhythm: Contrast between stressed and unstressed syllables makes presentations engaging and natural."
+    }
+  ]
+}
