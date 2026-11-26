@@ -1,0 +1,128 @@
+{
+  "clientId": "rugbysa",
+  "profileName": "RugbySA — Founder Presence, Improv Flow, Enunciation & Meeting Leadership (SA)",
+  "watchOuts": [
+    {
+      "tag": "Improv & Flow · Prepared Strength vs. Live Spontaneity",
+      "title": "Trade Over-Polishing for Fast, Cohesive Live Framing When Put on the Spot",
+      "detail": "When you have time to prepare, your thinking is sharp and thorough—which can make unscripted moments feel like a sudden gear shift. Use a simple two-beat anchor ('Here is the core point, and here is why it matters right now') so you stay in flow without losing integrity or authenticity."
+    },
+    {
+      "tag": "Enunciation · Crisp Articulation Under Speed or Scale",
+      "title": "Finish Consonants and Vowel Shapes Cleanly in Large Rooms and Calls",
+      "detail": "Speaking to larger groups or steering lively board/team discussions tempts you to clip word endings or run phrases together. Open the jaw slightly, land final consonants cleanly, and slow down by 10% on key terms so listeners never have to strain."
+    },
+    {
+      "tag": "Staying on Target · Holding the Thread Across Board and Team Rooms",
+      "title": "Bring Wandering Threads Back to the Decision Without Sounding Abrupt",
+      "detail": "Investment, board, and team meetings pull in many directions at once. Name the exact objective up front, spot detours early, and bridge back cleanly ('Good context—to bring that back to today's decision...') while keeping your authentic tone intact."
+    },
+    {
+      "tag": "Maintaining Engagement · Moving From Information to Pull",
+      "title": "Break Up Long Stretches With Contrast, Pauses, and Targeted Checks",
+      "detail": "Even strong founders lose room energy when a monologue runs too long. Vary pacing, pause before your main takeaway, and ask sharp, specific questions that pull board members or team leads into the conversation."
+    },
+    {
+      "tag": "Cohesion & Integrity · Authentic Authority Across All Settings",
+      "title": "Stay True to Your Own Voice Rather Than Performing a Forced 'Executive' Style",
+      "detail": "In South African business and sports culture, people spot posturing immediately. Real confidence and competence come from saying what you genuinely see, owning what you don't yet know, and keeping your words aligned with how you operate."
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "Improv Under Pressure: Answering an Unscripted Board or Investor Question",
+      "category": "Improv & Flow · Authenticity",
+      "prompt": "An investor asks a sharp, unexpected question about growth, unit economics, or transport/tech execution that wasn't on the deck. Stay calm, state your honest view in two clean beats, and show coherent thinking without bluffing or stalling."
+    },
+    {
+      "title": "Leading the Room: Opening and Steering a High-Stakes Board or Team Meeting",
+      "category": "Meeting Leadership · Staying on Target",
+      "prompt": "Open a mixed board and leadership-team meeting by setting the target outcome, defining how time will be used, and showing how you will keep the discussion focused on decisions rather than side debates."
+    },
+    {
+      "title": "Large-Group Address: Holding Attention and Enunciating Clearly",
+      "category": "Large Groups & Enunciation · Engagement",
+      "prompt": "Deliver a 90-second address to a large group—such as a company all-hands or industry gathering—on an 11-year milestone in tech and transport. Focus on crisp enunciation, deliberate pauses, and an engaging arc that holds the whole room."
+    },
+    {
+      "title": "Re-Centering a Drifting Discussion: Keeping Target and Cohesion Together",
+      "category": "Staying on Target · Meeting Control",
+      "prompt": "A team or board meeting has drifted into tangents and competing opinions. Step in with calm authority, summarize where the conversation stands, name the target we need to hit, and reset momentum authentically."
+    },
+    {
+      "title": "Sports-to-Leadership Arc: Grit, Route-Reading, and Staying Grounded",
+      "category": "Cohesion & Integrity · Personal Story",
+      "prompt": "Draw a short, authentic parallel between rugby, football, climbing, or running and leading a tech-and-transport company over 11 years—focusing on reading the terrain, staying composed, and acting with integrity."
+    }
+  ],
+  "beachcombing": {
+    "tier1": [
+      "Crag chalk",
+      "Running shoe",
+      "Whistle lanyard",
+      "Board agenda"
+    ],
+    "tier2": [
+      "Belay rope",
+      "Touchline",
+      "Route crux",
+      "Fleet route"
+    ],
+    "tier3": [
+      "Cohesion",
+      "Integrity",
+      "Cadence",
+      "Anchor"
+    ]
+  },
+  "customCards": [
+    {
+      "id": "rugbysa-01",
+      "category": "custom",
+      "term": "Improv Two-Beat Anchor: Step into unscripted moments with structure instead of scrambling for a full speech.",
+      "definition": "\"Here's how I look at that right now: [core point]. The main reason that matters here is [practical impact].\"",
+      "example": "A two-beat frame gives you instant footing in improv while keeping your answer honest and tight.",
+      "note": "Improv & Flow: Simple structure unlocks flow without sacrificing integrity."
+    },
+    {
+      "id": "rugbysa-02",
+      "category": "custom",
+      "term": "Enunciation & Clarity Reset: Slow down slightly on key nouns and verbs so every syllable lands.",
+      "definition": "\"Let's be very clear on two numbers: operational uptime and customer retention.\"",
+      "example": "Articulating final consonants and key terms clearly reduces strain for listeners in large rooms or calls.",
+      "note": "Enunciation: Crisp delivery makes strong ideas effortless to catch."
+    },
+    {
+      "id": "rugbysa-03",
+      "category": "custom",
+      "term": "Staying-on-Target Pivot: Pull a wandering meeting back to the main objective without sounding sharp.",
+      "definition": "\"That's a useful angle—we can park that for a separate follow-up. To stay on target for today's call, let's come back to [core decision].\"",
+      "example": "Acknowledging the point before redirecting protects both alignment and relationship trust.",
+      "note": "Meeting Leadership: Steering back to the target keeps meetings decisive and cohesive."
+    },
+    {
+      "id": "rugbysa-04",
+      "category": "custom",
+      "term": "Engagement Pull: Shift from telling to inviting sharp perspective.",
+      "definition": "\"Before we move past this slide, where do you see the biggest risk in how we're executing this?\"",
+      "example": "A concrete question wakes up passive listeners and tests real alignment in the room.",
+      "note": "Maintaining Engagement: Targeted questions turn passive listening into active engagement."
+    },
+    {
+      "id": "rugbysa-05",
+      "category": "custom",
+      "term": "Beachcombing Drill ('Route Crux' / 'Anchor'): Ground an improv or board point in a physical cue.",
+      "definition": "\"In climbing, you don't rush past the crux without setting your feet—and in a boardroom, you don't rush past the core trade-off without naming the risk.\"",
+      "example": "Using a sports trigger keeps your voice natural, authentic, and memorable.",
+      "note": "Beachcombing & Authenticity: Real-world imagery keeps you grounded in your own voice."
+    },
+    {
+      "id": "rugbysa-06",
+      "category": "custom",
+      "term": "Integrity & Candor Frame: Keep competence high by naming limits and next steps straight.",
+      "definition": "\"I don't have the final number in front of me yet, and I won't guess—I'll verify it after this call and share the exact figure today.\"",
+      "example": "Plain honesty builds deeper credibility with boards and teams than hedging or overstating.",
+      "note": "Cohesion & Integrity: Candor strengthens authority rather than diminishing it."
+    }
+  ]
+}
