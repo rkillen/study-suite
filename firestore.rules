@@ -1,0 +1,140 @@
+rules_version = '2';
+
+// WHO CAN DO WHAT
+//
+//   Anyone not listed below ........ nothing at all
+//   A signed-in person with an invite  can create their own profile (users/<uid>), once
+//   A person (role "user") ......... read the shared content and their own client's content;
+//                                    read and write only their own jots, stories and progress
+//   An admin (role "admin") ........ everything a person can, plus: edit all shared content,
+//                                    manage invites and profiles, and READ (never write)
+//                                    every person's jots, stories and progress
+//   A revoked person ............... nothing, except seeing their own profile (to show a message)
+//
+// The role and the client of a person are stored in their profile and can only be changed
+// by an admin. These rules are tested: see rules-tests/README.md.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---------- helpers ----------
+
+    // Signed in with a Google account whose email is verified.
+    function signedIn() {
+      return request.auth != null && request.auth.token.email_verified == true;
+    }
+
+    function myEmail() {
+      return request.auth.token.email.lower();
+    }
+
+    function profilePath(uid) {
+      return /databases/$(database)/documents/users/$(uid);
+    }
+
+    function invitePath(email) {
+      return /databases/$(database)/documents/invites/$(email);
+    }
+
+    // These read the caller's own profile. If there is no profile the rule fails, which means "no".
+    function myRole() {
+      return get(profilePath(request.auth.uid)).data.role;
+    }
+
+    function myClientId() {
+      return get(profilePath(request.auth.uid)).data.clientId;
+    }
+
+    function hasAccess() {
+      return signedIn() && myRole() in ['user', 'admin'];
+    }
+
+    function isAdmin() {
+      return signedIn() && myRole() == 'admin';
+    }
+
+    function isOwner(uid) {
+      return hasAccess() && request.auth.uid == uid;
+    }
+
+    function canSeeClient(clientId) {
+      return hasAccess() && (isAdmin() || clientId == 'default' || clientId == myClientId());
+    }
+
+    // ---------- invitations: the "guest list" ----------
+    // A document per email address, named with the email in lower case.
+
+    match /invites/{email} {
+      allow get: if signedIn() && email == myEmail();
+      allow read, write: if isAdmin();
+    }
+
+    // ---------- people ----------
+
+    match /users/{uid} {
+      // You can always look up your own profile. Admins can read and list all of them.
+      allow get: if signedIn() && request.auth.uid == uid;
+      allow read: if isAdmin();
+
+      // First sign-in: create your own profile, copying the role and client from your invite.
+      allow create: if signedIn()
+        && request.auth.uid == uid
+        && exists(invitePath(myEmail()))
+        && request.resource.data.keys().hasOnly(
+             ['email', 'displayName', 'role', 'clientId', 'createdAt', 'lastActiveAt',
+              'storyCount', 'jotCount', 'masteredCount'])
+        && request.resource.data.email == myEmail()
+        && request.resource.data.role == get(invitePath(myEmail())).data.role
+        && request.resource.data.clientId == get(invitePath(myEmail())).data.clientId
+        && request.resource.data.createdAt == request.time;
+
+      // People may only update their activity fields. Role and client are admin-only.
+      allow update: if isAdmin()
+        || (isOwner(uid)
+            && request.resource.data.diff(resource.data).affectedKeys()
+                 .hasOnly(['displayName', 'lastActiveAt', 'storyCount', 'jotCount', 'masteredCount']));
+
+      // Nobody deletes profiles: access is ended by setting role to "revoked".
+
+      // A person's own work. Owner reads and writes; admins can only read.
+      match /progress/{docId} {
+        allow read: if isOwner(uid) || isAdmin();
+        allow write: if isOwner(uid);
+      }
+      match /jots/{docId} {
+        allow read: if isOwner(uid) || isAdmin();
+        allow write: if isOwner(uid);
+      }
+      match /stories/{docId} {
+        allow read: if isOwner(uid) || isAdmin();
+        allow write: if isOwner(uid);
+      }
+    }
+
+    // ---------- shared content ----------
+
+    match /library/{docId} {
+      allow read: if hasAccess();
+      allow write: if isAdmin();
+    }
+
+    match /flashcards/{docId} {
+      allow read: if hasAccess();
+      allow write: if isAdmin();
+    }
+
+    // ---------- client profiles ----------
+    // People see their own client and the "default" one. Admins see all.
+
+    match /clients/{clientId} {
+      allow get: if canSeeClient(clientId);
+      allow list: if isAdmin();
+      allow write: if isAdmin();
+
+      match /{section}/{docId} {
+        allow read: if canSeeClient(clientId);
+        allow write: if isAdmin();
+      }
+    }
+  }
+}

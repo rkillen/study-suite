@@ -1,0 +1,50 @@
+# Features (one folder per tab)
+
+| Folder | Tab |
+|---|---|
+| `overview/` | Overview: numbers, watch-outs, shortcuts |
+| `beachcombing/` | Beachcombing: trigger words and memory jots |
+| `preoutlining/` | Pre-Outlining: countdown timer and spoken answer |
+| `storycraft/` | Storycraft: write stories and keep the story log |
+| `speaking/` | Speaking Arena: scenarios and live transcripts |
+| `flashcards/` | Flashcards: the rolling 20-card deck |
+| `admin/` | The Admin tab (admins only): editing content, importing and backing it up. See `admin/README.md` |
+| `auth/` | Not a tab: the sign-in, "not invited" and setup screens shown before the app opens |
+
+Inside a folder, the main file is named after the tab, for example `Beachcombing.tsx`.
+
+## Add a new tab
+
+1. Make a folder, for example `src/features/journal/`, with a file `Journal.tsx`:
+
+   ```tsx
+   import { useStudy } from "../../context/StudyContext.tsx";
+
+   export default function Journal() {
+     const { clientId } = useStudy();
+     return (
+       <section className="space-y-6">
+         <h1 className="font-serif text-2xl font-semibold text-charcoal-900">Journal for {clientId}</h1>
+       </section>
+     );
+   }
+   ```
+
+2. Open `src/tabs.ts`, import it, and add one line to the list:
+
+   ```ts
+   { id: "journal", label: "Journal", icon: BookOpen, Component: Journal },
+   ```
+
+   (Icons come from <https://lucide.dev/icons>. Import the one you pick at the top of the file.)
+
+   The `id` is also the tab's address: `id: "journal"` lives at `/journal`.
+
+3. Run `npm run dev` and the tab appears. Run `npm run typecheck` to check your new file for mistakes.
+
+## What `useStudy()` gives you
+
+`clientId`, `clientProfile` (watch-outs, scenarios, personal cards), `library` (shared words, questions,
+prompts, flashcards), `progress` (the person's stories, mastered cards, decks and `jotCount`), and the actions that
+change them (`addJot`, `addStory`, `updateStory`, `removeStory`, `masterCard`, ...). Use these rather
+than saving things yourself, so that the data ends up in the right place.

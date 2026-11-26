@@ -1,0 +1,15 @@
+node_modules
+dist
+.firebase
+*-debug.log
+*.local
+.DS_Store
+
+# Firebase settings live in .env (copy .env.example). Never commit it.
+.env
+.env.*
+!.env.example
+!.env.emulator
+
+# Playwright MCP test output
+.playwright-mcp
