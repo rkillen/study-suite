@@ -1,0 +1,128 @@
+{
+  "clientId": "funinny",
+  "profileName": "Funinny — Concise On-the-Spot Presence, Market Updates & Derivative Sales (C1)",
+  "watchOuts": [
+    {
+      "tag": "50-Person Rooms & Roundtables · Speaking Up Without Over-Elaborating",
+      "title": "Deliver Your Insight in Two Crisp Beats Before Adding Nuance",
+      "detail": "In a 50-person room or roundtable, good thoughts get lost when built up slowly from background to conclusion. State your take first in one clear sentence, add the single strongest data or market point behind it, and stop before trailing off."
+    },
+    {
+      "tag": "Senior Leaders · Precision Without Inflated Jargon",
+      "title": "Match Senior Precision With Plain, High-Signal Phrasing Rather Than Big Words",
+      "detail": "Senior leaders value exactness, not vocabulary fireworks. You do not need heavy multisyllabic words to sound sharp in finance or AI discussions—clean, exact verbs and clear trade-offs carry more weight than ornate phrasing."
+    },
+    {
+      "tag": "On-the-Spot Comfort · Uncomfortable Does Not Mean Unprepared",
+      "title": "Use a Fast Mental Frame When Called On During Market Updates or AI Talk",
+      "detail": "Feeling uncomfortable speaking on the spot after 12 years in the US and 5.5 years in finance is a habit of caution, not a lack of substance. Keep a default two-part structure ready—what's shifting in the market or workflow, and what it means for client positioning."
+    },
+    {
+      "tag": "Russian L1 Speech Habits · Articles, Prepositions, and Cadence",
+      "title": "Keep Articles ('a/the'), Prepositions, and End-of-Sentence Cadence Crisp",
+      "detail": "Under pressure in larger rooms, dropping articles or clipping sentence endings can make strong C1 ideas sound rushed. Take a half-second breath before speaking and land the final word of your thought cleanly."
+    },
+    {
+      "tag": "Engagement in Finance · Turning Data Into Room Pull",
+      "title": "Connect Derivatives and AI Initiatives to What Clients Actually Do Next",
+      "detail": "Market updates and AI initiatives can feel dry if they stay purely technical or abstract. Tie your point to client hedging behavior, risk posture, or speed of execution so the room stays engaged."
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "50-Person Roundtable: Sharing a Sharp Derivative or Market View on the Spot",
+      "category": "On-the-Spot Presence · Concise Delivery",
+      "prompt": "You are in a roundtable or 50-person session and a senior leader asks for your view on client positioning around rates, volatility, or derivatives. Deliver a crisp, engaging 30-to-45-second take without rambling or over-qualifying."
+    },
+    {
+      "title": "Market Update Beat: Highlighting the One Shift That Matters Most",
+      "category": "Market Updates · Precision & Clarity",
+      "prompt": "Give a concise market update on a recent move or pricing dynamic and explain in plain, exact language why it matters to clients right now—avoiding buzzwords or long wind-ups."
+    },
+    {
+      "title": "AI Initiatives in Sales: Connecting AI to Real Client Conversations",
+      "category": "AI Initiatives · Engaging Framing",
+      "prompt": "Share a practical perspective on how AI initiatives are changing research, prep, or client outreach in derivative sales. Keep it grounded, engaging, and easy for a mixed group to follow."
+    },
+    {
+      "title": "Following Senior Leaders: Adding Value Without Repeating Them",
+      "category": "Roundtable Dynamics · Concise Contribution",
+      "prompt": "Two senior leaders just spoke using dense, precise language. Step in concisely to add a distinct client-facing angle or practical nuance in two or three clear sentences."
+    },
+    {
+      "title": "Out-of-Office Rhythm: NY Energy, Friends, and Heading to Italy to Ski",
+      "category": "Personal Grounding · Natural Cadence",
+      "prompt": "Share a relaxed, engaging story about enjoying New York with friends or gearing up for a ski trip in Italy—practicing warm, unhurried pacing that carries naturally into work conversations."
+    }
+  ],
+  "beachcombing": {
+    "tier1": [
+      "Ski pass",
+      "Term sheet",
+      "Subway card",
+      "Quote screen"
+    ],
+    "tier2": [
+      "Alpine slope",
+      "Hedge book",
+      "Roundtable mic",
+      "Prompt window"
+    ],
+    "tier3": [
+      "Precision",
+      "Cadence",
+      "Presence",
+      "Signal"
+    ]
+  },
+  "customCards": [
+    {
+      "id": "funinny-01",
+      "category": "custom",
+      "term": "On-the-Spot Two-Beat Opener: Step in cleanly without a long run-up.",
+      "definition": "\"My take on that is [clear view]. Where I see it showing up with clients right now is [concrete impact].\"",
+      "example": "Gives you an immediate foothold in large rooms while keeping your answer tight.",
+      "note": "On-the-Spot Presence: Starting with your take builds instant clarity."
+    },
+    {
+      "id": "funinny-02",
+      "category": "custom",
+      "term": "Plain Precision Upgrade: Swap inflated 'big words' for crisp, exact finance language.",
+      "definition": "Instead of stretching for heavy words, say: \"Clients aren't pulling back on risk—they're waiting for cleaner entry levels before locking in hedges.\"",
+      "example": "Exact, everyday phrasing sounds sharper and more confident than overly dense jargon.",
+      "note": "Precision & Clarity: Clear words beat big words when speaking on the spot."
+    },
+    {
+      "id": "funinny-03",
+      "category": "custom",
+      "term": "50-Person Room Trim: Cut throat-clearing and land your point in 30 seconds.",
+      "definition": "\"One quick point from the desk: volatility is creating real dispersion, so structured protection is getting much more attention this week.\"",
+      "example": "A single high-signal observation holds attention far better than a long breakdown.",
+      "note": "Concise Engagement: Short, high-signal turns keep large groups tuned in."
+    },
+    {
+      "id": "funinny-04",
+      "category": "custom",
+      "term": "AI Initiative Anchor: Connect AI tools to better client judgment rather than hype.",
+      "definition": "\"Where AI helps most for us is compressing prep time so we spend more of the conversation reading client intent and structure.\"",
+      "example": "Grounds AI talk in real sales value and human judgment.",
+      "note": "AI Initiatives: Practical framing keeps AI discussions credible and relevant."
+    },
+    {
+      "id": "funinny-05",
+      "category": "custom",
+      "term": "Beachcombing Drill ('Alpine Slope' / 'Cadence'): Use a familiar physical trigger to pace your delivery.",
+      "definition": "\"Carving clean turns on a slope is about edge control and balance, not speed—the same goes for pacing a point in a crowded room.\"",
+      "example": "Tying a trigger from an upcoming ski trip to pacing helps you stay calm and unhurried.",
+      "note": "Beachcombing & Cadence: Physical cues anchor steady delivery under pressure."
+    },
+    {
+      "id": "funinny-06",
+      "category": "custom",
+      "term": "Closing a Point Cleanly: End on a strong finish instead of trailing off.",
+      "definition": "\"So for client conversations this week, that's the main shift I'm watching.\"",
+      "example": "A clear closing line signals confidence and naturally hands the floor back.",
+      "note": "Meeting Presence: Strong finishes make concise remarks feel complete."
+    }
+  ]
+}
