@@ -1,0 +1,128 @@
+{
+  "clientId": "aiedtech",
+  "profileName": "AI EdTech — Conceptual Clarity, Persuasion & Functional Spoken English (B2)",
+  "watchOuts": [
+    {
+      "tag": "Functional Speech · Moving From Careful Detail to Spoken Flow",
+      "title": "Keep Sentences Tight and Functional So Logic Lands in Live Conversation",
+      "detail": "At B2, building detailed, logical explanations is a real strength—but long, multi-clause sentences can slow down everyday peer talk or get lost in fast discussions. State one clear premise at a time, use clean connectors ('so', 'which means', 'for example'), and check in with your listener."
+    },
+    {
+      "tag": "Conceptual Clarity · Explaining Complex Ideas Simply",
+      "title": "Anchor Abstract EdTech and Ethics Ideas in Concrete Classroom Examples",
+      "detail": "Teaching 6th-grade science and 3rd/4th-grade ethics already trains you to make big ideas understandable to young minds. Carry that same clarity into adult conversations: define the core concept in plain words before adding detail or nuance."
+    },
+    {
+      "tag": "Persuasion With Trust · Pairing Logic With Empathy",
+      "title": "Lead With Shared Human Value Before Making a Logical Case",
+      "detail": "Strong logic can feel cold or rigid if you jump straight to arguments before establishing empathy and trust. Show why a learner, teacher, or teammate matters first—then lay out your reasoning step by step."
+    },
+    {
+      "tag": "Korean L1 Spoken Habits · Rhythm, Articles, and Directness",
+      "title": "Watch Article Choices, Subject-Verb Directness, and Pauses in Speech",
+      "detail": "In spoken English, missing articles ('a/an/the') or starting with long background clauses before the main point can make clear thoughts sound tentative. Put your main point early and pause briefly rather than rushing through complex ideas."
+    },
+    {
+      "tag": "Seoul to Canada Transition · Adapting Tone Across Cultures",
+      "title": "Balance Thoughtful Depth With Open, Conversational Peer Dialogue",
+      "detail": "As you prepare for peer interactions and a potential move to Canada, treat conversations as collaborative back-and-forth rather than a lecture. Share your structured view, then invite peers' reactions openly."
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "Peer Conversation: Connecting Elementary Teaching to AI EdTech",
+      "category": "Functional Speech · Conceptual Clarity",
+      "prompt": "Talk with a peer about what teaching 6th-grade science and 3rd/4th-grade ethics taught you about how people learn—and how that shapes your thinking on AI in education. Keep your explanation clear, logical, and conversational."
+    },
+    {
+      "title": "Persuading With Logic and Empathy: Why AI Should Support, Not Replace, Care",
+      "category": "Persuasion · Human Value & Trust",
+      "prompt": "Make a persuasive case to a colleague or startup collaborator about why AI edtech must protect human connection, trust, and the value of life. Start with a concrete human concern, then give two logical reasons why it matters."
+    },
+    {
+      "title": "Breaking Down a Concept Simply: Explaining a Detailed Idea in 45 Seconds",
+      "category": "Conceptual Clarity · Spoken Precision",
+      "prompt": "Explain a detailed idea—such as how students build real understanding versus memorizing steps—in plain, spoken English without jargon. Make sure the main takeaway is obvious right away."
+    },
+    {
+      "title": "Navigating a Shift to Canada: Peer Check-In on Goals and Growth",
+      "category": "Peer Interaction · Relocating & Adapting",
+      "prompt": "Have a natural, everyday conversation with a peer about preparing for life and work in Canada—what excites you, what feels uncertain, and what kind of leadership you want to grow into."
+    },
+    {
+      "title": "Building Trust in a Team: Handling a Disagreement Constructively",
+      "category": "Empathy & Trust · Startup Leadership",
+      "prompt": "A peer disagrees with your logical plan for a learning tool. Respond with empathy first, show you heard their concern accurately, and walk through your reasoning calmly so trust stays intact."
+    }
+  ],
+  "beachcombing": {
+    "tier1": [
+      "Lab notebook",
+      "Ethics card",
+      "Boarding pass",
+      "Whiteboard marker"
+    ],
+    "tier2": [
+      "Study group",
+      "Lesson plan",
+      "Time zone",
+      "Prototype demo"
+    ],
+    "tier3": [
+      "Clarity",
+      "Empathy",
+      "Trust",
+      "Purpose"
+    ]
+  },
+  "customCards": [
+    {
+      "id": "aiedtech-01",
+      "category": "custom",
+      "term": "Conceptual Clarity Frame: Start with the core idea in one simple line before adding details.",
+      "definition": "\"Here's the core idea in plain terms: technology works best when it helps learners think for themselves, not just get faster answers.\"",
+      "example": "Naming the central claim up front keeps detailed explanations easy to follow.",
+      "note": "Conceptual Clarity: Simple framing makes complex logic effortless to grasp."
+    },
+    {
+      "id": "aiedtech-02",
+      "category": "custom",
+      "term": "Empathy + Logic Bridge: Link human care directly to your logical reasoning.",
+      "definition": "\"Students only open up when they feel safe and respected. That's why any AI tool in a classroom has to build trust first.\"",
+      "example": "Connecting values and cause-and-effect makes your argument feel both thoughtful and practical.",
+      "note": "Persuasion & Trust: Logic persuades faster when it rests on shared human care."
+    },
+    {
+      "id": "aiedtech-03",
+      "category": "custom",
+      "term": "Functional Speech Trim: Break a dense, multi-part thought into two short, spoken sentences.",
+      "definition": "\"Instead of 'Because in elementary school students need concrete examples to understand abstract rules, if an AI skips that step they get confused,' say: 'Young learners need concrete examples before abstract rules. If AI skips that step, they get confused.'\"",
+      "example": "Shorter sentences keep your logic sharp and easy to hear in live conversation.",
+      "note": "Functional English: Crisp sentences beat long, winding clauses in spoken dialogue."
+    },
+    {
+      "id": "aiedtech-04",
+      "category": "custom",
+      "term": "Persuasion Check-In: Invite peer perspective after making a clear point.",
+      "definition": "\"That's how I see the learning side of it—how does that line up with what you're seeing?\"",
+      "example": "Turning a point into an open question builds strong peer rapport and trust.",
+      "note": "Peer Interaction & Leadership: Collaborative framing invites genuine dialogue."
+    },
+    {
+      "id": "aiedtech-05",
+      "category": "custom",
+      "term": "Beachcombing Drill ('Ethics Card' / 'Purpose'): Ground a leadership idea in everyday values.",
+      "definition": "\"In 3rd-grade ethics, kids ask 'Is this fair?' In AI edtech, the deeper question is 'Does this respect human growth and the value of life?'\"",
+      "example": "Drawing from real teaching moments gives your startup vision authenticity.",
+      "note": "Beachcombing & Value of Life: Concrete roots keep big goals grounded."
+    },
+    {
+      "id": "aiedtech-06",
+      "category": "custom",
+      "term": "Canada & Peer Transition: Express near-term curiosity and long-term ambition naturally.",
+      "definition": "\"Right now I'm focused on connecting with peers and sharpening how I explain ideas in English, while building toward leading an AI edtech team.\"",
+      "example": "Stating your near-term step and long-term direction clearly makes your path easy to support.",
+      "note": "Functional Speech & Direction: Clear near-term vs. long-term framing builds credibility."
+    }
+  ]
+}
