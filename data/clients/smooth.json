@@ -1,0 +1,128 @@
+{
+  "clientId": "smooth",
+  "profileName": "Smooth — Executive Presence, Layoff Leadership & Being Heard Across Cultures (C1)",
+  "watchOuts": [
+    {
+      "tag": "Meeting Authority · Claiming the Floor Early",
+      "title": "State Your Position Before Over-Qualifying or Waiting for a Polite Opening",
+      "detail": "In fast-paced US/European tech calls, polite pauses rarely appear on their own and hedging phrases ('just a quick thought', 'sorry to jump in', 'maybe we could') can signal low conviction. Enter cleanly with a direct anchor—'Here is where I land on this'—and state your point before adding caveats."
+    },
+    {
+      "tag": "Casual Confidence · Grounded Presence Without Forced Mimicry",
+      "title": "Adopt Unhurried Clarity and Directness Rather Than Imitating American Slang",
+      "detail": "Casual confidence in US/European tech rooms comes from calm pacing, clear ownership, and speaking plainly—not forcing idioms or hyper-casual banter that feels unnatural. Let your steady judgment and concise structure do the heavy lifting."
+    },
+    {
+      "tag": "Layoff Navigation · Composure, Candor, and Team Stability",
+      "title": "Hold Steady Tone Between Corporate Guardrails and Human Care",
+      "detail": "During layoffs, teams watch their engineering lead closely for mixed signals, defensiveness, or vague corporate spin. Separate what you can confirm from what remains undecided, acknowledge real strain plainly, and keep near-term priorities clear."
+    },
+    {
+      "tag": "Cross-Cultural Pacing · Indian English Cadence in US/EU Rooms",
+      "title": "Slow Down Slightly at Key Transitions and Land Crisp Endings",
+      "detail": "At C1, your fluency is strong, so speaking quickly or packing multiple clauses into one breath can blur emphasis in hybrid calls. Pause briefly before your main conclusion and let key nouns and verbs land cleanly."
+    },
+    {
+      "tag": "Respect & Influence · Connecting Tech Trade-Offs to Business Risk",
+      "title": "Frame Engineering Decisions Around Risk, Velocity, and Team Capacity",
+      "detail": "Senior stakeholders lean in when technical trade-offs are tied directly to delivery risk, customer impact, and realistic team bandwidth—especially when headcount is tight."
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "Stepping Into a Crowded Meeting: Being Heard Without Over-Explaining",
+      "category": "Meeting Presence · Executive Authority",
+      "prompt": "You are on a cross-regional call with US and European stakeholders who are debating priorities. Take the floor cleanly, state your recommendation in two crisp sentences, and explain why it protects delivery."
+    },
+    {
+      "title": "Leading Through Layoffs: Addressing Your Engineering Team With Candor",
+      "category": "Layoff Leadership · Trust & Clarity",
+      "prompt": "Speak to your development team shortly after a layoff announcement. Acknowledge the disruption and uncertainty directly, clarify what stays steady this week, and invite questions without hiding behind corporate clichés."
+    },
+    {
+      "title": "Pushback With Composure: Holding Your Line on Scope After Headcount Cuts",
+      "category": "Executive Pushback · Resource Realism",
+      "prompt": "Leadership asks your team to hit the original roadmap despite fewer engineers. Push back calmly and constructively—laying out the concrete trade-offs in timeline, quality, or scope so they can make an informed call."
+    },
+    {
+      "title": "Casual-Yet-Credible Check-In: Building Rapport With US Peers Naturally",
+      "category": "Cross-Cultural Presence · Authentic Tone",
+      "prompt": "Open a 1-on-1 or cross-team sync with a US peer in a relaxed, assured tone that feels natural to you—moving smoothly from a brief human check-in into a focused work decision."
+    },
+    {
+      "title": "Aligning European & US Stakeholders: Closing a Circular Discussion",
+      "category": "Decision Framing · Team Leadership",
+      "prompt": "A technical/product discussion is going in circles across time zones. Step in as a calm team lead, summarize the real disagreement in one line, propose a clear next step, and lock in ownership."
+    }
+  ],
+  "beachcombing": {
+    "tier1": [
+      "Mute button",
+      "Standup board",
+      "Badge lanyard",
+      "Coffee mug"
+    ],
+    "tier2": [
+      "Roadmap slide",
+      "Time zone",
+      "Release train",
+      "Town hall"
+    ],
+    "tier3": [
+      "Conviction",
+      "Composure",
+      "Bandwidth",
+      "Leverage"
+    ]
+  },
+  "customCards": [
+    {
+      "id": "smooth-01",
+      "category": "custom",
+      "term": "Claiming the Floor Upgrade: Replace 'Sorry to interrupt, I just wanted to maybe throw in a small point here...' with a direct opener.",
+      "definition": "\"One quick point before we move on: if we cut that scope now, we protect the core release.\"",
+      "example": "Dropping 'sorry' and 'maybe' establishes presence immediately without sounding harsh.",
+      "note": "Meeting Presence: Direct entry signals ownership before you even get to the details."
+    },
+    {
+      "id": "smooth-02",
+      "category": "custom",
+      "term": "Layoff Candor Upgrade: Replace stiff or vague phrasing like 'We need to stay positive and adjust to the new reality' with grounded honesty.",
+      "definition": "\"I know this week has been heavy, and it's fair to feel unsettled. Here is what I know today, what I don't know yet, and how we'll protect the team's focus.\"",
+      "example": "Naming uncertainty honestly builds far more respect than forced optimism.",
+      "note": "Layoff Leadership: Calm realism earns trust when morale is stretched thin."
+    },
+    {
+      "id": "smooth-03",
+      "category": "custom",
+      "term": "Scope & Capacity Pushback: Frame a 'no' or trade-off around concrete outcomes rather than sounding defensive.",
+      "definition": "\"With current team capacity, we can ship X cleanly by Friday or add Y and push the date—which trade-off do you want to take?\"",
+      "example": "Presenting clear options puts the decision on shared realities rather than personal pushback.",
+      "note": "Executive Influence: Clear trade-offs command respect from senior leaders."
+    },
+    {
+      "id": "smooth-04",
+      "category": "custom",
+      "term": "Grounded Confidence (No Forced Slang): Replace stiff hedging with calm, natural authority in your own voice.",
+      "definition": "\"Let's test that assumption first—it'll save us two weeks of rework if it doesn't hold.\"",
+      "example": "Plain, confident phrasing works across US and European offices without trying to sound like someone else.",
+      "note": "Authentic Presence: Calm clarity beats forced casualness every time."
+    },
+    {
+      "id": "smooth-05",
+      "category": "custom",
+      "term": "Beachcombing Drill ('Time Zone' / 'Conviction'): Use a trigger to sharpen a cross-regional meeting point.",
+      "definition": "\"Across time zones, ambiguity multiplies fast. If we leave this call with one owner and one clear definition of done, everyone moves in sync.\"",
+      "example": "Tying a concrete operational trigger to a clear rule makes your point memorable.",
+      "note": "Beachcombing & Leadership: Anchoring abstract coordination in real habits sharpens delivery."
+    },
+    {
+      "id": "smooth-06",
+      "category": "custom",
+      "term": "Closing a Drift in Meetings: Steer scattered discussion back to a decision calmly.",
+      "definition": "\"We've got two real options on the table—Option A for speed, Option B for flexibility. Let's decide which one we're backing before we wrap.\"",
+      "example": "Naming the two choices concisely helps teams converge and reinforces your role as a leader.",
+      "note": "Team Leadership: Summarizing choices cleanly is one of the fastest ways to be heard and respected."
+    }
+  ]
+}
